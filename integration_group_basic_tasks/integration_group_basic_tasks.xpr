@@ -93,14 +93,14 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/group_task/adaptor_group_task.v">
+      <File Path="$PSRCDIR/sources_1/new/task_a/adaptor_task_a.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/task_a/adaptor_task_a.v">
+      <File Path="$PSRCDIR/sources_1/new/group_task/adaptor_task_group.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -151,6 +151,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/helpers/seg/seg_multiplexer.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/new/group_task/given_paint/ss_display.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -183,14 +190,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/seg_multiplexer.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/MouseAudioDisplay/archive_project_summary.txt">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../GitLab/school-work/NUS/Y1S2/MouseAudioDisplay/archive_project_summary.txt"/>
@@ -217,6 +216,14 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../GitLab/school-work/NUS/Y1S2/EE2026/Labs/Project B-MODs/MODS.xpr/MODS/archive_project_summary.txt"/>
           <Attr Name="ImportTime" Val="1709512915"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/helpers/seg/seg_num_mapping.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <Config>

@@ -15,4 +15,4 @@ module seg_num_mapping(input [3:0] display_num);
             default : seg = 7'b0001001;
         endcase      
     end
-end;
+endmodule

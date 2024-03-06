@@ -17,7 +17,7 @@ module Top_Student (
     // LEDs, Switches, Buttons
     input btnC, btnU, btnL, btnR, btnD, input [15:0] sw, output [15:0] led,
     // 7 Segment Display
-    output [5:0] seg, output dp, output [3:0] an,
+    output [6:0] seg, output dp, output [3:0] an,
     // OLED PMOD
     inout [7:0] JB,
     inout mouse_ps2_clk, mouse_ps2_data
@@ -61,14 +61,15 @@ module Top_Student (
     
 
     //// Group Task //////////////////////////////////////////////////////////////////////////////////////////////////
-    wire group_reset = 0;
+    wire group_reset;
     wire [15:0] group_led; 
     wire [6:0] group_seg;
     wire [15:0] group_oled_pixel_data;
 
     adaptor_task_group task_group(
-        .reset(group_reset), .clk(clk),
-        .led(group_led), .seg(group_seg),
+        .reset(a_reset), .clk(clk),
+        .btnC(btnC), .btnU(btnU), .btnL(L), .btnR(btnR), .btnD(btnD), .sw(sw), .led(a_led), 
+        .seg(a_seg), .dp(dp), .an(an),
         .oled_pixel_index(oled_pixel_index), .oled_pixel_data(group_oled_pixel_data),
         .mouse_xpos(mouse_xpos), .mouse_ypos(mouse_ypos), .mouse_zpos(mouse_zpos),
         .mouse_left_click(mouse_left_click), .mouse_middle_click(mouse_middle_click),
@@ -83,8 +84,8 @@ module Top_Student (
 
     adaptor_task_a task_a(
         .reset(a_reset), .clk(clk),
-        .btnC(btnC), .btnU(btnU), .btnL(L), .btnR(btnR), .btnD(btnD), 
-        .led(a_led), .seg(a_seg),
+        .btnC(btnC), .btnU(btnU), .btnL(L), .btnR(btnR), .btnD(btnD), .sw(sw), .led(a_led), 
+        .seg(a_seg), .dp(dp), .an(an),
         .oled_pixel_index(oled_pixel_index), .oled_pixel_data(a_oled_pixel_data),
         .mouse_xpos(mouse_xpos), .mouse_ypos(mouse_ypos), .mouse_zpos(mouse_zpos),
         .mouse_left_click(mouse_left_click), .mouse_middle_click(mouse_middle_click),
@@ -92,13 +93,26 @@ module Top_Student (
     );
 
     //// Overall Control Logic ////////////////////////////////////////////////////////////////////////////////////
-    wire enable_task_group = sw[0];
-    wire enable_task_a = sw[1];
-    assign led = enable_task_group ? group_led : (enable_task_a ? a_led : 0);
-    assign seg = enable_task_group ? group_seg : (enable_task_a ? a_seg : 0);
+    // 4.E1
+    wire enable_task_group = sw[4];
+    wire enable_task_a = sw[0];
+    wire enable_task_b = sw[1];
+    wire enable_task_c = sw[2];
+    wire enable_task_d = sw[3];
+    wire [15:0] indiv_led;
+
+    assign led = enable_task_group ? group_led : indiv_led;
+    assign seg = enable_task_group ? group_seg : 0;
     assign oled_pixel_data = enable_task_group ? group_oled_pixel_data : (enable_task_a ? a_oled_pixel_data : 16'hFFFF);
 
+    // 4.E2
+    assign indiv_led = {12'b0, enable_task_d, enable_task_c, enable_task_b, enable_task_a}; 
+
+    // 4.E3
     assign group_reset = ~enable_task_group;
     assign a_reset = ~enable_task_a;
+    /*assign b_reset = ~enable_task_b;
+    assign c_reset = ~enable_task_c;
+    assign d_reset = ~enable_task_d;*/
 
 endmodule

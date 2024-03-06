@@ -26,7 +26,7 @@ module adaptor_task_a(
     // LEDs, Switches, Buttons
     input btnC, btnU, btnL, btnR, btnD, input [15:0] sw, output [15:0] led,
     // 7 Segment Display
-    output [5:0] seg, output dp, output [3:0] an,
+    output [6:0] seg, output dp, output [3:0] an,
     // OLED
     input [12:0] oled_pixel_index, output [15:0] oled_pixel_data,
     // Mouse - NOT NEEDED

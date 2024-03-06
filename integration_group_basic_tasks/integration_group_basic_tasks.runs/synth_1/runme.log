@@ -14,9 +14,12 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12068 
+INFO: Helper process launched with PID 79936 
+WARNING: [Synth 8-992] a_reset is already implicitly declared earlier [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:80]
+WARNING: [Synth 8-992] a_led is already implicitly declared earlier [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:81]
+WARNING: [Synth 8-992] a_seg is already implicitly declared earlier [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:82]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 386.867 ; gain = 99.719
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 398.973 ; gain = 112.281
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:14]
 INFO: [Synth 8-6157] synthesizing module 'clk_counter' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/custom/clk_counter.v:23]
@@ -102,7 +105,12 @@ WARNING: [Synth 8-6014] Unused sequential element x_inter_reg was removed.  [C:/
 WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:519]
 WARNING: [Synth 8-6014] Unused sequential element y_inter_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:525]
 INFO: [Synth 8-256] done synthesizing module 'MouseCtl' (4#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:212]
-INFO: [Synth 8-6157] synthesizing module 'adaptor_task_group' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/adaptor_group_task.v:23]
+INFO: [Synth 8-6157] synthesizing module 'adaptor_task_group' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/adaptor_task_group.v:23]
+	Parameter SEG_CLEAR bound to: 7'b1111111 
+	Parameter SEG_DIGIT_5 bound to: 7'b0010010 
+	Parameter SEG_DIGIT_1 bound to: 7'b1111001 
+	Parameter SEG_DIGIT_0 bound to: 7'b1000000 
+	Parameter SEG_DIGIT_4 bound to: 7'b0011001 
 INFO: [Synth 8-6157] synthesizing module 'paint' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/paint.v:23]
 	Parameter WHITE bound to: 16'b1111111111111111 
 	Parameter ORANGE bound to: 16'b1111110110100000 
@@ -126,8 +134,8 @@ WARNING: [Synth 8-567] referenced signal 'pixel_data' should be on the sensitivi
 WARNING: [Synth 8-567] referenced signal 'row' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/paint.v:145]
 WARNING: [Synth 8-567] referenced signal 'col' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/paint.v:145]
 INFO: [Synth 8-6157] synthesizing module 'module_pack' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/module_pack.v:23]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-77032-HackerbookAce/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (5#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-77032-HackerbookAce/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-79044-HackerbookAce/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (5#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-79044-HackerbookAce/realtime/blk_mem_gen_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'CanvasTransfer' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:23]
 	Parameter CANVAS_SIZE bound to: 3136 - type: integer 
 	Parameter IDLE bound to: 2'b10 
@@ -145,12 +153,12 @@ INFO: [Synth 8-226] default block is never used [C:/Users/zunmun/Documents/Stuff
 WARNING: [Synth 8-6014] Unused sequential element offsetX_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:91]
 WARNING: [Synth 8-6014] Unused sequential element offsetY_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:92]
 INFO: [Synth 8-6155] done synthesizing module 'CanvasTransfer' (6#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:23]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_img' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-77032-HackerbookAce/realtime/blk_mem_gen_img_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_img' (7#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-77032-HackerbookAce/realtime/blk_mem_gen_img_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_const' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-77032-HackerbookAce/realtime/blk_mem_gen_const_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_const' (8#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-77032-HackerbookAce/realtime/blk_mem_gen_const_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_inter' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-77032-HackerbookAce/realtime/blk_mem_gen_inter_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_inter' (9#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-77032-HackerbookAce/realtime/blk_mem_gen_inter_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_img' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-79044-HackerbookAce/realtime/blk_mem_gen_img_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_img' (7#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-79044-HackerbookAce/realtime/blk_mem_gen_img_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_const' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-79044-HackerbookAce/realtime/blk_mem_gen_const_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_const' (8#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-79044-HackerbookAce/realtime/blk_mem_gen_const_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_inter' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-79044-HackerbookAce/realtime/blk_mem_gen_inter_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_inter' (9#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-79044-HackerbookAce/realtime/blk_mem_gen_inter_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'neural_net' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/neural_net.v:3]
 	Parameter S_IDLE bound to: 2'b00 
 	Parameter S_FIRST bound to: 2'b01 
@@ -171,13 +179,22 @@ INFO: [Synth 8-4471] merging register 'mouse_press_y_reg[9:0]' into 'h_cnt_reg[9
 WARNING: [Synth 8-6014] Unused sequential element mouse_press_x_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/paint.v:139]
 WARNING: [Synth 8-6014] Unused sequential element mouse_press_y_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/paint.v:140]
 INFO: [Synth 8-6155] done synthesizing module 'paint' (13#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/paint.v:23]
-WARNING: [Synth 8-689] width (32) of port connection 'mouse_l' does not match port width (1) of module 'paint' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/adaptor_group_task.v:52]
-WARNING: [Synth 8-689] width (6) of port connection 'seg' does not match port width (7) of module 'paint' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/adaptor_group_task.v:59]
-WARNING: [Synth 8-689] width (31) of port connection 'colour_chooser' does not match port width (16) of module 'paint' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/adaptor_group_task.v:60]
-INFO: [Synth 8-6155] done synthesizing module 'adaptor_task_group' (14#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/adaptor_group_task.v:23]
-WARNING: [Synth 8-689] width (7) of port connection 'seg' does not match port width (6) of module 'adaptor_task_group' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:71]
-WARNING: [Synth 8-689] width (16) of port connection 'oled_pixel_data' does not match port width (31) of module 'adaptor_task_group' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:72]
-WARNING: [Synth 8-350] instance 'task_group' of module 'adaptor_task_group' requires 20 connections, but only 13 given [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:69]
+WARNING: [Synth 8-689] width (32) of port connection 'mouse_l' does not match port width (1) of module 'paint' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/adaptor_task_group.v:61]
+WARNING: [Synth 8-689] width (31) of port connection 'colour_chooser' does not match port width (16) of module 'paint' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/adaptor_task_group.v:69]
+INFO: [Synth 8-6157] synthesizing module 'seg_multiplexer' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/helpers/seg/seg_multiplexer.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'seg_multiplexer' (14#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/helpers/seg/seg_multiplexer.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'seg1' does not match port width (7) of module 'seg_multiplexer' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/adaptor_task_group.v:80]
+WARNING: [Synth 8-689] width (1) of port connection 'seg0' does not match port width (7) of module 'seg_multiplexer' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/adaptor_task_group.v:81]
+WARNING: [Synth 8-6014] Unused sequential element success_screen_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/adaptor_task_group.v:91]
+WARNING: [Synth 8-6014] Unused sequential element prev_button_state_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/adaptor_task_group.v:92]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net dp with 1st driver pin 'adaptor_task_group:/starting_digit_number/dp' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/adaptor_task_group.v:23]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net dp with 2nd driver pin 'GND' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/adaptor_task_group.v:23]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net dp is connected to constant driver, other driver is ignored [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/adaptor_task_group.v:23]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net an[0] with 1st driver pin 'adaptor_task_group:/starting_digit_number/an[0]' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/adaptor_task_group.v:23]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net an[0] with 2nd driver pin 'GND' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/adaptor_task_group.v:23]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net an[0] is connected to constant driver, other driver is ignored [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/adaptor_task_group.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'adaptor_task_group' (15#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/adaptor_task_group.v:23]
+WARNING: [Synth 8-689] width (16) of port connection 'oled_pixel_data' does not match port width (31) of module 'adaptor_task_group' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:73]
 INFO: [Synth 8-6157] synthesizing module 'adaptor_task_a' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/adaptor_task_a.v:23]
 	Parameter WIDTH bound to: 96 - type: integer 
 	Parameter HEIGHT bound to: 64 - type: integer 
@@ -190,25 +207,23 @@ INFO: [Synth 8-6157] synthesizing module 'animation_timer' [C:/Users/zunmun/Docu
 	Parameter COUNT3 bound to: 100000000 - type: integer 
 	Parameter COUNT4 bound to: 100000000 - type: integer 
 	Parameter BITWIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'animation_timer' (15#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/animation_timer.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'animation_timer' (16#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/animation_timer.v:23]
 INFO: [Synth 8-6157] synthesizing module 'middle_square_timer' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/middle_square_timer.v:23]
 	Parameter COUNT_BUTTON bound to: 5000000 - type: integer 
 	Parameter COUNT_DEBOUNCE bound to: 20000000 - type: integer 
 	Parameter BITWIDTH bound to: 32 - type: integer 
 WARNING: [Synth 8-6014] Unused sequential element counter_overflow_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/middle_square_timer.v:54]
-INFO: [Synth 8-6155] done synthesizing module 'middle_square_timer' (16#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/middle_square_timer.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'middle_square_timer' (17#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/middle_square_timer.v:23]
 WARNING: [Synth 8-350] instance 'mid_timer' of module 'middle_square_timer' requires 5 connections, but only 4 given [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/adaptor_task_a.v:137]
 WARNING: [Synth 8-3848] Net led in module/entity adaptor_task_a does not have driver. [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/adaptor_task_a.v:27]
 WARNING: [Synth 8-3848] Net seg in module/entity adaptor_task_a does not have driver. [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/adaptor_task_a.v:29]
 WARNING: [Synth 8-3848] Net dp in module/entity adaptor_task_a does not have driver. [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/adaptor_task_a.v:29]
 WARNING: [Synth 8-3848] Net an in module/entity adaptor_task_a does not have driver. [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/adaptor_task_a.v:29]
-INFO: [Synth 8-6155] done synthesizing module 'adaptor_task_a' (17#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/adaptor_task_a.v:23]
-WARNING: [Synth 8-689] width (7) of port connection 'seg' does not match port width (6) of module 'adaptor_task_a' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:87]
-WARNING: [Synth 8-350] instance 'task_a' of module 'adaptor_task_a' requires 21 connections, but only 18 given [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:84]
-WARNING: [Synth 8-3848] Net dp in module/entity Top_Student does not have driver. [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:20]
-WARNING: [Synth 8-3848] Net an in module/entity Top_Student does not have driver. [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:20]
-WARNING: [Synth 8-3848] Net L in module/entity Top_Student does not have driver. [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:86]
-INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (18#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'adaptor_task_a' (18#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/adaptor_task_a.v:23]
+WARNING: [Synth 8-3848] Net group_led in module/entity Top_Student does not have driver. [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:65]
+WARNING: [Synth 8-3848] Net group_seg in module/entity Top_Student does not have driver. [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:66]
+WARNING: [Synth 8-3848] Net L in module/entity Top_Student does not have driver. [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:71]
+INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (19#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:14]
 WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port led[15]
 WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port led[14]
 WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port led[13]
@@ -225,6 +240,7 @@ WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port led[3]
 WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port led[2]
 WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port led[1]
 WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port led[0]
+WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port seg[6]
 WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port seg[5]
 WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port seg[4]
 WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port seg[3]
@@ -298,20 +314,19 @@ WARNING: [Synth 8-3331] design adaptor_task_group has unconnected port btnU
 WARNING: [Synth 8-3331] design adaptor_task_group has unconnected port btnL
 WARNING: [Synth 8-3331] design adaptor_task_group has unconnected port btnR
 WARNING: [Synth 8-3331] design adaptor_task_group has unconnected port btnD
-WARNING: [Synth 8-3331] design adaptor_task_group has unconnected port mouse_zpos[3]
-WARNING: [Synth 8-3331] design adaptor_task_group has unconnected port mouse_zpos[2]
-WARNING: [Synth 8-3331] design adaptor_task_group has unconnected port mouse_zpos[1]
-WARNING: [Synth 8-3331] design adaptor_task_group has unconnected port mouse_zpos[0]
-WARNING: [Synth 8-3331] design adaptor_task_group has unconnected port mouse_middle_click
-WARNING: [Synth 8-3331] design adaptor_task_group has unconnected port mouse_new_event
-WARNING: [Synth 8-3331] design Top_Student has unconnected port dp
-WARNING: [Synth 8-3331] design Top_Student has unconnected port an[3]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port an[2]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port an[1]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port an[0]
+WARNING: [Synth 8-3331] design adaptor_task_group has unconnected port sw[12]
+WARNING: [Synth 8-3331] design adaptor_task_group has unconnected port sw[11]
+WARNING: [Synth 8-3331] design adaptor_task_group has unconnected port sw[10]
+WARNING: [Synth 8-3331] design adaptor_task_group has unconnected port sw[9]
+WARNING: [Synth 8-3331] design adaptor_task_group has unconnected port sw[8]
+WARNING: [Synth 8-3331] design adaptor_task_group has unconnected port sw[7]
+WARNING: [Synth 8-3331] design adaptor_task_group has unconnected port sw[6]
+WARNING: [Synth 8-3331] design adaptor_task_group has unconnected port sw[5]
+WARNING: [Synth 8-3331] design adaptor_task_group has unconnected port sw[4]
+WARNING: [Synth 8-3331] design adaptor_task_group has unconnected port sw[3]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 476.883 ; gain = 189.734
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 477.406 ; gain = 190.715
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -320,14 +335,15 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin starting_digit_number:clk to constant 0 [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/adaptor_task_group.v:76]
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 476.883 ; gain = 189.734
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 477.406 ; gain = 190.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 476.883 ; gain = 189.734
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 477.406 ; gain = 190.715
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -343,9 +359,7 @@ Finished Parsing XDC File [c:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Pr
 Parsing XDC File [c:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/ip/blk_mem_gen_img/blk_mem_gen_img/blk_mem_gen_img_in_context.xdc] for cell 'task_group/paint_module/nn_inst/blk_mem_gen_img_inst'
 Finished Parsing XDC File [c:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/ip/blk_mem_gen_img/blk_mem_gen_img/blk_mem_gen_img_in_context.xdc] for cell 'task_group/paint_module/nn_inst/blk_mem_gen_img_inst'
 Parsing XDC File [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/constrs_1/new/basys3.xdc]
-WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/constrs_1/new/basys3.xdc:56]
 Finished Parsing XDC File [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/constrs_1/new/basys3.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/constrs_1/new/basys3.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/Top_Student_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/constrs_1/new/basys3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Student_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Top_Student_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/dont_touch.xdc]
@@ -355,18 +369,18 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 823.715 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 824.641 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'task_group/paint_module/nn_inst/blk_mem_gen_0_inst' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'task_group/paint_module/nn_inst/blk_mem_gen_img_inst' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 825.238 ; gain = 538.090
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 826.207 ; gain = 539.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 825.238 ; gain = 538.090
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 826.207 ; gain = 539.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -376,7 +390,7 @@ Applied set_property DONT_TOUCH = true for task_group/paint_module/nn_inst/blk_m
 Applied set_property DONT_TOUCH = true for task_group/paint_module/nn_inst/blk_mem_gen_const_inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for task_group/paint_module/nn_inst/blk_mem_gen_img_inst. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 825.238 ; gain = 538.090
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 826.207 ; gain = 539.516
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "clk_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -687,7 +701,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 WARNING: [Synth 8-327] inferring latch for variable 'colour_chooser_reg' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/paint.v:147]
 WARNING: [Synth 8-327] inferring latch for variable 'state_reg' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/paint.v:87]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 825.238 ; gain = 538.090
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 826.207 ; gain = 539.516
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -717,6 +731,7 @@ Detailed RTL Component Info :
 	   2 Input      6 Bit       Adders := 2     
 	   2 Input      4 Bit       Adders := 4     
 	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
 	               64 Bit    Registers := 1     
 	               40 Bit    Registers := 1     
@@ -729,12 +744,12 @@ Detailed RTL Component Info :
 	               11 Bit    Registers := 3     
 	               10 Bit    Registers := 18    
 	                8 Bit    Registers := 4     
-	                7 Bit    Registers := 3     
+	                7 Bit    Registers := 4     
 	                6 Bit    Registers := 2     
-	                4 Bit    Registers := 7     
+	                4 Bit    Registers := 8     
 	                3 Bit    Registers := 363   
-	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 60    
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 61    
 +---Multipliers : 
 	                32x32  Multipliers := 2     
 +---Muxes : 
@@ -751,7 +766,7 @@ Detailed RTL Component Info :
 	  32 Input     20 Bit        Muxes := 1     
 	   2 Input     17 Bit        Muxes := 19    
 	  17 Input     17 Bit        Muxes := 1     
-	   2 Input     16 Bit        Muxes := 9     
+	   2 Input     16 Bit        Muxes := 8     
 	   4 Input     16 Bit        Muxes := 3     
 	  12 Input     16 Bit        Muxes := 1     
 	   9 Input     16 Bit        Muxes := 1     
@@ -763,30 +778,30 @@ Detailed RTL Component Info :
 	   4 Input     10 Bit        Muxes := 2     
 	   2 Input      9 Bit        Muxes := 2     
 	  37 Input      8 Bit        Muxes := 3     
-	   2 Input      7 Bit        Muxes := 4     
-	   3 Input      7 Bit        Muxes := 1     
-	   4 Input      7 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 6     
+	   3 Input      7 Bit        Muxes := 2     
+	   4 Input      7 Bit        Muxes := 3     
 	  32 Input      6 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 5     
+	   2 Input      6 Bit        Muxes := 3     
 	   4 Input      6 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 2     
 	  32 Input      5 Bit        Muxes := 1     
 	  37 Input      4 Bit        Muxes := 1     
 	   3 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
-	   4 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
 	  11 Input      4 Bit        Muxes := 1     
 	   5 Input      3 Bit        Muxes := 2     
 	   2 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 5     
 	   4 Input      2 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 396   
+	   2 Input      1 Bit        Muxes := 399   
 	  17 Input      1 Bit        Muxes := 4     
 	  37 Input      1 Bit        Muxes := 20    
 	   6 Input      1 Bit        Muxes := 3     
 	   3 Input      1 Bit        Muxes := 10    
 	   5 Input      1 Bit        Muxes := 2     
-	   4 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 11    
 	   8 Input      1 Bit        Muxes := 1     
 	  12 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
@@ -799,8 +814,8 @@ Hierarchical RTL Component report
 Module Top_Student 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input     16 Bit        Muxes := 4     
-	   2 Input      6 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 3     
+	   2 Input      7 Bit        Muxes := 1     
 Module clk_counter 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1006,10 +1021,25 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 362   
 	  12 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 1     
+Module seg_multiplexer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      7 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
 Module adaptor_task_group 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   3 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
 Module animation_timer 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1096,8 +1126,8 @@ WARNING: [Synth 8-6014] Unused sequential element j_reg was removed.  [C:/Users/
 WARNING: [Synth 8-6014] Unused sequential element i_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/neural_net.v:69]
 WARNING: [Synth 8-6014] Unused sequential element i_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/neural_net.v:69]
 INFO: [Synth 8-5546] ROM "next_addr_inter" won't be mapped to RAM because it is too sparse
-DSP Debug: swapped A/B pins for adder 000002453D4270D0
-DSP Debug: swapped A/B pins for adder 0000024541CF1350
+DSP Debug: swapped A/B pins for adder 00000248BB65ED30
+DSP Debug: swapped A/B pins for adder 00000248C1C52990
 DSP Report: Generating DSP next_val_out0, operation Mode is: A*B.
 DSP Report: operator next_val_out0 is absorbed into DSP next_val_out0.
 DSP Report: operator next_val_out0 is absorbed into DSP next_val_out0.
@@ -1189,22 +1219,6 @@ INFO: [Synth 8-3886] merging instance 'task_group/paint_module/colour_chooser_re
 INFO: [Synth 8-3886] merging instance 'task_group/paint_module/colour_chooser_reg[6]' (LD) to 'task_group/paint_module/colour_chooser_reg[9]'
 INFO: [Synth 8-3886] merging instance 'task_group/paint_module/colour_chooser_reg[7]' (LD) to 'task_group/paint_module/colour_chooser_reg[8]'
 INFO: [Synth 8-3886] merging instance 'task_group/paint_module/colour_chooser_reg[8]' (LD) to 'task_group/paint_module/colour_chooser_reg[10]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/MOUSE_Y_POS_reg[0]' (FDR) to 'task_group/paint_module/nn_inst/MOUSE_X_POS_reg[0]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/MOUSE_Y_POS_reg[1]' (FDR) to 'task_group/paint_module/nn_inst/MOUSE_X_POS_reg[0]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/MOUSE_Y_POS_reg[2]' (FDR) to 'task_group/paint_module/nn_inst/MOUSE_X_POS_reg[0]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/MOUSE_X_POS_reg[0]' (FDR) to 'task_group/paint_module/nn_inst/MOUSE_X_POS_reg[1]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/MOUSE_X_POS_reg[1]' (FDR) to 'task_group/paint_module/nn_inst/MOUSE_X_POS_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\task_group/paint_module /nn_inst/\MOUSE_X_POS_reg[2] )
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/p_reg[8]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/p_reg[9]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/p_reg[7]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/p_reg[6]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/p_reg[5]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/p_reg[4]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/p_reg[3]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/p_reg[2]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/p_reg[1]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\task_group/paint_module /nn_inst/\ct_inst/p_reg[0] )
 INFO: [Synth 8-3886] merging instance 'task_group/paint_module/colour_chooser_reg[11]' (LD) to 'task_group/paint_module/colour_chooser_reg[12]'
 INFO: [Synth 8-3886] merging instance 'task_group/paint_module/colour_chooser_reg[12]' (LD) to 'task_group/paint_module/colour_chooser_reg[13]'
 INFO: [Synth 8-3886] merging instance 'mouse/y_max_reg[0]' (FDRE) to 'mouse/x_max_reg[11]'
@@ -1232,20 +1246,6 @@ INFO: [Synth 8-3886] merging instance 'mouse/x_max_reg[10]' (FDRE) to 'mouse/x_m
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mouse/x_max_reg[11] )
 INFO: [Synth 8-3886] merging instance 'task_group/paint_module/colour_chooser_reg[13]' (LD) to 'task_group/paint_module/colour_chooser_reg[14]'
 INFO: [Synth 8-3886] merging instance 'task_group/paint_module/colour_chooser_reg[14]' (LD) to 'task_group/paint_module/colour_chooser_reg[15]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/startY_reg[0]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/goalX_reg[0]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/goalX_reg[1]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/goalX_reg[2]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/goalY_reg[0]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/goalY_reg[1]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/goalY_reg[2]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/startY_reg[1]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/startY_reg[2]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/startY_reg[2]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/startX_reg[0]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/startX_reg[0]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/startX_reg[1]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/startX_reg[1]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/startX_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\task_group/paint_module /nn_inst/\ct_inst/startX_reg[2] )
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/dY_reg[1]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/dY_reg[2]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/dX_reg[1]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/dX_reg[2]'
 WARNING: [Synth 8-3332] Sequential element (mouse/zpos_reg[3]) is unused and will be removed from module Top_Student.
 WARNING: [Synth 8-3332] Sequential element (mouse/zpos_reg[2]) is unused and will be removed from module Top_Student.
 WARNING: [Synth 8-3332] Sequential element (mouse/zpos_reg[1]) is unused and will be removed from module Top_Student.
@@ -1254,8 +1254,10 @@ WARNING: [Synth 8-3332] Sequential element (mouse/middle_down_reg) is unused and
 WARNING: [Synth 8-3332] Sequential element (mouse/middle_reg) is unused and will be removed from module Top_Student.
 WARNING: [Synth 8-3332] Sequential element (mouse/new_event_reg) is unused and will be removed from module Top_Student.
 WARNING: [Synth 8-3332] Sequential element (mouse/x_max_reg[11]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/p_reg[0]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startX_reg[2]) is unused and will be removed from module module_pack.
+WARNING: [Synth 8-3332] Sequential element (nn1/digit_reg[3]) is unused and will be removed from module module_pack.
+WARNING: [Synth 8-3332] Sequential element (nn1/digit_reg[2]) is unused and will be removed from module module_pack.
+WARNING: [Synth 8-3332] Sequential element (nn1/digit_reg[1]) is unused and will be removed from module module_pack.
+WARNING: [Synth 8-3332] Sequential element (nn1/digit_reg[0]) is unused and will be removed from module module_pack.
 WARNING: [Synth 8-3332] Sequential element (nums_reg[15]) is unused and will be removed from module module_pack.
 WARNING: [Synth 8-3332] Sequential element (nums_reg[14]) is unused and will be removed from module module_pack.
 WARNING: [Synth 8-3332] Sequential element (nums_reg[13]) is unused and will be removed from module module_pack.
@@ -1272,59 +1274,89 @@ WARNING: [Synth 8-3332] Sequential element (nums_reg[3]) is unused and will be r
 WARNING: [Synth 8-3332] Sequential element (nums_reg[2]) is unused and will be removed from module module_pack.
 WARNING: [Synth 8-3332] Sequential element (nums_reg[1]) is unused and will be removed from module module_pack.
 WARNING: [Synth 8-3332] Sequential element (nums_reg[0]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (MOUSE_X_POS_reg[2]) is unused and will be removed from module module_pack.
+WARNING: [Synth 8-3332] Sequential element (LED_reg[10]) is unused and will be removed from module module_pack.
+WARNING: [Synth 8-3332] Sequential element (LED_reg[9]) is unused and will be removed from module module_pack.
+WARNING: [Synth 8-3332] Sequential element (LED_reg[8]) is unused and will be removed from module module_pack.
+WARNING: [Synth 8-3332] Sequential element (LED_reg[7]) is unused and will be removed from module module_pack.
+WARNING: [Synth 8-3332] Sequential element (LED_reg[6]) is unused and will be removed from module module_pack.
+WARNING: [Synth 8-3332] Sequential element (LED_reg[5]) is unused and will be removed from module module_pack.
+WARNING: [Synth 8-3332] Sequential element (LED_reg[4]) is unused and will be removed from module module_pack.
+WARNING: [Synth 8-3332] Sequential element (LED_reg[3]) is unused and will be removed from module module_pack.
+WARNING: [Synth 8-3332] Sequential element (LED_reg[2]) is unused and will be removed from module module_pack.
+WARNING: [Synth 8-3332] Sequential element (LED_reg[1]) is unused and will be removed from module module_pack.
+WARNING: [Synth 8-3332] Sequential element (LED_reg[0]) is unused and will be removed from module module_pack.
+WARNING: [Synth 8-3332] Sequential element (display_num_reg[3]) is unused and will be removed from module ss_display.
+WARNING: [Synth 8-3332] Sequential element (display_num_reg[2]) is unused and will be removed from module ss_display.
+WARNING: [Synth 8-3332] Sequential element (display_num_reg[1]) is unused and will be removed from module ss_display.
+WARNING: [Synth 8-3332] Sequential element (display_num_reg[0]) is unused and will be removed from module ss_display.
 WARNING: [Synth 8-3332] Sequential element (clk_6p25MHz_reg) is unused and will be removed from module paint.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net group_reset0 with 1st driver pin 'group_reset0_inferred/group_reset0' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:101]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net group_reset0 with 2nd driver pin 'GND' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:101]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net group_reset0 is connected to constant driver, other driver is ignored [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:101]
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/dY_reg[0]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/dX_reg[0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\task_group/paint_module /nn_inst/\ct_inst/dX_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (clk_s_reg) is unused and will be removed from module paint.
+WARNING: [Synth 8-3332] Sequential element (task_group/starting_digit_number/dp_reg) is unused and will be removed from module Top_Student.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net dp with 1st driver pin 'task_group/starting_digit_number/dp_reg/Q' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/helpers/seg/seg_multiplexer.v:35]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net dp with 2nd driver pin 'GND' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/helpers/seg/seg_multiplexer.v:35]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net dp is connected to constant driver, other driver is ignored [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/helpers/seg/seg_multiplexer.v:35]
+WARNING: [Synth 8-3332] Sequential element (task_group/starting_digit_number/an_reg[3]) is unused and will be removed from module Top_Student.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net an[3] with 1st driver pin 'task_group/starting_digit_number/an_reg[3]/Q' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/helpers/seg/seg_multiplexer.v:36]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net an[3] with 2nd driver pin 'GND' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/helpers/seg/seg_multiplexer.v:36]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net an[3] is connected to constant driver, other driver is ignored [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/helpers/seg/seg_multiplexer.v:36]
+WARNING: [Synth 8-3332] Sequential element (task_group/starting_digit_number/an_reg[2]) is unused and will be removed from module Top_Student.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net an[2] with 1st driver pin 'task_group/starting_digit_number/an_reg[2]/Q' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/helpers/seg/seg_multiplexer.v:36]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net an[2] with 2nd driver pin 'GND' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/helpers/seg/seg_multiplexer.v:36]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net an[2] is connected to constant driver, other driver is ignored [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/helpers/seg/seg_multiplexer.v:36]
+WARNING: [Synth 8-3332] Sequential element (task_group/starting_digit_number/an_reg[1]) is unused and will be removed from module Top_Student.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net an[1] with 1st driver pin 'task_group/starting_digit_number/an_reg[1]/Q' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/helpers/seg/seg_multiplexer.v:36]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net an[1] with 2nd driver pin 'GND' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/helpers/seg/seg_multiplexer.v:36]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net an[1] is connected to constant driver, other driver is ignored [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/helpers/seg/seg_multiplexer.v:36]
+WARNING: [Synth 8-3332] Sequential element (task_group/starting_digit_number/an_reg[0]) is unused and will be removed from module Top_Student.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net an[0] with 1st driver pin 'task_group/starting_digit_number/an_reg[0]/Q' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/helpers/seg/seg_multiplexer.v:36]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net an[0] with 2nd driver pin 'GND' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/helpers/seg/seg_multiplexer.v:36]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net an[0] is connected to constant driver, other driver is ignored [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/helpers/seg/seg_multiplexer.v:36]
+WARNING: [Synth 8-3332] Sequential element (task_group/starting_digit_number/state_reg[1]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/starting_digit_number/state_reg[0]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/starting_digit_number/seg_reg[6]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/starting_digit_number/seg_reg[5]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/starting_digit_number/seg_reg[4]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/starting_digit_number/seg_reg[3]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/starting_digit_number/seg_reg[2]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/starting_digit_number/seg_reg[1]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/starting_digit_number/seg_reg[0]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[31]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[30]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[29]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[28]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[27]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[26]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[25]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[24]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[23]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[22]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[21]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[20]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[19]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[18]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[17]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[16]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[15]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[14]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[13]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[12]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[11]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[10]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[9]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[8]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[7]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[6]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[5]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[4]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[3]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[2]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[1]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/counter_reg[0]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/clkslow/clk_out_reg) is unused and will be removed from module Top_Student.
 WARNING: [Synth 8-3332] Sequential element (mouse/x_max_reg[9]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[0]) is unused and will be removed from module module_pack.
 WARNING: [Synth 8-3332] Sequential element (task_a/mid_timer/trigger_state_reg[2]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[9]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[8]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[7]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[6]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[5]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[4]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[3]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[2]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dY_reg[9]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dY_reg[8]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dY_reg[7]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dY_reg[6]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dY_reg[5]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dY_reg[4]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dY_reg[3]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dY_reg[2]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startX_reg[9]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startX_reg[8]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startX_reg[7]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startX_reg[6]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startX_reg[5]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startX_reg[4]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startX_reg[3]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/primaryDir_reg) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startY_reg[9]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startY_reg[8]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startY_reg[7]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startY_reg[6]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startY_reg[5]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startY_reg[4]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startY_reg[3]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (LED_reg[9]_P) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (LED_reg[8]_P) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (LED_reg[7]_P) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (LED_reg[6]_P) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (LED_reg[5]_P) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (LED_reg[4]_P) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (LED_reg[3]_P) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (LED_reg[2]_P) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (LED_reg[1]_P) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (LED_reg[0]_P) is unused and will be removed from module module_pack.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 825.238 ; gain = 538.090
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 826.207 ; gain = 539.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1375,6 +1407,22 @@ Note: The table above is a preliminary report that shows the DSPs inferred at th
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:86]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:86]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:87]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:82]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:95]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:86]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:87]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:80]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:87]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:87]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:86]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:83]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:95]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:87]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:86]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:81]
 INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:80]
 
 Report RTL Partitions: 
@@ -1386,13 +1434,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 873.531 ; gain = 586.383
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 879.164 ; gain = 592.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:42 . Memory (MB): peak = 900.992 ; gain = 613.844
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 913.750 ; gain = 627.059
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1403,20 +1451,16 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/nn_inst/ct_inst/goalY_reg[2]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/nn_inst/ct_inst/goalY_reg[1]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/nn_inst/ct_inst/goalY_reg[0]) is unused and will be removed from module Top_Student.
 WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/nn_inst/ct_inst/goalX_reg[9]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/nn_inst/MOUSE_X_POS_reg[9]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/v_cnt_reg[9]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/v_cnt_reg[8]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/v_cnt_reg[7]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/v_cnt_reg[6]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/nn_inst/ct_inst/turtleX_reg[0]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/nn_inst/ct_inst/turtleY_reg[0]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/nn_inst/ct_inst/invY_reg) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/nn_inst/ct_inst/turtleY_reg[2]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/nn_inst/ct_inst/turtleY_reg[1]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/nn_inst/ct_inst/goalX_reg[2]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/nn_inst/ct_inst/goalX_reg[1]) is unused and will be removed from module Top_Student.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:80]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:45 . Memory (MB): peak = 978.258 ; gain = 691.109
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 991.086 ; gain = 704.395
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1438,13 +1482,13 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5365] Flop mouse/Inst_Ps2Interface/ps2_clk_h_reg is being inverted and renamed to mouse/Inst_Ps2Interface/ps2_clk_h_reg_inv.
 INFO: [Synth 8-5365] Flop mouse/Inst_Ps2Interface/ps2_data_h_reg is being inverted and renamed to mouse/Inst_Ps2Interface/ps2_data_h_reg_inv.
-INFO: [Synth 8-6064] Net n_0_4387 is driving 70 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
 INFO: [Synth 8-6064] Net \task_a/is_in_circle_return2 [16] is driving 70 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_4161 is driving 70 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:46 . Memory (MB): peak = 978.258 ; gain = 691.109
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 991.086 ; gain = 704.395
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1457,7 +1501,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:46 . Memory (MB): peak = 978.258 ; gain = 691.109
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 991.086 ; gain = 704.395
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1469,25 +1513,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:46 . Memory (MB): peak = 978.258 ; gain = 691.109
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 991.086 ; gain = 704.395
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:46 . Memory (MB): peak = 978.258 ; gain = 691.109
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 991.086 ; gain = 704.395
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:46 . Memory (MB): peak = 978.258 ; gain = 691.109
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 991.086 ; gain = 704.395
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:46 . Memory (MB): peak = 978.258 ; gain = 691.109
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 991.086 ; gain = 704.395
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1513,80 +1557,77 @@ Report Cell Usage:
 |4     |blk_mem_gen_inter |     1|
 |5     |BUF               |     1|
 |6     |BUFG              |     4|
-|7     |CARRY4            |   354|
+|7     |CARRY4            |   365|
 |8     |DSP48E1           |    19|
-|9     |DSP48E1_1         |     1|
+|9     |DSP48E1_1         |     2|
 |10    |DSP48E1_2         |     1|
 |11    |DSP48E1_3         |     1|
-|12    |DSP48E1_4         |     2|
+|12    |DSP48E1_4         |     1|
 |13    |DSP48E1_5         |     1|
-|14    |LUT1              |    88|
-|15    |LUT2              |   863|
-|16    |LUT3              |  1199|
-|17    |LUT4              |   451|
-|18    |LUT5              |   567|
-|19    |LUT6              |  1611|
-|20    |MUXF7             |   270|
-|21    |MUXF8             |   101|
-|22    |FDCE              |  1153|
+|14    |LUT1              |   111|
+|15    |LUT2              |   888|
+|16    |LUT3              |  1204|
+|17    |LUT4              |   479|
+|18    |LUT5              |   540|
+|19    |LUT6              |  1607|
+|20    |MUXF7             |   269|
+|21    |MUXF8             |    91|
+|22    |FDCE              |  1148|
 |23    |FDE_1             |    32|
-|24    |FDPE              |     2|
-|25    |FDRE              |   852|
-|26    |FDSE              |     4|
-|27    |LD                |     8|
-|28    |IBUF              |     5|
-|29    |IOBUF             |     2|
-|30    |OBUF              |    29|
-|31    |OBUFT             |     5|
+|24    |FDPE              |     1|
+|25    |FDRE              |   800|
+|26    |LD                |     8|
+|27    |IBUF              |     8|
+|28    |IOBUF             |     2|
+|29    |OBUF              |    35|
 +------+------------------+------+
 
 Report Instance Areas: 
 +------+----------------------+------------------------------+------+
 |      |Instance              |Module                        |Cells |
 +------+----------------------+------------------------------+------+
-|1     |top                   |                              |  7708|
+|1     |top                   |                              |  7700|
 |2     |  clk6p25m            |clk_counter__parameterized1   |    53|
-|3     |  display             |Oled_Display                  |   608|
-|4     |  mouse               |MouseCtl                      |   969|
+|3     |  display             |Oled_Display                  |   603|
+|4     |  mouse               |MouseCtl                      |   973|
 |5     |    Inst_Ps2Interface |Ps2Interface                  |   281|
-|6     |  task_a              |adaptor_task_a                |   486|
-|7     |    anim_timer        |animation_timer               |   123|
-|8     |    mid_timer         |middle_square_timer           |   117|
-|9     |  task_group          |adaptor_task_group            |  5509|
+|6     |  task_a              |adaptor_task_a                |   464|
+|7     |    anim_timer        |animation_timer               |   117|
+|8     |    mid_timer         |middle_square_timer           |   114|
+|9     |  task_group          |adaptor_task_group            |  5517|
 |10    |    clk12p5m          |clk_counter__parameterized0   |    52|
 |11    |    clk25m            |clk_counter                   |    52|
 |12    |    clk6p25m          |clk_counter__parameterized1_0 |    52|
-|13    |    clkslow           |clk_counter__parameterized2   |    52|
-|14    |    paint_module      |paint                         |  5301|
-|15    |      nn_inst         |module_pack                   |  1473|
-|16    |        ct_inst       |CanvasTransfer                |   154|
-|17    |        nn1           |neural_net                    |  1038|
-|18    |      ssd1            |ss_display                    |    10|
+|13    |    paint_module      |paint                         |  5361|
+|14    |      nn_inst         |module_pack                   |  1517|
+|15    |        ct_inst       |CanvasTransfer                |   200|
+|16    |        nn1           |neural_net                    |  1070|
 +------+----------------------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:46 . Memory (MB): peak = 978.258 ; gain = 691.109
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 991.086 ; gain = 704.395
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 3 critical warnings and 200 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:41 . Memory (MB): peak = 978.258 ; gain = 342.754
-Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:47 . Memory (MB): peak = 978.258 ; gain = 691.109
+Synthesis finished with 0 errors, 15 critical warnings and 291 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 991.086 ; gain = 355.594
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 991.086 ; gain = 704.395
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 798 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 801 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 3 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 43 instances were transformed.
   BUF => LUT1: 1 instances
   FDE_1 => FDRE (inverted pins: C): 32 instances
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
-  LD => LDCE: 8 instances
+  LD => LDCE: 5 instances
+  LD => LDCE (inverted pins: G): 3 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-345 Infos, 238 Warnings, 3 Critical Warnings and 0 Errors encountered.
+332 Infos, 256 Warnings, 21 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:50 . Memory (MB): peak = 978.258 ; gain = 702.598
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:45 . Memory (MB): peak = 991.086 ; gain = 715.918
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/Top_Student.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 978.258 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Mar  6 18:17:13 2024...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 991.086 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Mar  6 20:15:25 2024...
