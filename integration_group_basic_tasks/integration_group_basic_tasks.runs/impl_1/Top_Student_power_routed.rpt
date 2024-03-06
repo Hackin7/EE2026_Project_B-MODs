@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Wed Mar  6 13:16:01 2024
+| Date             : Wed Mar  6 14:15:35 2024
 | Host             : HackerbookAce running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.079        |
+| Total On-Chip Power (W)  | 0.091        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.007        |
-| Device Static (W)        | 0.072        |
+| Dynamic (W)              | 0.018        |
+| Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 84.6         |
-| Junction Temperature (C) | 25.4         |
+| Max Ambient (C)          | 84.5         |
+| Junction Temperature (C) | 25.5         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,17 +52,20 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      753 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      310 |     20800 |            1.49 |
-|   CARRY4       |    <0.001 |       26 |      8150 |            0.32 |
-|   Register     |    <0.001 |      323 |     41600 |            0.78 |
-|   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |       11 |       --- |             --- |
-| Signals        |    <0.001 |      551 |       --- |             --- |
-| I/O            |     0.003 |       27 |       106 |           25.47 |
-| Static Power   |     0.072 |          |           |                 |
-| Total          |     0.079 |          |           |                 |
+| Clocks         |     0.005 |        3 |       --- |             --- |
+| Slice Logic    |     0.004 |     7167 |       --- |             --- |
+|   LUT as Logic |     0.003 |     3567 |     20800 |           17.15 |
+|   CARRY4       |    <0.001 |      290 |      8150 |            3.56 |
+|   F7/F8 Muxes  |    <0.001 |      359 |     32600 |            1.10 |
+|   Register     |    <0.001 |     1991 |     41600 |            4.79 |
+|   BUFG         |     0.000 |        3 |        32 |            9.38 |
+|   Others       |     0.000 |      127 |       --- |             --- |
+| Signals        |     0.004 |     5444 |       --- |             --- |
+| Block RAM      |     0.002 |     26.5 |        50 |           53.00 |
+| DSPs           |     0.002 |       19 |        90 |           21.11 |
+| I/O            |    <0.001 |       32 |       106 |           30.19 |
+| Static Power   |     0.073 |          |           |                 |
+| Total          |     0.091 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,16 +75,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.014 |       0.004 |      0.010 |
+| Vccint    |       1.000 |     0.027 |       0.017 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
-| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
+| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -138,16 +141,107 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-----------------------------+-----------+
-| Name                        | Power (W) |
-+-----------------------------+-----------+
-| Top_Student                 |     0.007 |
-|   clk6p25m                  |    <0.001 |
-|   display                   |    <0.001 |
-|   mouse                     |     0.003 |
-|     Inst_Ps2Interface       |     0.002 |
-|   mouse_ps2_clk_IOBUF_inst  |     0.000 |
-|   mouse_ps2_data_IOBUF_inst |     0.000 |
-+-----------------------------+-----------+
++--------------------------------------------------+-----------+
+| Name                                             | Power (W) |
++--------------------------------------------------+-----------+
+| Top_Student                                      |     0.018 |
+|   clk12p5m                                       |    <0.001 |
+|   clk25m                                         |    <0.001 |
+|   clk6p25m                                       |    <0.001 |
+|   clkslow                                        |    <0.001 |
+|   display                                        |    <0.001 |
+|   mouse                                          |     0.004 |
+|     Inst_Ps2Interface                            |     0.001 |
+|   mouse_ps2_clk_IOBUF_inst                       |     0.000 |
+|   mouse_ps2_data_IOBUF_inst                      |     0.000 |
+|   paint_module                                   |     0.010 |
+|     nn_inst                                      |     0.007 |
+|       blk_mem_gen_0_inst                         |     0.002 |
+|         U0                                       |     0.002 |
+|           inst_blk_mem_gen                       |     0.002 |
+|             gnbram.gnativebmg.native_blk_mem_gen |     0.002 |
+|               valid.cstr                         |     0.002 |
+|                 ramloop[0].ram.r                 |     0.002 |
+|                   prim_noinit.ram                |     0.002 |
+|       blk_mem_gen_const_inst                     |     0.000 |
+|         U0                                       |     0.000 |
+|           inst_blk_mem_gen                       |     0.000 |
+|             gnbram.gnativebmg.native_blk_mem_gen |     0.000 |
+|               valid.cstr                         |     0.000 |
+|                 has_mux_a.A                      |     0.000 |
+|                 ramloop[0].ram.r                 |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[10].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[11].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[12].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[13].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[14].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[15].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[16].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[17].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[18].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[19].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[1].ram.r                 |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[20].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[21].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[22].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[23].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[24].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[25].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[26].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[27].ram.r                |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[2].ram.r                 |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[3].ram.r                 |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[4].ram.r                 |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[5].ram.r                 |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[6].ram.r                 |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[7].ram.r                 |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[8].ram.r                 |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|                 ramloop[9].ram.r                 |     0.000 |
+|                   prim_init.ram                  |     0.000 |
+|       blk_mem_gen_img_inst                       |    <0.001 |
+|         U0                                       |    <0.001 |
+|           inst_blk_mem_gen                       |    <0.001 |
+|             gnbram.gnativebmg.native_blk_mem_gen |    <0.001 |
+|               valid.cstr                         |    <0.001 |
+|                 ramloop[0].ram.r                 |    <0.001 |
+|                   prim_init.ram                  |    <0.001 |
+|       blk_mem_gen_inter_inst                     |     0.000 |
+|         U0                                       |     0.000 |
+|           inst_blk_mem_gen                       |     0.000 |
+|             gnbram.gnativebmg.native_blk_mem_gen |     0.000 |
+|               valid.cstr                         |     0.000 |
+|                 ramloop[0].ram.r                 |     0.000 |
+|                   prim_noinit.ram                |     0.000 |
+|       ct_inst                                    |    <0.001 |
+|       nn1                                        |     0.003 |
+|     ssd1                                         |     0.000 |
++--------------------------------------------------+-----------+
 
 

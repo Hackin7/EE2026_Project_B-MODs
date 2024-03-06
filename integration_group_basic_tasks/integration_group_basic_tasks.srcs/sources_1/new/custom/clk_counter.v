@@ -19,7 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
+// COUNT - number of ticks before flipping -> half the timing
 module clk_counter #(parameter COUNT=10, BITWIDTH=30)(input clk, output reg clk_out);
     reg [BITWIDTH-1:0] counter;
     initial begin
@@ -28,7 +28,7 @@ module clk_counter #(parameter COUNT=10, BITWIDTH=30)(input clk, output reg clk_
     end;
     always @ (posedge clk) begin
         counter <= counter + 1;
-        if (counter == COUNT) begin
+        if (counter == COUNT-1) begin // if the new value of counter is matched
             clk_out <= ~clk_out;
             counter <= 0;
         end

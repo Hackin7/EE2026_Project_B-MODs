@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/zunmun/Documents/Stuff/GitLab/school-work/NUS/Y1S2/EE2026/Labs/Project B-MODs/MODS.xpr/MODS/MODS.runs/synth_1'
+HD_PWD='C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
