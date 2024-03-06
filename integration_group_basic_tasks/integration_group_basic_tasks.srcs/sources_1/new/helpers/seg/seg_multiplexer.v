@@ -28,25 +28,28 @@ module seg_multiplexer(
     output reg dp,
     output reg [3:0] an
 );
-    reg [1:0] state = 0;
-    always @ (posedge clk) begin
+    wire clk_10000hz;
+    clk_counter #(5_000, 30)    clk_100hz_module(clk, clk_10000hz);  // Looks like PWM
+    reg [4:0] state = 0;
+    always @ (posedge clk_10000hz) begin
+        state <= state + 1;
         if (state == 0) begin 
             seg <= seg0;
             dp <= dp0;
-            an <= 4'b0001;
+            an <= 4'b1110;
         end else if (state == 1) begin 
             seg <= seg1;
             dp <= dp1;
-            an <= 4'b0010;
+            an <= 4'b1101;
         end else if (state == 2) begin 
             seg <= seg2;
             dp <= dp2;
-            an <= 4'b0100;
+            an <= 4'b1011;
         end else if (state == 3) begin 
             seg <= seg3;
             dp <= dp3;
-            an <= 4'b1000;
-        end 
-        state <= state + 1;
+            an <= 4'b0111;
+            state <= 0; // Reset
+        end  
     end
 endmodule

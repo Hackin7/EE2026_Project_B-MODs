@@ -1,4 +1,4 @@
-module seg_num_mapping(input [3:0] display_num);
+module seg_num_mapping(input [3:0] display_num, output reg [6:0] seg);
     always @* begin    
         case (display_num)
             0: seg = 7'b1000000;

@@ -45,6 +45,7 @@ module Top_Student (
         .cs(Jx[0]), .sdin(Jx[1]), .sclk(Jx[3]), .d_cn(Jx[4]), .resn(Jx[5]), .vccen(Jx[6]), .pmoden(Jx[7])); //to SPI
     
     //// 3.B Mouse Setup /////////////////////////////////////
+    wire mouse_reset; // cannot hardcode to 1 for some reason
     wire [11:0] mouse_xpos;
     wire [11:0] mouse_ypos;
     wire [3:0] mouse_zpos;
@@ -53,7 +54,7 @@ module Top_Student (
     wire mouse_right_click;
     wire mouse_new_event;
     MouseCtl mouse(
-        .clk(clk), .rst(0), .value(11'b0), .setx(0), .sety(0), .setmax_x(96), .setmax_y(64),
+        .clk(clk), .rst(mouse_reset), .value(11'b0), .setx(0), .sety(0), .setmax_x(96), .setmax_y(64),
         .xpos(mouse_xpos), .ypos(mouse_ypos), .zpos(mouse_zpos), 
         .left(mouse_left_click), .middle(mouse_middle_click), .right(mouse_right_click), .new_event(mouse_new_event),
         .ps2_clk(mouse_ps2_clk), .ps2_data(mouse_ps2_data)
@@ -64,12 +65,14 @@ module Top_Student (
     wire group_reset;
     wire [15:0] group_led; 
     wire [6:0] group_seg;
+    wire group_dp;
+    wire [3:0] group_an;
     wire [15:0] group_oled_pixel_data;
 
     adaptor_task_group task_group(
-        .reset(a_reset), .clk(clk),
-        .btnC(btnC), .btnU(btnU), .btnL(L), .btnR(btnR), .btnD(btnD), .sw(sw), .led(a_led), 
-        .seg(a_seg), .dp(dp), .an(an),
+        .reset(group_reset), .clk(clk),
+        .btnC(btnC), .btnU(btnU), .btnL(btnL), .btnR(btnR), .btnD(btnD), .sw(sw), .led(group_led), 
+        .seg(group_seg), .dp(group_dp), .an(group_an),
         .oled_pixel_index(oled_pixel_index), .oled_pixel_data(group_oled_pixel_data),
         .mouse_xpos(mouse_xpos), .mouse_ypos(mouse_ypos), .mouse_zpos(mouse_zpos),
         .mouse_left_click(mouse_left_click), .mouse_middle_click(mouse_middle_click),
@@ -79,13 +82,15 @@ module Top_Student (
     //// Task A //////////////////////////////////////////////////////////////////////////////////////////////////
     wire a_reset;
     wire [15:0] a_led; 
-    wire [6:0] a_seg;
+    wire [6:0] a_seg; 
+    wire a_dp;
+    wire [3:0] a_an;
     wire [15:0] a_oled_pixel_data;
 
     adaptor_task_a task_a(
         .reset(a_reset), .clk(clk),
-        .btnC(btnC), .btnU(btnU), .btnL(L), .btnR(btnR), .btnD(btnD), .sw(sw), .led(a_led), 
-        .seg(a_seg), .dp(dp), .an(an),
+        .btnC(btnC), .btnU(btnU), .btnL(btnL), .btnR(btnR), .btnD(btnD), .sw(sw), .led(a_led), 
+        .seg(a_seg), .dp(a_dp), .an(a_an),
         .oled_pixel_index(oled_pixel_index), .oled_pixel_data(a_oled_pixel_data),
         .mouse_xpos(mouse_xpos), .mouse_ypos(mouse_ypos), .mouse_zpos(mouse_zpos),
         .mouse_left_click(mouse_left_click), .mouse_middle_click(mouse_middle_click),
@@ -102,7 +107,9 @@ module Top_Student (
     wire [15:0] indiv_led;
 
     assign led = enable_task_group ? group_led : indiv_led;
-    assign seg = enable_task_group ? group_seg : 0;
+    assign seg = enable_task_group ? group_seg : 7'b1111111;
+    assign dp = enable_task_group ? group_dp : 1;
+    assign an = enable_task_group ? group_an : 4'b1111;
     assign oled_pixel_data = enable_task_group ? group_oled_pixel_data : (enable_task_a ? a_oled_pixel_data : 16'hFFFF);
 
     // 4.E2
@@ -110,6 +117,7 @@ module Top_Student (
 
     // 4.E3
     assign group_reset = ~enable_task_group;
+    assign mouse_reset = group_reset;
     assign a_reset = ~enable_task_a;
     /*assign b_reset = ~enable_task_b;
     assign c_reset = ~enable_task_c;
