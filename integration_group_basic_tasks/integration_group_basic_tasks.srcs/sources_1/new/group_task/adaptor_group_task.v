@@ -20,16 +20,21 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module adaptor_group_task(
-    input clk,
-    output [15:0] led, output [5:0] seg,
+module adaptor_task_group(
+    // Control
+    input reset, input clk,
+    // LEDs, Switches, Buttons
+    input btnC, btnU, btnL, btnR, btnD, output [15:0] led,
+    // 7 Segment Display
+    output [5:0] seg, output dp, output [3:0] an,
     // OLED
-    input [12:0] oled_pixel_index, input [15:0] oled_pixel_data,
+    input [12:0] oled_pixel_index, input [30:0] oled_pixel_data,
     // Mouse
     input [11:0] mouse_xpos,  mouse_ypos, input [3:0] mouse_zpos,
     input mouse_left_click, mouse_middle_click, mouse_right_click, mouse_new_event
 );
-
+    assign dp = 1;
+    assign an = 0;
     //// Clocks /////////////////////////////////////////////////////
     wire clk_25mhz, clk_12_5mhz, clk_6_25mhz, slow_clk;
     clk_counter #(2, 32) clk25m (clk, clk_25mhz);
@@ -44,8 +49,8 @@ module adaptor_group_task(
         .clk_12p5M(clk_12_5mhz),
         .clk_6p25M(clk_6_25mhz),
         .slow_clk(slow_clk),
-        .mouse_l(mouse_left_click),
-        .reset(mouse_right_click),
+        .mouse_l(reset ? 0 : mouse_left_click),
+        .reset(reset | mouse_right_click),
         .enable(1),
         .mouse_x(mouse_xpos),
         .mouse_y(mouse_ypos),
