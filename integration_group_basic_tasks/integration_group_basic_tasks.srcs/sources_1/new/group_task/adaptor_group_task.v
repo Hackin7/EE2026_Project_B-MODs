@@ -20,12 +20,6 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module seg_multiplexer(
-    input clk,
-    input [6:0] seg1, seg2, seg3, seg4,
-    input dp1, dp2, dp3, dp4,
-    output [6:0] seg, 
-    output dp
-);
+module adaptor_group_task();
     
 endmodule

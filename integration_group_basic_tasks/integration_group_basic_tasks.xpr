@@ -77,10 +77,8 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/CanvasTransfer.v">
+      <File Path="$PSRCDIR/sources_1/new/group_task/given/CanvasTransfer.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../GitLab/school-work/NUS/Y1S2/EE2026/MODS.srcs/sources_1/new/CanvasTransfer.v"/>
-          <Attr Name="ImportTime" Val="1680151347"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -104,37 +102,29 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/module_pack.v">
+      <File Path="$PSRCDIR/sources_1/new/group_task/given/module_pack.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../GitLab/school-work/NUS/Y1S2/EE2026/MODS.srcs/sources_1/new/module_pack.v"/>
-          <Attr Name="ImportTime" Val="1686554360"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/neural_net.v">
+      <File Path="$PSRCDIR/sources_1/new/group_task/given/neural_net.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../GitLab/school-work/NUS/Y1S2/EE2026/MODS.srcs/sources_1/new/neural_net.v"/>
-          <Attr Name="ImportTime" Val="1677159677"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/paint.v">
+      <File Path="$PSRCDIR/sources_1/new/group_task/given/paint.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../GitLab/school-work/NUS/Y1S2/EE2026/MODS.srcs/sources_1/new/paint.v"/>
-          <Attr Name="ImportTime" Val="1709183192"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/ss_display.v">
+      <File Path="$PSRCDIR/sources_1/new/group_task/given/ss_display.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../GitLab/school-work/NUS/Y1S2/EE2026/MODS.srcs/sources_1/new/ss_display.v"/>
-          <Attr Name="ImportTime" Val="1696226948"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -160,6 +150,56 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../GitLab/SoundDisplay.srcs/sources_1/new/Top_Student.v"/>
           <Attr Name="ImportTime" Val="1570395690"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/CanvasTransfer.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../GitLab/school-work/NUS/Y1S2/EE2026/MODS.srcs/sources_1/new/CanvasTransfer.v"/>
+          <Attr Name="ImportTime" Val="1680151347"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/module_pack.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../GitLab/school-work/NUS/Y1S2/EE2026/MODS.srcs/sources_1/new/module_pack.v"/>
+          <Attr Name="ImportTime" Val="1686554360"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/neural_net.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../GitLab/school-work/NUS/Y1S2/EE2026/MODS.srcs/sources_1/new/neural_net.v"/>
+          <Attr Name="ImportTime" Val="1677159677"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/paint.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../GitLab/school-work/NUS/Y1S2/EE2026/MODS.srcs/sources_1/new/paint.v"/>
+          <Attr Name="ImportTime" Val="1709183192"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/ss_display.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../GitLab/school-work/NUS/Y1S2/EE2026/MODS.srcs/sources_1/new/ss_display.v"/>
+          <Attr Name="ImportTime" Val="1696226948"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -194,6 +234,14 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/seg_multiplexer.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/group_task/adaptor_group_task.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>

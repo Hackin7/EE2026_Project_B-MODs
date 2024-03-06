@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 17460 
+INFO: Helper process launched with PID 45372 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 387.762 ; gain = 100.840
+Starting RTL Elaboration : Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 387.000 ; gain = 100.480
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:14]
 INFO: [Synth 8-6157] synthesizing module 'clk_counter' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/custom/clk_counter.v:23]
@@ -102,8 +102,7 @@ WARNING: [Synth 8-6014] Unused sequential element x_inter_reg was removed.  [C:/
 WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:519]
 WARNING: [Synth 8-6014] Unused sequential element y_inter_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:525]
 INFO: [Synth 8-256] done synthesizing module 'MouseCtl' (4#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:212]
-WARNING: [Synth 8-689] width (12) of port connection 'zpos' does not match port width (4) of module 'MouseCtl' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:50]
-INFO: [Synth 8-6157] synthesizing module 'paint' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/paint.v:23]
+INFO: [Synth 8-6157] synthesizing module 'paint' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/paint.v:23]
 	Parameter WHITE bound to: 16'b1111111111111111 
 	Parameter ORANGE bound to: 16'b1111110110100000 
 	Parameter BLUE bound to: 16'b0000000000011111 
@@ -112,23 +111,23 @@ INFO: [Synth 8-6157] synthesizing module 'paint' [C:/Users/zunmun/Documents/Stuf
 	Parameter PURPLE bound to: 16'b1111100000011110 
 	Parameter outline_color bound to: 16'b0000000000000000 
 	Parameter background_color bound to: 16'b1111111111111111 
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/paint.v:154]
-WARNING: [Synth 8-567] referenced signal 'enable' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/paint.v:145]
-WARNING: [Synth 8-567] referenced signal 'within_cursor' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/paint.v:145]
-WARNING: [Synth 8-567] referenced signal 'cursor_color' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/paint.v:145]
-WARNING: [Synth 8-567] referenced signal 'red' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/paint.v:145]
-WARNING: [Synth 8-567] referenced signal 'blue' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/paint.v:145]
-WARNING: [Synth 8-567] referenced signal 'green' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/paint.v:145]
-WARNING: [Synth 8-567] referenced signal 'orange' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/paint.v:145]
-WARNING: [Synth 8-567] referenced signal 'outline' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/paint.v:145]
-WARNING: [Synth 8-567] referenced signal 'screen' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/paint.v:145]
-WARNING: [Synth 8-567] referenced signal 'pixel_data' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/paint.v:145]
-WARNING: [Synth 8-567] referenced signal 'row' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/paint.v:145]
-WARNING: [Synth 8-567] referenced signal 'col' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/paint.v:145]
-INFO: [Synth 8-6157] synthesizing module 'module_pack' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/module_pack.v:23]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-54936-HackerbookAce/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (5#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-54936-HackerbookAce/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'CanvasTransfer' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/CanvasTransfer.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/paint.v:154]
+WARNING: [Synth 8-567] referenced signal 'enable' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/paint.v:145]
+WARNING: [Synth 8-567] referenced signal 'within_cursor' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/paint.v:145]
+WARNING: [Synth 8-567] referenced signal 'cursor_color' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/paint.v:145]
+WARNING: [Synth 8-567] referenced signal 'red' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/paint.v:145]
+WARNING: [Synth 8-567] referenced signal 'blue' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/paint.v:145]
+WARNING: [Synth 8-567] referenced signal 'green' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/paint.v:145]
+WARNING: [Synth 8-567] referenced signal 'orange' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/paint.v:145]
+WARNING: [Synth 8-567] referenced signal 'outline' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/paint.v:145]
+WARNING: [Synth 8-567] referenced signal 'screen' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/paint.v:145]
+WARNING: [Synth 8-567] referenced signal 'pixel_data' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/paint.v:145]
+WARNING: [Synth 8-567] referenced signal 'row' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/paint.v:145]
+WARNING: [Synth 8-567] referenced signal 'col' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/paint.v:145]
+INFO: [Synth 8-6157] synthesizing module 'module_pack' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/module_pack.v:23]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-22692-HackerbookAce/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (5#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-22692-HackerbookAce/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'CanvasTransfer' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/CanvasTransfer.v:23]
 	Parameter CANVAS_SIZE bound to: 3136 - type: integer 
 	Parameter IDLE bound to: 2'b10 
 	Parameter PAINT bound to: 2'b01 
@@ -141,17 +140,17 @@ INFO: [Synth 8-6157] synthesizing module 'CanvasTransfer' [C:/Users/zunmun/Docum
 	Parameter YES bound to: 1'b1 
 	Parameter BigBrushOffsetX bound to: 39'b010001011010001000011010001000010001001 
 	Parameter BigBrushOffsetY bound to: 39'b011011010010010010001001001001000000000 
-INFO: [Synth 8-226] default block is never used [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/CanvasTransfer.v:119]
-WARNING: [Synth 8-6014] Unused sequential element offsetX_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/CanvasTransfer.v:91]
-WARNING: [Synth 8-6014] Unused sequential element offsetY_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/CanvasTransfer.v:92]
-INFO: [Synth 8-6155] done synthesizing module 'CanvasTransfer' (6#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/CanvasTransfer.v:23]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_img' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-54936-HackerbookAce/realtime/blk_mem_gen_img_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_img' (7#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-54936-HackerbookAce/realtime/blk_mem_gen_img_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_const' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-54936-HackerbookAce/realtime/blk_mem_gen_const_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_const' (8#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-54936-HackerbookAce/realtime/blk_mem_gen_const_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_inter' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-54936-HackerbookAce/realtime/blk_mem_gen_inter_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_inter' (9#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-54936-HackerbookAce/realtime/blk_mem_gen_inter_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'neural_net' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/neural_net.v:3]
+INFO: [Synth 8-226] default block is never used [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/CanvasTransfer.v:119]
+WARNING: [Synth 8-6014] Unused sequential element offsetX_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/CanvasTransfer.v:91]
+WARNING: [Synth 8-6014] Unused sequential element offsetY_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/CanvasTransfer.v:92]
+INFO: [Synth 8-6155] done synthesizing module 'CanvasTransfer' (6#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/CanvasTransfer.v:23]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_img' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-22692-HackerbookAce/realtime/blk_mem_gen_img_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_img' (7#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-22692-HackerbookAce/realtime/blk_mem_gen_img_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_const' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-22692-HackerbookAce/realtime/blk_mem_gen_const_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_const' (8#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-22692-HackerbookAce/realtime/blk_mem_gen_const_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_inter' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-22692-HackerbookAce/realtime/blk_mem_gen_inter_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_inter' (9#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-22692-HackerbookAce/realtime/blk_mem_gen_inter_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'neural_net' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/neural_net.v:3]
 	Parameter S_IDLE bound to: 2'b00 
 	Parameter S_FIRST bound to: 2'b01 
 	Parameter S_SECOND bound to: 2'b10 
@@ -161,16 +160,16 @@ INFO: [Synth 8-6157] synthesizing module 'neural_net' [C:/Users/zunmun/Documents
 	Parameter l1b_idx bound to: 50816 - type: integer 
 	Parameter l2b_idx bound to: 50880 - type: integer 
 	Parameter inter_idx bound to: 64 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'neural_net' (10#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/neural_net.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'module_pack' (11#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/module_pack.v:23]
-INFO: [Synth 8-6157] synthesizing module 'ss_display' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/ss_display.v:23]
-WARNING: [Synth 8-6014] Unused sequential element numsd_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/ss_display.v:33]
-INFO: [Synth 8-6155] done synthesizing module 'ss_display' (12#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/ss_display.v:23]
-INFO: [Synth 8-4471] merging register 'mouse_press_x_reg[9:0]' into 'v_cnt_reg[9:0]' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/paint.v:139]
-INFO: [Synth 8-4471] merging register 'mouse_press_y_reg[9:0]' into 'h_cnt_reg[9:0]' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/paint.v:140]
-WARNING: [Synth 8-6014] Unused sequential element mouse_press_x_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/paint.v:139]
-WARNING: [Synth 8-6014] Unused sequential element mouse_press_y_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/paint.v:140]
-INFO: [Synth 8-6155] done synthesizing module 'paint' (13#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/paint.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'neural_net' (10#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/neural_net.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'module_pack' (11#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/module_pack.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ss_display' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/ss_display.v:23]
+WARNING: [Synth 8-6014] Unused sequential element numsd_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/ss_display.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'ss_display' (12#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/ss_display.v:23]
+INFO: [Synth 8-4471] merging register 'mouse_press_x_reg[9:0]' into 'v_cnt_reg[9:0]' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/paint.v:139]
+INFO: [Synth 8-4471] merging register 'mouse_press_y_reg[9:0]' into 'h_cnt_reg[9:0]' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/paint.v:140]
+WARNING: [Synth 8-6014] Unused sequential element mouse_press_x_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/paint.v:139]
+WARNING: [Synth 8-6014] Unused sequential element mouse_press_y_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/paint.v:140]
+INFO: [Synth 8-6155] done synthesizing module 'paint' (13#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/paint.v:23]
 WARNING: [Synth 8-689] width (6) of port connection 'seg' does not match port width (7) of module 'paint' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:73]
 INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (14#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:14]
 WARNING: [Synth 8-3331] design module_pack has unconnected port clk_6p25MHz
@@ -197,7 +196,7 @@ WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[2]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[1]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 476.590 ; gain = 189.668
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 474.984 ; gain = 188.465
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -210,10 +209,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 476.590 ; gain = 189.668
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 474.984 ; gain = 188.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 476.590 ; gain = 189.668
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 474.984 ; gain = 188.465
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -241,18 +240,18 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 820.457 ; gain = 0.035
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 821.090 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'paint_module/nn_inst/blk_mem_gen_0_inst' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'paint_module/nn_inst/blk_mem_gen_img_inst' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 822.023 ; gain = 535.102
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 822.355 ; gain = 535.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 822.023 ; gain = 535.102
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 822.355 ; gain = 535.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -262,7 +261,7 @@ Applied set_property DONT_TOUCH = true for paint_module/nn_inst/blk_mem_gen_0_in
 Applied set_property DONT_TOUCH = true for paint_module/nn_inst/blk_mem_gen_const_inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for paint_module/nn_inst/blk_mem_gen_img_inst. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 822.023 ; gain = 535.102
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 822.355 ; gain = 535.836
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "clk_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -342,10 +341,10 @@ INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address si
 INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/CanvasTransfer.v:178]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/CanvasTransfer.v:177]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/CanvasTransfer.v:151]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/CanvasTransfer.v:149]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/CanvasTransfer.v:178]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/CanvasTransfer.v:177]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/CanvasTransfer.v:151]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/CanvasTransfer.v:149]
 INFO: [Synth 8-5544] ROM "enable0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "data" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "nextState0" won't be mapped to RAM because it is too sparse
@@ -361,8 +360,8 @@ INFO: [Synth 8-5546] ROM "next_addr_inter" won't be mapped to RAM because it is 
 INFO: [Synth 8-5546] ROM "next_addr_inter" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "next_addr_inter" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "next_addr_inter" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 16 [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/neural_net.v:204]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/neural_net.v:146]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 16 [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/neural_net.v:204]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/neural_net.v:146]
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'neural_net'
 INFO: [Synth 8-5546] ROM "numsd" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "pixel_data_reg[360]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -570,10 +569,10 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
                   S_COMP |                               11 |                               11
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'neural_net'
-WARNING: [Synth 8-327] inferring latch for variable 'colour_chooser_reg' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/paint.v:147]
-WARNING: [Synth 8-327] inferring latch for variable 'state_reg' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/paint.v:87]
+WARNING: [Synth 8-327] inferring latch for variable 'colour_chooser_reg' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/paint.v:147]
+WARNING: [Synth 8-327] inferring latch for variable 'state_reg' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/paint.v:87]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 822.023 ; gain = 535.102
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 822.355 ; gain = 535.836
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -924,17 +923,17 @@ DSP Report: Generating DSP addr1, operation Mode is: A*(B:0x38).
 DSP Report: operator addr1 is absorbed into DSP addr1.
 DSP Report: Generating DSP addr0, operation Mode is: PCIN+(A:0x0):B+(C:0xffffffffffff).
 DSP Report: operator addr0 is absorbed into DSP addr0.
-INFO: [Synth 8-4471] merging register 'j_reg[9:0]' into 'j_reg[9:0]' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/neural_net.v:70]
-INFO: [Synth 8-4471] merging register 'j_reg[9:0]' into 'j_reg[9:0]' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/neural_net.v:70]
-INFO: [Synth 8-4471] merging register 'i_reg[5:0]' into 'i_reg[5:0]' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/neural_net.v:69]
-INFO: [Synth 8-4471] merging register 'i_reg[5:0]' into 'i_reg[5:0]' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/neural_net.v:69]
-WARNING: [Synth 8-6014] Unused sequential element j_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/neural_net.v:70]
-WARNING: [Synth 8-6014] Unused sequential element j_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/neural_net.v:70]
-WARNING: [Synth 8-6014] Unused sequential element i_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/neural_net.v:69]
-WARNING: [Synth 8-6014] Unused sequential element i_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/neural_net.v:69]
+INFO: [Synth 8-4471] merging register 'j_reg[9:0]' into 'j_reg[9:0]' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/neural_net.v:70]
+INFO: [Synth 8-4471] merging register 'j_reg[9:0]' into 'j_reg[9:0]' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/neural_net.v:70]
+INFO: [Synth 8-4471] merging register 'i_reg[5:0]' into 'i_reg[5:0]' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/neural_net.v:69]
+INFO: [Synth 8-4471] merging register 'i_reg[5:0]' into 'i_reg[5:0]' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/neural_net.v:69]
+WARNING: [Synth 8-6014] Unused sequential element j_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/neural_net.v:70]
+WARNING: [Synth 8-6014] Unused sequential element j_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/neural_net.v:70]
+WARNING: [Synth 8-6014] Unused sequential element i_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/neural_net.v:69]
+WARNING: [Synth 8-6014] Unused sequential element i_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given/neural_net.v:69]
 INFO: [Synth 8-5546] ROM "next_addr_inter" won't be mapped to RAM because it is too sparse
-DSP Debug: swapped A/B pins for adder 000002BEB410A4A0
-DSP Debug: swapped A/B pins for adder 000002BEB411DD60
+DSP Debug: swapped A/B pins for adder 00000167B8AC6740
+DSP Debug: swapped A/B pins for adder 00000167B8AD2560
 DSP Report: Generating DSP next_val_out0, operation Mode is: A*B.
 DSP Report: operator next_val_out0 is absorbed into DSP next_val_out0.
 DSP Report: operator next_val_out0 is absorbed into DSP next_val_out0.
@@ -1040,119 +1039,212 @@ INFO: [Synth 8-3886] merging instance 'paint_module/nn_inst/ct_inst/p_reg[1]' (F
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/nn_inst/\ct_inst/p_reg[0] )
 INFO: [Synth 8-3886] merging instance 'paint_module/colour_chooser_reg[11]' (LD) to 'paint_module/colour_chooser_reg[12]'
 INFO: [Synth 8-3886] merging instance 'paint_module/colour_chooser_reg[12]' (LD) to 'paint_module/colour_chooser_reg[13]'
-INFO: [Synth 8-3886] merging instance 'mouse/y_max_reg[0]' (FDRE) to 'mouse/y_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'mouse/y_max_reg[1]' (FDRE) to 'mouse/y_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'mouse/y_max_reg[2]' (FDRE) to 'mouse/y_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'mouse/y_max_reg[3]' (FDRE) to 'mouse/y_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'mouse/y_max_reg[4]' (FDRE) to 'mouse/y_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'mouse/y_max_reg[5]' (FDRE) to 'mouse/y_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'mouse/y_max_reg[6]' (FDRE) to 'mouse/y_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'mouse/y_max_reg[7]' (FDSE) to 'mouse/y_max_reg[9]'
-INFO: [Synth 8-3886] merging instance 'mouse/y_max_reg[8]' (FDRE) to 'mouse/y_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'mouse/y_max_reg[9]' (FDSE) to 'mouse/x_max_reg[6]'
-INFO: [Synth 8-3886] merging instance 'mouse/y_max_reg[10]' (FDRE) to 'mouse/y_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'mouse/y_max_reg[11]' (FDRE) to 'mouse/x_max_reg[0]'
-INFO: [Synth 8-3886] merging instance 'mouse/x_max_reg[0]' (FDRE) to 'mouse/x_max_reg[1]'
-INFO: [Synth 8-3886] merging instance 'mouse/x_max_reg[1]' (FDRE) to 'mouse/x_max_reg[2]'
-INFO: [Synth 8-3886] merging instance 'mouse/x_max_reg[2]' (FDRE) to 'mouse/x_max_reg[3]'
-INFO: [Synth 8-3886] merging instance 'mouse/x_max_reg[3]' (FDRE) to 'mouse/x_max_reg[4]'
-INFO: [Synth 8-3886] merging instance 'mouse/x_max_reg[4]' (FDRE) to 'mouse/x_max_reg[5]'
-INFO: [Synth 8-3886] merging instance 'mouse/x_max_reg[5]' (FDRE) to 'mouse/x_max_reg[10]'
-INFO: [Synth 8-3886] merging instance 'mouse/x_max_reg[6]' (FDSE) to 'mouse/x_max_reg[7]'
-INFO: [Synth 8-3886] merging instance 'mouse/x_max_reg[7]' (FDSE) to 'mouse/x_max_reg[8]'
-INFO: [Synth 8-3886] merging instance 'mouse/x_max_reg[8]' (FDSE) to 'mouse/x_max_reg[9]'
-INFO: [Synth 8-3886] merging instance 'mouse/x_max_reg[10]' (FDRE) to 'mouse/x_max_reg[11]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mouse/x_max_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\state_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\state_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\state_reg[1] )
 INFO: [Synth 8-3886] merging instance 'paint_module/colour_chooser_reg[13]' (LD) to 'paint_module/colour_chooser_reg[14]'
+INFO: [Synth 8-3886] merging instance 'paint_module/state_choice_reg[2]' (FDE) to 'paint_module/state_choice_reg[0]'
+INFO: [Synth 8-3886] merging instance 'paint_module/state_choice_reg[0]' (FDE) to 'paint_module/state_choice_reg[1]'
 INFO: [Synth 8-3886] merging instance 'paint_module/colour_chooser_reg[14]' (LD) to 'paint_module/colour_chooser_reg[15]'
-INFO: [Synth 8-3886] merging instance 'paint_module/nn_inst/ct_inst/startY_reg[0]' (FDCE) to 'paint_module/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'paint_module/nn_inst/ct_inst/goalX_reg[0]' (FDCE) to 'paint_module/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'paint_module/nn_inst/ct_inst/goalX_reg[1]' (FDCE) to 'paint_module/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'paint_module/nn_inst/ct_inst/goalX_reg[2]' (FDCE) to 'paint_module/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'paint_module/nn_inst/ct_inst/goalY_reg[0]' (FDCE) to 'paint_module/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'paint_module/nn_inst/ct_inst/goalY_reg[1]' (FDCE) to 'paint_module/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'paint_module/nn_inst/ct_inst/goalY_reg[2]' (FDCE) to 'paint_module/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'paint_module/nn_inst/ct_inst/startY_reg[1]' (FDCE) to 'paint_module/nn_inst/ct_inst/startY_reg[2]'
-INFO: [Synth 8-3886] merging instance 'paint_module/nn_inst/ct_inst/startY_reg[2]' (FDCE) to 'paint_module/nn_inst/ct_inst/startX_reg[0]'
-INFO: [Synth 8-3886] merging instance 'paint_module/nn_inst/ct_inst/startX_reg[0]' (FDCE) to 'paint_module/nn_inst/ct_inst/startX_reg[1]'
-INFO: [Synth 8-3886] merging instance 'paint_module/nn_inst/ct_inst/startX_reg[1]' (FDCE) to 'paint_module/nn_inst/ct_inst/startX_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/nn_inst/\ct_inst/startX_reg[2] )
-INFO: [Synth 8-3886] merging instance 'paint_module/nn_inst/ct_inst/dY_reg[1]' (FDCE) to 'paint_module/nn_inst/ct_inst/dY_reg[2]'
-INFO: [Synth 8-3886] merging instance 'paint_module/nn_inst/ct_inst/dX_reg[1]' (FDCE) to 'paint_module/nn_inst/ct_inst/dX_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[360][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[359][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[358][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[357][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[356][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[355][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[354][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[353][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[352][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[351][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[350][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[349][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[348][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[347][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[346][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[345][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[344][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[343][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[342][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[341][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[340][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[339][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[338][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[337][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[336][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[335][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[334][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[333][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[332][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[331][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[330][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[329][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[328][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[327][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[326][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[325][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[324][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[323][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[322][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[321][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[320][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[319][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[318][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[317][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[316][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[315][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[314][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[313][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[312][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[311][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[310][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[309][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[308][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[307][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[306][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[305][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[304][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[303][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[302][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[301][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[300][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[299][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[298][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[297][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[296][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[295][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[294][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[293][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[292][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[291][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[290][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[289][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[288][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[287][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[286][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[285][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[284][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[283][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[282][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[281][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[280][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[279][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[278][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[277][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[276][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[275][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[274][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[273][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[272][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[271][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[270][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[269][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[268][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[267][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/\pixel_data_reg[266][2] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_new_reg) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_overflow_reg) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_inc_reg[7]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_inc_reg[6]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_inc_reg[5]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_inc_reg[4]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_inc_reg[3]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_inc_reg[2]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_inc_reg[1]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_inc_reg[0]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_max_reg[11]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_max_reg[10]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_max_reg[9]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_max_reg[8]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_max_reg[7]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_max_reg[6]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_max_reg[5]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_max_reg[4]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_max_reg[3]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_max_reg[2]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_max_reg[1]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_max_reg[0]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_sign_reg) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_pos_reg[11]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_pos_reg[10]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_pos_reg[9]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_pos_reg[8]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_pos_reg[7]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_pos_reg[6]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_pos_reg[5]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_pos_reg[4]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_pos_reg[3]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_pos_reg[2]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_pos_reg[1]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/x_pos_reg[0]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/xpos_reg[11]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/xpos_reg[10]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/xpos_reg[9]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/xpos_reg[8]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/xpos_reg[7]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/xpos_reg[6]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/xpos_reg[5]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/xpos_reg[4]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/xpos_reg[3]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/xpos_reg[2]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/xpos_reg[1]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/xpos_reg[0]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_new_reg) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_overflow_reg) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_inc_reg[7]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_inc_reg[6]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_inc_reg[5]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_inc_reg[4]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_inc_reg[3]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_inc_reg[2]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_inc_reg[1]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_inc_reg[0]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_max_reg[11]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_max_reg[10]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_max_reg[9]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_max_reg[8]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_max_reg[7]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_max_reg[6]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_max_reg[5]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_max_reg[4]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_max_reg[3]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_max_reg[2]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_max_reg[1]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_max_reg[0]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_sign_reg) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_pos_reg[11]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_pos_reg[10]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_pos_reg[9]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_pos_reg[8]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_pos_reg[7]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_pos_reg[6]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_pos_reg[5]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_pos_reg[4]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_pos_reg[3]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_pos_reg[2]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_pos_reg[1]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/y_pos_reg[0]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/ypos_reg[11]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/ypos_reg[10]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/ypos_reg[9]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/ypos_reg[8]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/ypos_reg[7]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/ypos_reg[6]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/ypos_reg[5]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/ypos_reg[4]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/ypos_reg[3]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/ypos_reg[2]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/ypos_reg[1]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/ypos_reg[0]) is unused and will be removed from module Top_Student.
 WARNING: [Synth 8-3332] Sequential element (mouse/zpos_reg[3]) is unused and will be removed from module Top_Student.
 WARNING: [Synth 8-3332] Sequential element (mouse/zpos_reg[2]) is unused and will be removed from module Top_Student.
 WARNING: [Synth 8-3332] Sequential element (mouse/zpos_reg[1]) is unused and will be removed from module Top_Student.
 WARNING: [Synth 8-3332] Sequential element (mouse/zpos_reg[0]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (mouse/middle_down_reg) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (mouse/middle_reg) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (mouse/new_event_reg) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (mouse/x_max_reg[11]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/p_reg[0]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startX_reg[2]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (nums_reg[15]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (nums_reg[14]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (nums_reg[13]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (nums_reg[12]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (nums_reg[11]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (nums_reg[10]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (nums_reg[9]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (nums_reg[8]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (nums_reg[7]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (nums_reg[6]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (nums_reg[5]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (nums_reg[4]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (nums_reg[3]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (nums_reg[2]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (nums_reg[1]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (nums_reg[0]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (MOUSE_X_POS_reg[2]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (clk_6p25MHz_reg) is unused and will be removed from module paint.
-INFO: [Synth 8-3886] merging instance 'paint_module/nn_inst/ct_inst/dY_reg[0]' (FDCE) to 'paint_module/nn_inst/ct_inst/dX_reg[0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (paint_module/nn_inst/\ct_inst/dX_reg[0] )
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[0]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[9]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[8]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[7]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[6]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[5]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[4]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[3]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[2]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dY_reg[9]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dY_reg[8]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dY_reg[7]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dY_reg[6]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dY_reg[5]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dY_reg[4]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dY_reg[3]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dY_reg[2]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startX_reg[9]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startX_reg[8]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startX_reg[7]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startX_reg[6]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startX_reg[5]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startX_reg[4]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startX_reg[3]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/primaryDir_reg) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startY_reg[9]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startY_reg[8]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startY_reg[7]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startY_reg[6]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startY_reg[5]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startY_reg[4]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (ct_inst/startY_reg[3]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (LED_reg[9]_P) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (LED_reg[8]_P) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (LED_reg[7]_P) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (LED_reg[6]_P) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (LED_reg[5]_P) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (LED_reg[4]_P) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (LED_reg[3]_P) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (LED_reg[2]_P) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (LED_reg[1]_P) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (LED_reg[0]_P) is unused and will be removed from module module_pack.
+WARNING: [Synth 8-3332] Sequential element (mouse/left_down_reg) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (mouse/left_reg) is unused and will be removed from module Top_Student.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 822.023 ; gain = 535.102
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 822.355 ; gain = 535.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1195,7 +1287,6 @@ Note: The table above is a preliminary report that shows the DSPs inferred at th
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/CanvasTransfer.v:80]
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -1206,13 +1297,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 873.715 ; gain = 586.793
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 854.875 ; gain = 568.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 900.727 ; gain = 613.805
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:33 . Memory (MB): peak = 878.160 ; gain = 591.641
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1223,20 +1314,8 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (paint_module/nn_inst/ct_inst/goalX_reg[9]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (paint_module/nn_inst/MOUSE_X_POS_reg[9]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (paint_module/v_cnt_reg[9]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (paint_module/v_cnt_reg[8]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (paint_module/v_cnt_reg[7]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (paint_module/v_cnt_reg[6]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (paint_module/nn_inst/ct_inst/turtleX_reg[0]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (paint_module/nn_inst/ct_inst/turtleY_reg[0]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (paint_module/nn_inst/ct_inst/invY_reg) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (paint_module/nn_inst/ct_inst/turtleY_reg[2]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (paint_module/nn_inst/ct_inst/turtleY_reg[1]) is unused and will be removed from module Top_Student.
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/CanvasTransfer.v:80]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 973.344 ; gain = 686.422
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:33 . Memory (MB): peak = 910.621 ; gain = 624.102
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1262,7 +1341,7 @@ INFO: [Synth 8-5365] Flop mouse/Inst_Ps2Interface/ps2_data_h_reg is being invert
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 973.344 ; gain = 686.422
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 910.621 ; gain = 624.102
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1275,7 +1354,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 973.344 ; gain = 686.422
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 910.621 ; gain = 624.102
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1287,25 +1366,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 973.344 ; gain = 686.422
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 910.621 ; gain = 624.102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 973.344 ; gain = 686.422
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 910.621 ; gain = 624.102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 973.344 ; gain = 686.422
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 910.621 ; gain = 624.102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 973.344 ; gain = 686.422
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 910.621 ; gain = 624.102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1329,75 +1408,68 @@ Report Cell Usage:
 |2     |blk_mem_gen_const |     1|
 |3     |blk_mem_gen_img   |     1|
 |4     |blk_mem_gen_inter |     1|
-|5     |BUFG              |     4|
-|6     |CARRY4            |   290|
-|7     |DSP48E1           |    13|
+|5     |BUFG              |     3|
+|6     |CARRY4            |   165|
+|7     |DSP48E1           |    12|
 |8     |DSP48E1_1         |     1|
 |9     |DSP48E1_2         |     1|
 |10    |DSP48E1_3         |     1|
-|11    |DSP48E1_4         |     2|
-|12    |DSP48E1_5         |     1|
-|13    |LUT1              |    79|
-|14    |LUT2              |   674|
-|15    |LUT3              |  1191|
-|16    |LUT4              |   359|
-|17    |LUT5              |   468|
-|18    |LUT6              |  1520|
-|19    |MUXF7             |   239|
-|20    |MUXF8             |    93|
-|21    |FDCE              |  1153|
-|22    |FDE_1             |    32|
-|23    |FDPE              |     2|
-|24    |FDRE              |   750|
-|25    |FDSE              |     4|
-|26    |LD                |     8|
-|27    |IBUF              |     1|
-|28    |IOBUF             |     2|
-|29    |OBUF              |    24|
-|30    |OBUFT             |     5|
+|11    |DSP48E1_4         |     1|
+|12    |LUT1              |    35|
+|13    |LUT2              |   448|
+|14    |LUT3              |   159|
+|15    |LUT4              |   212|
+|16    |LUT5              |   275|
+|17    |LUT6              |   299|
+|18    |FDCE              |    10|
+|19    |FDE_1             |    32|
+|20    |FDPE              |     2|
+|21    |FDRE              |   527|
+|22    |FDSE              |     4|
+|23    |IBUF              |     1|
+|24    |IOBUF             |     2|
+|25    |OBUF              |    24|
+|26    |OBUFT             |     5|
 +------+------------------+------+
 
 Report Instance Areas: 
 +------+----------------------+----------------------------+------+
 |      |Instance              |Module                      |Cells |
 +------+----------------------+----------------------------+------+
-|1     |top                   |                            |  6999|
-|2     |  clk12p5m            |clk_counter__parameterized0 |    52|
-|3     |  clk25m              |clk_counter                 |    52|
-|4     |  clk6p25m            |clk_counter__parameterized1 |    53|
-|5     |  clkslow             |clk_counter__parameterized2 |    52|
-|6     |  display             |Oled_Display                |   472|
-|7     |  mouse               |MouseCtl                    |   974|
-|8     |    Inst_Ps2Interface |Ps2Interface                |   282|
-|9     |  paint_module        |paint                       |  5264|
-|10    |    nn_inst           |module_pack                 |  1462|
-|11    |      ct_inst         |CanvasTransfer              |   154|
-|12    |      nn1             |neural_net                  |  1038|
-|13    |    ssd1              |ss_display                  |    10|
+|1     |top                   |                            |  2301|
+|2     |  clk25m              |clk_counter                 |    52|
+|3     |  clk6p25m            |clk_counter__parameterized1 |    53|
+|4     |  clkslow             |clk_counter__parameterized2 |    52|
+|5     |  display             |Oled_Display                |   435|
+|6     |  mouse               |MouseCtl                    |   446|
+|7     |    Inst_Ps2Interface |Ps2Interface                |   256|
+|8     |  paint_module        |paint                       |  1213|
+|9     |    nn_inst           |module_pack                 |  1161|
+|10    |      nn1             |neural_net                  |  1048|
+|11    |    ssd1              |ss_display                  |    10|
 +------+----------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 973.344 ; gain = 686.422
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 910.621 ; gain = 624.102
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 115 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 973.344 ; gain = 340.988
-Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 973.344 ; gain = 686.422
+Synthesis finished with 0 errors, 0 critical warnings and 1461 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 910.621 ; gain = 276.730
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 910.621 ; gain = 624.102
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 684 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 216 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 42 instances were transformed.
+  A total of 34 instances were transformed.
   FDE_1 => FDRE (inverted pins: C): 32 instances
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
-  LD => LDCE: 8 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-332 Infos, 166 Warnings, 0 Critical Warnings and 0 Errors encountered.
+393 Infos, 184 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:44 . Memory (MB): peak = 973.344 ; gain = 697.918
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:37 . Memory (MB): peak = 910.621 ; gain = 635.633
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/Top_Student.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 973.344 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Mar  6 14:14:23 2024...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 910.621 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Mar  6 16:16:22 2024...
