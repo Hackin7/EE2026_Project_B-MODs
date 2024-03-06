@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Wed Mar  6 18:10:42 2024
+| Date         : Wed Mar  6 18:18:28 2024
 | Host         : HackerbookAce running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Top_Student_methodology_drc_routed.rpt -pb Top_Student_methodology_drc_routed.pb -rpx Top_Student_methodology_drc_routed.rpx
 | Design       : Top_Student
@@ -23,15 +23,15 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 1037
+             Violations found: 1061
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
 | DPIR-1    | Warning  | Asynchronous driver check     | 7          |
-| SYNTH-10  | Warning  | Wide multiplier               | 10         |
+| SYNTH-10  | Warning  | Wide multiplier               | 16         |
 | SYNTH-13  | Warning  | combinational multiplier      | 2          |
 | TIMING-17 | Warning  | Non-clocked sequential cell   | 1000       |
-| TIMING-18 | Warning  | Missing input or output delay | 10         |
+| TIMING-18 | Warning  | Missing input or output delay | 28         |
 | TIMING-20 | Warning  | Non-clocked latch             | 8          |
 +-----------+----------+-------------------------------+------------+
 
@@ -74,50 +74,80 @@ Related violations: <none>
 
 SYNTH-10#1 Warning
 Wide multiplier  
-Detected multiplier at task_group/paint_module/nn_inst/nn1/next_val_out0 of size 18x18, it is decomposed from a wide multipler into 16 DSP blocks.
+Detected multiplier at task_a/is_in_circle_return1 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#2 Warning
 Wide multiplier  
-Detected multiplier at task_group/paint_module/nn_inst/nn1/next_val_out0__0 of size 14x18, it is decomposed from a wide multipler into 16 DSP blocks.
+Detected multiplier at task_a/is_in_circle_return1__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#3 Warning
 Wide multiplier  
-Detected multiplier at task_group/paint_module/nn_inst/nn1/next_val_out0__1 of size 18x18, it is decomposed from a wide multipler into 16 DSP blocks.
+Detected multiplier at task_a/is_in_circle_return1__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#4 Warning
 Wide multiplier  
-Detected multiplier at task_group/paint_module/nn_inst/nn1/next_val_out0__2 of size 18x18, it is decomposed from a wide multipler into 16 DSP blocks.
+Detected multiplier at task_a/is_in_circle_return1__2 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#5 Warning
 Wide multiplier  
-Detected multiplier at task_group/paint_module/nn_inst/nn1/next_val_out0__3 of size 18x14, it is decomposed from a wide multipler into 16 DSP blocks.
+Detected multiplier at task_a/is_in_circle_return1__3 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#6 Warning
 Wide multiplier  
-Detected multiplier at task_group/paint_module/nn_inst/nn1/next_val_out0__4 of size 18x18, it is decomposed from a wide multipler into 16 DSP blocks.
+Detected multiplier at task_a/is_in_circle_return1__4 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#7 Warning
 Wide multiplier  
-Detected multiplier at task_group/paint_module/nn_inst/nn1/next_val_out0__5 of size 18x18, it is decomposed from a wide multipler into 16 DSP blocks.
+Detected multiplier at task_group/paint_module/nn_inst/nn1/next_val_out0 of size 18x18, it is decomposed from a wide multipler into 16 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#8 Warning
 Wide multiplier  
-Detected multiplier at task_group/paint_module/nn_inst/nn1/next_val_out0__6 of size 18x18, it is decomposed from a wide multipler into 16 DSP blocks.
+Detected multiplier at task_group/paint_module/nn_inst/nn1/next_val_out0__0 of size 14x18, it is decomposed from a wide multipler into 16 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#9 Warning
 Wide multiplier  
-Detected multiplier at task_group/paint_module/nn_inst/nn1/next_val_out0__7 of size 18x18, it is decomposed from a wide multipler into 16 DSP blocks.
+Detected multiplier at task_group/paint_module/nn_inst/nn1/next_val_out0__1 of size 18x18, it is decomposed from a wide multipler into 16 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#10 Warning
+Wide multiplier  
+Detected multiplier at task_group/paint_module/nn_inst/nn1/next_val_out0__2 of size 18x18, it is decomposed from a wide multipler into 16 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#11 Warning
+Wide multiplier  
+Detected multiplier at task_group/paint_module/nn_inst/nn1/next_val_out0__3 of size 18x14, it is decomposed from a wide multipler into 16 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#12 Warning
+Wide multiplier  
+Detected multiplier at task_group/paint_module/nn_inst/nn1/next_val_out0__4 of size 18x18, it is decomposed from a wide multipler into 16 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#13 Warning
+Wide multiplier  
+Detected multiplier at task_group/paint_module/nn_inst/nn1/next_val_out0__5 of size 18x18, it is decomposed from a wide multipler into 16 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#14 Warning
+Wide multiplier  
+Detected multiplier at task_group/paint_module/nn_inst/nn1/next_val_out0__6 of size 18x18, it is decomposed from a wide multipler into 16 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#15 Warning
+Wide multiplier  
+Detected multiplier at task_group/paint_module/nn_inst/nn1/next_val_out0__7 of size 18x18, it is decomposed from a wide multipler into 16 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#16 Warning
 Wide multiplier  
 Detected multiplier at task_group/paint_module/nn_inst/nn1/next_val_out0__8 of size 18x18, it is decomposed from a wide multipler into 16 DSP blocks.
 Related violations: <none>
@@ -5174,12 +5204,102 @@ Related violations: <none>
 
 TIMING-18#9 Warning
 Missing input or output delay  
-An input delay is missing on mouse_ps2_clk relative to clock(s) sys_clk_pin
+An input delay is missing on btnC relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#10 Warning
 Missing input or output delay  
+An input delay is missing on btnD relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An input delay is missing on mouse_ps2_clk relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
 An input delay is missing on mouse_ps2_data relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An input delay is missing on sw[0] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#14 Warning
+Missing input or output delay  
+An input delay is missing on sw[10] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#15 Warning
+Missing input or output delay  
+An input delay is missing on sw[11] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An input delay is missing on sw[12] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#17 Warning
+Missing input or output delay  
+An input delay is missing on sw[13] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#18 Warning
+Missing input or output delay  
+An input delay is missing on sw[14] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#19 Warning
+Missing input or output delay  
+An input delay is missing on sw[15] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#20 Warning
+Missing input or output delay  
+An input delay is missing on sw[1] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#21 Warning
+Missing input or output delay  
+An input delay is missing on sw[2] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#22 Warning
+Missing input or output delay  
+An input delay is missing on sw[3] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#23 Warning
+Missing input or output delay  
+An input delay is missing on sw[4] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#24 Warning
+Missing input or output delay  
+An input delay is missing on sw[5] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#25 Warning
+Missing input or output delay  
+An input delay is missing on sw[6] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#26 Warning
+Missing input or output delay  
+An input delay is missing on sw[7] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#27 Warning
+Missing input or output delay  
+An input delay is missing on sw[8] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#28 Warning
+Missing input or output delay  
+An input delay is missing on sw[9] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-20#1 Warning

@@ -28,7 +28,7 @@ module adaptor_task_a(
     // 7 Segment Display
     output [5:0] seg, output dp, output [3:0] an,
     // OLED
-    input [12:0] oled_pixel_index, input [15:0] oled_pixel_data,
+    input [12:0] oled_pixel_index, output [15:0] oled_pixel_data,
     // Mouse - NOT NEEDED
     input [11:0] mouse_xpos,  mouse_ypos, input [3:0] mouse_zpos,
     input mouse_left_click, mouse_middle_click, mouse_right_click, mouse_new_event
