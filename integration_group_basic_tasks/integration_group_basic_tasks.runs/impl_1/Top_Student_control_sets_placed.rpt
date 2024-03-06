@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Wed Mar  6 22:01:45 2024
+| Date         : Wed Mar  6 22:16:52 2024
 | Host         : HackerbookAce running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
 | Design       : Top_Student
@@ -50,12 +50,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             298 |          102 |
-| No           | No                    | Yes                    |            2322 |          309 |
-| No           | Yes                   | No                     |             784 |          113 |
-| Yes          | No                    | No                     |             218 |           33 |
-| Yes          | No                    | Yes                    |             150 |           25 |
-| Yes          | Yes                   | No                     |             456 |           91 |
+| No           | No                    | No                     |             298 |           84 |
+| No           | No                    | Yes                    |            2322 |          332 |
+| No           | Yes                   | No                     |             784 |          109 |
+| Yes          | No                    | No                     |             218 |           32 |
+| Yes          | No                    | Yes                    |             150 |           26 |
+| Yes          | Yes                   | No                     |             456 |          103 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -66,78 +66,78 @@ Table of Contents
 |                        Clock Signal                       |                            Enable Signal                            |                      Set/Reset Signal                     | Slice Load Count | Bel Load Count |
 +-----------------------------------------------------------+---------------------------------------------------------------------+-----------------------------------------------------------+------------------+----------------+
 | ~clk_6_25mhz_BUFG                                         |                                                                     |                                                           |                2 |              4 |
-| ~mouse/state_choice_reg[2]_rep__3                         |                                                                     |                                                           |                2 |              6 |
+| ~mouse/state_choice_reg[2]_rep__3                         |                                                                     |                                                           |                1 |              6 |
 |  paint_module/clk_25                                      |                                                                     | task_group/paint_module/nn_inst/nn_rst                    |                3 |              6 |
-|  task_group/paint_module/clk_s                            |                                                                     |                                                           |                2 |              8 |
 |  clk_IBUF_BUFG                                            |                                                                     | mouse/Inst_Ps2Interface/clk_inter0                        |                1 |              8 |
+|  task_group/paint_module/clk_s                            |                                                                     |                                                           |                2 |              8 |
 |  clk_IBUF_BUFG                                            |                                                                     | mouse/Inst_Ps2Interface/data_inter0                       |                1 |              8 |
-|  paint_module/clk_25                                      | task_group/paint_module/nn_inst/nn1/digit[3]_i_1_n_0                | task_group/paint_module/nn_inst/nn_algo_rst               |                2 |              8 |
+|  paint_module/clk_25                                      | task_group/paint_module/nn_inst/nn1/digit[3]_i_1_n_0                | task_group/paint_module/nn_inst/nn_algo_rst               |                1 |              8 |
 |  paint_module/clk_25                                      | task_group/paint_module/nn_inst/nn1/FSM_sequential_state[1]_i_1_n_0 | task_group/paint_module/nn_inst/nn_algo_rst               |                2 |              8 |
 |  clk_IBUF_BUFG                                            | mouse/Inst_Ps2Interface/shift_frame                                 | mouse/Inst_Ps2Interface/reset_bit_count                   |                2 |              8 |
-|  task_group/paint_module/colour_chooser_reg[15]_i_2_n_0   |                                                                     |                                                           |                5 |             10 |
-|  clk_IBUF_BUFG                                            | mouse/Inst_Ps2Interface/right_down_reg                              | mouse/Inst_Ps2Interface/group_reset                       |                4 |             12 |
-|  paint_module/clk_25                                      | task_group/paint_module/nn_inst/nn1/i[5]_i_1_n_0                    | task_group/paint_module/nn_inst/nn_algo_rst               |                3 |             12 |
-|  task_group/clk6p25m/clk_6_25mhz                          |                                                                     |                                                           |                3 |             14 |
-|  clk_IBUF_BUFG                                            | sw_IBUF[4]                                                          |                                                           |                4 |             14 |
-|  paint_module/clk_25                                      | task_group/paint_module/nn_inst/nn1/next_out_valid                  | task_group/paint_module/nn_inst/nn_algo_rst               |                2 |             14 |
+|  task_group/paint_module/colour_chooser_reg[15]_i_2_n_0   |                                                                     |                                                           |                2 |             10 |
+|  paint_module/clk_25                                      | task_group/paint_module/nn_inst/nn1/i[5]_i_1_n_0                    | task_group/paint_module/nn_inst/nn_algo_rst               |                2 |             12 |
+|  clk_IBUF_BUFG                                            | mouse/Inst_Ps2Interface/right_down_reg                              | mouse/Inst_Ps2Interface/group_reset                       |                2 |             12 |
+|  task_group/clk6p25m/clk_6_25mhz                          |                                                                     |                                                           |                5 |             14 |
+|  clk_IBUF_BUFG                                            | sw_IBUF[4]                                                          |                                                           |                3 |             14 |
+|  paint_module/clk_25                                      | task_group/paint_module/nn_inst/nn1/next_out_valid                  | task_group/paint_module/nn_inst/nn_algo_rst               |                3 |             14 |
 |  paint_module/clk_25                                      | task_group/paint_module/nn_inst/nn1/addr_inter0                     | task_group/paint_module/nn_inst/nn_algo_rst               |                5 |             14 |
 |  clk_IBUF_BUFG                                            | mouse/Inst_Ps2Interface/delay_63clk_count[6]_i_2_n_0                | mouse/Inst_Ps2Interface/delay_63clk_count[6]_i_1_n_0      |                2 |             14 |
-|  clk_IBUF_BUFG                                            | mouse/Inst_Ps2Interface/E[0]                                        | mouse/Inst_Ps2Interface/group_reset                       |                3 |             16 |
-|  clk_IBUF_BUFG                                            | mouse/Inst_Ps2Interface/y_inc_reg[0][0]                             | mouse/Inst_Ps2Interface/group_reset                       |                2 |             16 |
-|  clk_IBUF_BUFG                                            | mouse/tx_data0                                                      |                                                           |                3 |             16 |
+|  clk_IBUF_BUFG                                            | mouse/tx_data0                                                      |                                                           |                4 |             16 |
 |  clk_IBUF_BUFG                                            | mouse/Inst_Ps2Interface/load_rx_data                                |                                                           |                2 |             16 |
+|  clk_IBUF_BUFG                                            | mouse/Inst_Ps2Interface/E[0]                                        | mouse/Inst_Ps2Interface/group_reset                       |                2 |             16 |
+|  clk_IBUF_BUFG                                            | mouse/Inst_Ps2Interface/y_inc_reg[0][0]                             | mouse/Inst_Ps2Interface/group_reset                       |                3 |             16 |
 |  task_group/clk6p25m/clk_6_25mhz                          |                                                                     | task_group/paint_module/h_cnt[9]_i_1_n_0                  |                5 |             20 |
-|  paint_module/clk_25                                      | task_group/paint_module/nn_inst/nn1/j[9]_i_1_n_0                    | task_group/paint_module/nn_inst/nn_algo_rst               |                4 |             20 |
+|  paint_module/clk_25                                      | task_group/paint_module/nn_inst/nn1/j[9]_i_1_n_0                    | task_group/paint_module/nn_inst/nn_algo_rst               |                5 |             20 |
 |  paint_module/clk_25                                      | task_group/paint_module/nn_inst/nn1/digit_valid                     | task_group/paint_module/nn_inst/nn_rst                    |                2 |             20 |
-|  paint_module/clk_25                                      | task_group/paint_module/nn_inst/nn1/addr_img0                       | task_group/paint_module/nn_inst/nn_algo_rst               |                6 |             20 |
+|  paint_module/clk_25                                      | task_group/paint_module/nn_inst/nn1/addr_img0                       | task_group/paint_module/nn_inst/nn_algo_rst               |                4 |             20 |
 |  clk_IBUF_BUFG                                            | mouse/Inst_Ps2Interface/frame[9]_i_1_n_0                            |                                                           |                2 |             20 |
-|  paint_module/clk_25                                      | task_group/paint_module/nn_inst/imgw_valid_i_1_n_0                  | task_group/paint_module/nn_inst/nn_rst                    |                4 |             22 |
+|  paint_module/clk_25                                      | task_group/paint_module/nn_inst/imgw_valid_i_1_n_0                  | task_group/paint_module/nn_inst/nn_rst                    |                6 |             22 |
 |  clk_IBUF_BUFG                                            | mouse/Inst_Ps2Interface/delay_20us_count[10]_i_2_n_0                | mouse/Inst_Ps2Interface/delay_20us_count[10]_i_1_n_0      |                3 |             22 |
 |  clk_IBUF_BUFG                                            | mouse/y_new_reg_n_0                                                 |                                                           |                4 |             24 |
-|  clk_IBUF_BUFG                                            | mouse/x_new_reg_n_0                                                 |                                                           |                6 |             24 |
-|  task_group/starting_digit_number/clk_100hz_module/dp_reg |                                                                     |                                                           |                5 |             26 |
+|  clk_IBUF_BUFG                                            | mouse/x_new_reg_n_0                                                 |                                                           |                3 |             24 |
+|  task_group/starting_digit_number/clk_100hz_module/dp_reg |                                                                     |                                                           |                3 |             26 |
 |  clk_IBUF_BUFG                                            | mouse/Inst_Ps2Interface/delay_100us_count[0]_i_2_n_0                | mouse/Inst_Ps2Interface/clear                             |                4 |             28 |
-|  clk_IBUF_BUFG                                            |                                                                     | task_group/paint_module/nn_inst/nn_rst_i_1_n_0            |                7 |             30 |
+|  clk_IBUF_BUFG                                            |                                                                     | task_group/paint_module/nn_inst/nn_rst_i_1_n_0            |                6 |             30 |
 | ~clk_6_25mhz_BUFG                                         |                                                                     | display/frame_counter[16]_i_1_n_0                         |                4 |             32 |
 |  clk_IBUF_BUFG                                            |                                                                     | task_group/paint_module/AR[0]                             |                6 |             32 |
-|  paint_module/clk_25                                      | task_group/paint_module/nn_inst/nn1/addr_const[15]_i_1_n_0          | task_group/paint_module/nn_inst/nn_algo_rst               |               10 |             32 |
-|  mouse/state_choice_reg[2]_rep__3_0                       |                                                                     |                                                           |               12 |             36 |
+|  paint_module/clk_25                                      | task_group/paint_module/nn_inst/nn1/addr_const[15]_i_1_n_0          | task_group/paint_module/nn_inst/nn_algo_rst               |               11 |             32 |
+|  mouse/state_choice_reg[2]_rep__3_0                       |                                                                     |                                                           |                7 |             36 |
 | ~clk_6_25mhz_BUFG                                         | display/delay[0]_i_1_n_0                                            |                                                           |                5 |             40 |
-|  clk_IBUF_BUFG                                            |                                                                     | mouse/reset_timeout_cnt_reg_n_0                           |                6 |             48 |
+|  clk_IBUF_BUFG                                            |                                                                     | mouse/reset_timeout_cnt_reg_n_0                           |                5 |             48 |
 |  clk_IBUF_BUFG                                            |                                                                     | mouse/reset_periodic_check_cnt__0                         |                6 |             52 |
 |  clk_IBUF_BUFG                                            |                                                                     | task_group/starting_digit_number/clk_100hz_module/clk_out |                8 |             58 |
+|  clk_IBUF_BUFG                                            |                                                                     | task_group/clk12p5m/clk_out                               |                8 |             62 |
 |  clk_IBUF_BUFG                                            |                                                                     | clk6p25m/clk_out                                          |                8 |             62 |
 |  clk_IBUF_BUFG                                            |                                                                     | task_group/clkslow/clk_out                                |                8 |             62 |
 |  clk_IBUF_BUFG                                            |                                                                     | task_group/clk6p25m/clk_out                               |                8 |             62 |
-|  clk_IBUF_BUFG                                            |                                                                     | task_group/clk12p5m/clk_out                               |                8 |             62 |
 |  clk_IBUF_BUFG                                            |                                                                     | task_group/clk25m/clk_out                                 |                8 |             62 |
 |  clk_IBUF_BUFG                                            | task_group/paint_module/nn_inst/nn_rst_i_1_n_0                      | task_group/paint_module/nn_inst/rst_counter               |                8 |             64 |
 |  clk_IBUF_BUFG                                            | task_a/mid_timer/counter[0]_i_2_n_0                                 | task_a/mid_timer/counter[0]_i_1__6_n_0                    |                8 |             64 |
-| ~clk_6_25mhz_BUFG                                         | display/FSM_onehot_state[31]_i_1__0_n_0                             |                                                           |                7 |             64 |
-|  clk_IBUF_BUFG                                            | task_group/paint_module/nn_inst/ct_inst/nextDY                      | task_group/paint_module/AR[0]                             |               10 |             64 |
+| ~clk_6_25mhz_BUFG                                         | display/FSM_onehot_state[31]_i_1__0_n_0                             |                                                           |                9 |             64 |
+|  clk_IBUF_BUFG                                            | task_group/paint_module/nn_inst/ct_inst/nextDY                      | task_group/paint_module/AR[0]                             |               11 |             64 |
 |  clk_IBUF_BUFG                                            |                                                                     | task_group/paint_module/reset_count[31]_i_1_n_0           |                9 |             64 |
-|  clk_IBUF_BUFG                                            |                                                                     | task_a/anim_timer/counter[31]_i_1_n_0                     |                6 |             64 |
-|  paint_module/clk_25                                      |                                                                     |                                                           |               30 |             66 |
-| ~clk_6_25mhz_BUFG                                         |                                                                     | display/spi_word[39]_i_1_n_0                              |               20 |             90 |
-|  clk_IBUF_BUFG                                            |                                                                     | mouse/Inst_Ps2Interface/group_reset                       |               21 |            118 |
-|  paint_module/clockMouse                                  |                                                                     | mouse/pixel_data_reg[253][1]                              |               13 |            128 |
-|  paint_module/clockMouse                                  |                                                                     | mouse/pixel_data_reg[125][1]                              |               20 |            128 |
-|  paint_module/clockMouse                                  |                                                                     | mouse/pixel_data_reg[61][2]                               |               17 |            128 |
-|  paint_module/clockMouse                                  |                                                                     | mouse/pixel_data_reg[317][2]                              |               15 |            128 |
-|  paint_module/clockMouse                                  |                                                                     | mouse/pixel_data_reg[189][0]                              |               17 |            128 |
-|  paint_module/clockMouse                                  |                                                                     | mouse/pixel_data_reg[189][2]                              |               17 |            128 |
-|  paint_module/clockMouse                                  |                                                                     | mouse/pixel_data_reg[253][2]                              |               13 |            128 |
-|  paint_module/clockMouse                                  |                                                                     | mouse/pixel_data_reg[317][0]                              |               16 |            128 |
-|  paint_module/clockMouse                                  |                                                                     | mouse/pixel_data_reg[125][0]                              |               19 |            128 |
-|  paint_module/clockMouse                                  |                                                                     | mouse/pixel_data_reg[189][1]                              |               17 |            128 |
-|  paint_module/clockMouse                                  |                                                                     | mouse/pixel_data_reg[317][1]                              |               15 |            128 |
-|  paint_module/clockMouse                                  |                                                                     | mouse/pixel_data_reg[253][0]                              |               14 |            128 |
-|  paint_module/clockMouse                                  |                                                                     | mouse/pixel_data_reg[61][0]                               |               17 |            128 |
-|  paint_module/clockMouse                                  |                                                                     | mouse/pixel_data_reg[61][1]                               |               25 |            128 |
-|  clk_IBUF_BUFG                                            |                                                                     |                                                           |               41 |            128 |
-|  paint_module/clk_25                                      | task_group/paint_module/nn_inst/nn1/val_out[63]_i_1_n_0             | task_group/paint_module/nn_inst/nn_algo_rst               |               30 |            128 |
-|  paint_module/clockMouse                                  |                                                                     | mouse/pixel_data_reg[125][2]                              |               16 |            128 |
-|  paint_module/clockMouse                                  |                                                                     | mouse/pixel_data_reg[321][0]                              |               28 |            246 |
+|  clk_IBUF_BUFG                                            |                                                                     | task_a/anim_timer/counter[31]_i_1_n_0                     |                7 |             64 |
+|  paint_module/clk_25                                      |                                                                     |                                                           |               23 |             66 |
+| ~clk_6_25mhz_BUFG                                         |                                                                     | display/spi_word[39]_i_1_n_0                              |               17 |             90 |
+|  clk_IBUF_BUFG                                            |                                                                     | mouse/Inst_Ps2Interface/group_reset                       |               18 |            118 |
+|  clk_IBUF_BUFG                                            |                                                                     |                                                           |               39 |            128 |
+|  paint_module/clk_25                                      | task_group/paint_module/nn_inst/nn1/val_out[63]_i_1_n_0             | task_group/paint_module/nn_inst/nn_algo_rst               |               43 |            128 |
+|  paint_module/clockMouse                                  |                                                                     | task_group/paint_module/pixel_data[127][0]_i_2_n_0        |               21 |            128 |
+|  paint_module/clockMouse                                  |                                                                     | task_group/paint_module/pixel_data[127][2]_i_2_n_0        |               19 |            128 |
+|  paint_module/clockMouse                                  |                                                                     | task_group/paint_module/pixel_data[127][1]_i_2_n_0        |               16 |            128 |
+|  paint_module/clockMouse                                  |                                                                     | task_group/paint_module/pixel_data[191][0]_i_2_n_0        |               17 |            128 |
+|  paint_module/clockMouse                                  |                                                                     | task_group/paint_module/pixel_data[191][1]_i_2_n_0        |               18 |            128 |
+|  paint_module/clockMouse                                  |                                                                     | task_group/paint_module/pixel_data[191][2]_i_2_n_0        |               20 |            128 |
+|  paint_module/clockMouse                                  |                                                                     | task_group/paint_module/pixel_data[255][1]_i_2_n_0        |               14 |            128 |
+|  paint_module/clockMouse                                  |                                                                     | task_group/paint_module/pixel_data[255][0]_i_2_n_0        |               13 |            128 |
+|  paint_module/clockMouse                                  |                                                                     | task_group/paint_module/pixel_data[255][2]_i_2_n_0        |               18 |            128 |
+|  paint_module/clockMouse                                  |                                                                     | task_group/paint_module/pixel_data[319][0]_i_2_n_0        |               16 |            128 |
+|  paint_module/clockMouse                                  |                                                                     | task_group/paint_module/pixel_data[319][2]_i_2_n_0        |               19 |            128 |
+|  paint_module/clockMouse                                  |                                                                     | task_group/paint_module/pixel_data[319][1]_i_2_n_0        |               18 |            128 |
+|  paint_module/clockMouse                                  |                                                                     | task_group/paint_module/pixel_data[63][1]_i_2_n_0         |               23 |            128 |
+|  paint_module/clockMouse                                  |                                                                     | task_group/paint_module/pixel_data[63][2]_i_2_n_0         |               20 |            128 |
+|  paint_module/clockMouse                                  |                                                                     | task_group/paint_module/pixel_data[63][0]_i_2_n_0         |               18 |            128 |
+|  paint_module/clockMouse                                  |                                                                     | task_group/paint_module/pixel_data[360][2]_i_3_n_0        |               35 |            246 |
 +-----------------------------------------------------------+---------------------------------------------------------------------+-----------------------------------------------------------+------------------+----------------+
 
 

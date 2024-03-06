@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Mar  6 22:00:07 2024
-# Process ID: 81528
+# Start of session at: Wed Mar  6 22:15:08 2024
+# Process ID: 82888
 # Current directory: C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1
 # Command line: vivado.exe -log Top_Student.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Student.tcl
 # Log file: C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/Top_Student.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 27996 
+INFO: Helper process launched with PID 27488 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 387.238 ; gain = 100.902
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 387.160 ; gain = 100.922
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:14]
 INFO: [Synth 8-6157] synthesizing module 'clk_counter' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/custom/clk_counter.v:23]
@@ -132,8 +132,8 @@ WARNING: [Synth 8-567] referenced signal 'pixel_data' should be on the sensitivi
 WARNING: [Synth 8-567] referenced signal 'row' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/paint.v:145]
 WARNING: [Synth 8-567] referenced signal 'col' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/paint.v:145]
 INFO: [Synth 8-6157] synthesizing module 'module_pack' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/module_pack.v:23]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-81528-HackerbookAce/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (5#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-81528-HackerbookAce/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-82888-HackerbookAce/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (5#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-82888-HackerbookAce/realtime/blk_mem_gen_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'CanvasTransfer' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:23]
 	Parameter CANVAS_SIZE bound to: 3136 - type: integer 
 	Parameter IDLE bound to: 2'b10 
@@ -151,12 +151,12 @@ INFO: [Synth 8-226] default block is never used [C:/Users/zunmun/Documents/Stuff
 WARNING: [Synth 8-6014] Unused sequential element offsetX_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:91]
 WARNING: [Synth 8-6014] Unused sequential element offsetY_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:92]
 INFO: [Synth 8-6155] done synthesizing module 'CanvasTransfer' (6#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:23]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_img' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-81528-HackerbookAce/realtime/blk_mem_gen_img_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_img' (7#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-81528-HackerbookAce/realtime/blk_mem_gen_img_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_const' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-81528-HackerbookAce/realtime/blk_mem_gen_const_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_const' (8#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-81528-HackerbookAce/realtime/blk_mem_gen_const_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_inter' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-81528-HackerbookAce/realtime/blk_mem_gen_inter_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_inter' (9#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-81528-HackerbookAce/realtime/blk_mem_gen_inter_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_img' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-82888-HackerbookAce/realtime/blk_mem_gen_img_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_img' (7#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-82888-HackerbookAce/realtime/blk_mem_gen_img_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_const' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-82888-HackerbookAce/realtime/blk_mem_gen_const_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_const' (8#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-82888-HackerbookAce/realtime/blk_mem_gen_const_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_inter' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-82888-HackerbookAce/realtime/blk_mem_gen_inter_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_inter' (9#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-82888-HackerbookAce/realtime/blk_mem_gen_inter_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'neural_net' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/neural_net.v:3]
 	Parameter S_IDLE bound to: 2'b00 
 	Parameter S_FIRST bound to: 2'b01 
@@ -313,7 +313,7 @@ WARNING: [Synth 8-3331] design adaptor_task_group has unconnected port sw[3]
 WARNING: [Synth 8-3331] design adaptor_task_group has unconnected port sw[2]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 477.922 ; gain = 191.586
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 478.676 ; gain = 192.438
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -326,10 +326,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 477.922 ; gain = 191.586
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 478.676 ; gain = 192.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 477.922 ; gain = 191.586
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 478.676 ; gain = 192.438
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -355,18 +355,18 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 825.047 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 824.902 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'task_group/paint_module/nn_inst/blk_mem_gen_0_inst' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'task_group/paint_module/nn_inst/blk_mem_gen_img_inst' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 826.609 ; gain = 540.273
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 826.469 ; gain = 540.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 826.609 ; gain = 540.273
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 826.469 ; gain = 540.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -376,7 +376,7 @@ Applied set_property DONT_TOUCH = true for task_group/paint_module/nn_inst/blk_m
 Applied set_property DONT_TOUCH = true for task_group/paint_module/nn_inst/blk_mem_gen_const_inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for task_group/paint_module/nn_inst/blk_mem_gen_img_inst. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 826.609 ; gain = 540.273
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 826.469 ; gain = 540.230
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "clk_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -688,7 +688,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 WARNING: [Synth 8-327] inferring latch for variable 'colour_chooser_reg' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/paint.v:147]
 WARNING: [Synth 8-327] inferring latch for variable 'state_reg' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/paint.v:87]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 826.609 ; gain = 540.273
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 826.469 ; gain = 540.230
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1139,8 +1139,8 @@ WARNING: [Synth 8-6014] Unused sequential element j_reg was removed.  [C:/Users/
 WARNING: [Synth 8-6014] Unused sequential element i_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/neural_net.v:69]
 WARNING: [Synth 8-6014] Unused sequential element i_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/neural_net.v:69]
 INFO: [Synth 8-5546] ROM "next_addr_inter" won't be mapped to RAM because it is too sparse
-DSP Debug: swapped A/B pins for adder 0000024389D3C730
-DSP Debug: swapped A/B pins for adder 00000243FCB75680
+DSP Debug: swapped A/B pins for adder 000002026EA7B890
+DSP Debug: swapped A/B pins for adder 000002026EA66AD0
 DSP Report: Generating DSP next_val_out0, operation Mode is: A*B.
 DSP Report: operator next_val_out0 is absorbed into DSP next_val_out0.
 DSP Report: operator next_val_out0 is absorbed into DSP next_val_out0.
@@ -1365,7 +1365,7 @@ WARNING: [Synth 8-3332] Sequential element (LED_reg[2]_P) is unused and will be 
 WARNING: [Synth 8-3332] Sequential element (LED_reg[1]_P) is unused and will be removed from module module_pack.
 WARNING: [Synth 8-3332] Sequential element (LED_reg[0]_P) is unused and will be removed from module module_pack.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 826.609 ; gain = 540.273
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 826.469 ; gain = 540.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1427,13 +1427,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 875.285 ; gain = 588.949
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:41 . Memory (MB): peak = 876.191 ; gain = 589.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 902.176 ; gain = 615.840
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 903.328 ; gain = 617.090
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1453,7 +1453,7 @@ WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/v_cnt_reg[6]
 WARNING: [Synth 8-3332] Sequential element (task_group/starting_digit_number/state_reg[4]) is unused and will be removed from module Top_Student.
 WARNING: [Synth 8-3332] Sequential element (task_group/starting_digit_number/state_reg[3]) is unused and will be removed from module Top_Student.
 WARNING: [Synth 8-3332] Sequential element (task_group/starting_digit_number/state_reg[2]) is unused and will be removed from module Top_Student.
-INFO: [Synth 8-3886] merging instance 'task_group/starting_digit_number/an_reg[2]' (FDSE) to 'task_group/starting_digit_number/dp_reg'
+INFO: [Synth 8-3886] merging instance 'task_group/starting_digit_number/an_reg[2]' (FDE) to 'task_group/starting_digit_number/dp_reg'
 WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/nn_inst/ct_inst/turtleX_reg[0]) is unused and will be removed from module Top_Student.
 WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/nn_inst/ct_inst/turtleY_reg[0]) is unused and will be removed from module Top_Student.
 WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/nn_inst/ct_inst/invY_reg) is unused and will be removed from module Top_Student.
@@ -1461,7 +1461,7 @@ WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/nn_inst/ct_i
 WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/nn_inst/ct_inst/turtleY_reg[1]) is unused and will be removed from module Top_Student.
 INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:80]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 966.000 ; gain = 679.664
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:45 . Memory (MB): peak = 967.129 ; gain = 680.891
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1483,13 +1483,13 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5365] Flop mouse/Inst_Ps2Interface/ps2_clk_h_reg is being inverted and renamed to mouse/Inst_Ps2Interface/ps2_clk_h_reg_inv.
 INFO: [Synth 8-5365] Flop mouse/Inst_Ps2Interface/ps2_data_h_reg is being inverted and renamed to mouse/Inst_Ps2Interface/ps2_data_h_reg_inv.
-INFO: [Synth 8-6064] Net n_0_4546 is driving 70 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_4526 is driving 70 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
 INFO: [Synth 8-6064] Net \task_a/is_in_circle_return2 [16] is driving 70 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 966.000 ; gain = 679.664
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:46 . Memory (MB): peak = 967.129 ; gain = 680.891
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1502,7 +1502,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 966.000 ; gain = 679.664
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:46 . Memory (MB): peak = 967.129 ; gain = 680.891
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1514,25 +1514,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 966.000 ; gain = 679.664
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:47 . Memory (MB): peak = 967.129 ; gain = 680.891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 966.000 ; gain = 679.664
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:47 . Memory (MB): peak = 967.129 ; gain = 680.891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 966.000 ; gain = 679.664
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:47 . Memory (MB): peak = 967.129 ; gain = 680.891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 966.000 ; gain = 679.664
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:47 . Memory (MB): peak = 967.129 ; gain = 680.891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1565,13 +1565,13 @@ Report Cell Usage:
 |11    |DSP48E1_3         |     1|
 |12    |DSP48E1_4         |     2|
 |13    |DSP48E1_5         |     1|
-|14    |LUT1              |   105|
-|15    |LUT2              |   866|
-|16    |LUT3              |  1187|
-|17    |LUT4              |   463|
-|18    |LUT5              |   573|
-|19    |LUT6              |  1644|
-|20    |MUXF7             |   269|
+|14    |LUT1              |   104|
+|15    |LUT2              |   865|
+|16    |LUT3              |  1178|
+|17    |LUT4              |   473|
+|18    |LUT5              |   574|
+|19    |LUT6              |  1609|
+|20    |MUXF7             |   268|
 |21    |MUXF8             |    92|
 |22    |FDCE              |  1230|
 |23    |FDE_1             |    32|
@@ -1588,20 +1588,20 @@ Report Instance Areas:
 +------+--------------------------+------------------------------+------+
 |      |Instance                  |Module                        |Cells |
 +------+--------------------------+------------------------------+------+
-|1     |top                       |                              |  7804|
+|1     |top                       |                              |  7768|
 |2     |  clk6p25m                |clk_counter__parameterized1   |    53|
-|3     |  display                 |Oled_Display                  |   612|
-|4     |  mouse                   |MouseCtl                      |   977|
-|5     |    Inst_Ps2Interface     |Ps2Interface                  |   286|
-|6     |  task_a                  |adaptor_task_a                |   479|
-|7     |    anim_timer            |animation_timer               |   118|
-|8     |    mid_timer             |middle_square_timer           |   112|
-|9     |  task_group              |adaptor_task_group            |  5593|
+|3     |  display                 |Oled_Display                  |   597|
+|4     |  mouse                   |MouseCtl                      |   959|
+|5     |    Inst_Ps2Interface     |Ps2Interface                  |   285|
+|6     |  task_a                  |adaptor_task_a                |   461|
+|7     |    anim_timer            |animation_timer               |   113|
+|8     |    mid_timer             |middle_square_timer           |   115|
+|9     |  task_group              |adaptor_task_group            |  5608|
 |10    |    clk12p5m              |clk_counter__parameterized0   |    52|
 |11    |    clk25m                |clk_counter                   |    52|
 |12    |    clk6p25m              |clk_counter__parameterized1_0 |    52|
 |13    |    clkslow               |clk_counter__parameterized2   |    52|
-|14    |    paint_module          |paint                         |  5295|
+|14    |    paint_module          |paint                         |  5310|
 |15    |      nn_inst             |module_pack                   |  1473|
 |16    |        ct_inst           |CanvasTransfer                |   154|
 |17    |        nn1               |neural_net                    |  1038|
@@ -1610,14 +1610,14 @@ Report Instance Areas:
 |20    |      clk_100hz_module    |clk_counter__parameterized3   |    49|
 +------+--------------------------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 966.000 ; gain = 679.664
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:47 . Memory (MB): peak = 967.129 ; gain = 680.891
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 212 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 966.000 ; gain = 330.977
-Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 966.000 ; gain = 679.664
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:40 . Memory (MB): peak = 967.129 ; gain = 333.098
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:47 . Memory (MB): peak = 967.129 ; gain = 680.891
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 802 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-17] Analyzing 801 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 3 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -1631,9 +1631,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 352 Infos, 229 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:44 . Memory (MB): peak = 966.000 ; gain = 691.180
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:50 . Memory (MB): peak = 967.129 ; gain = 692.406
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/Top_Student.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 966.000 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Mar  6 22:00:55 2024...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 967.129 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Mar  6 22:16:02 2024...
