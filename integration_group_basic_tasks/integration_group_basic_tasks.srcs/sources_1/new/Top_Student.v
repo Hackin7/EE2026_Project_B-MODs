@@ -101,7 +101,7 @@ module Top_Student (
     wire [15:0] b_oled_pixel_data;
     
     adaptor_task_b task_b(
-    .clk(clk), .btnC(btnC), .btnL(btnL), .btnR(btnR),
+    .clk(clk), .reset(b_reset), .btnC(btnC), .btnL(btnL), .btnR(btnR),
     .sw(sw), .oled_pixel_index(oled_pixel_index), .oled_pixel_data(b_oled_pixel_data)
     );
 

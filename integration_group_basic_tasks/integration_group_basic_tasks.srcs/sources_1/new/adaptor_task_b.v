@@ -21,7 +21,7 @@
 
 
 module adaptor_task_b(
-        input clk,
+        input clk, reset,
         input btnC, btnR, btnL, 
         input [15:0] sw,
         input [12:0] oled_pixel_index, output [15:0] oled_pixel_data
@@ -43,6 +43,9 @@ module adaptor_task_b(
     reg [31:0] counter, enable_task_counter;
     reg [31:0] move_counter;
     reg shift_once;
+    reg [15:0] COLOR = WHITE;
+    wire [2:0] middle_trigger_state;
+    middle_square_timer #(5_000_000, 20_000_000) mid_timer(clk, reset, btnC, middle_trigger_state);
    
    function is_green_border(input [7:0] size, 
            input [7:0] x, input [7:0] y,
@@ -65,22 +68,23 @@ module adaptor_task_b(
    endfunction
     always @ (posedge clk) begin
         if (sw[0]) begin
-            counter <= counter + 1;
-            enable_task_counter <= counter >= 400_000_000 ? 1 : 0;
+            counter <= counter <= 400_000_000 ? counter + 1 : counter;
+            enable_task_counter <= counter >= 399_999_999 ? 1 : 0;
         end else if (~sw[0]) begin
             counter <= 0;
             enable_task_counter <= 0;
+            green_box_pos <= 3;
         end
         if (enable_task_counter) begin
             if (btnL && green_box_pos > 1) begin 
                 move_counter <= move_counter + 1;
-                if (move_counter >= 1_000_000) begin
+                if (move_counter >= 10_000_000) begin
                     green_box_pos <= green_box_pos - 1;
                     move_counter <= 0;
                 end
             end else if (btnR && green_box_pos < 5) begin 
                 move_counter <= move_counter + 1;
-                if (move_counter >= 1_000_000) begin
+                if (move_counter >= 10_000_000) begin
                     green_box_pos <= green_box_pos + 1;
                     move_counter <= 0;
                 end
@@ -93,20 +97,19 @@ module adaptor_task_b(
         ypos = pixel_index / 96;
         if (enable_task_counter) begin
             if (is_box(xpos, ypos, 8'd45, 8'd29, SQUARE_LENGTH)) begin 
-                oled_data <= WHITE; 
+                oled_data <= COLOR; 
             end else if (is_box(xpos, ypos, 8'd30, 8'd29, SQUARE_LENGTH)) begin 
-                oled_data <= WHITE;
+                oled_data <= COLOR;
             end else if (is_box(xpos, ypos, 8'd15, 8'd29, SQUARE_LENGTH)) begin 
-                oled_data <= WHITE;
+                oled_data <= COLOR;
             end else if (is_box(xpos, ypos, 8'd60, 8'd29, SQUARE_LENGTH)) begin 
-                oled_data <= WHITE;
+                oled_data <= COLOR;
             end else if (is_box(xpos, ypos, 8'd75, 8'd29, SQUARE_LENGTH)) begin 
-                oled_data <= WHITE;
+                oled_data <= COLOR;
             end else oled_data <= BLACK;
         end else begin
             if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd40, 8'd25, BORDER_THICKNESS, 2)) begin
                 oled_data <= GREEN;
-                green_box_pos <= 3'd3;
             end else oled_data <= BLACK;
         end
         
@@ -161,6 +164,13 @@ module adaptor_task_b(
                 end
             end
         endcase
+        
+        case (middle_trigger_state)
+            0: COLOR <= WHITE;
+            1: COLOR <= RED;
+            2: COLOR <= GREEN;
+            3: COLOR <= BLUE;
+        endcase
     end
-
+    
 endmodule
