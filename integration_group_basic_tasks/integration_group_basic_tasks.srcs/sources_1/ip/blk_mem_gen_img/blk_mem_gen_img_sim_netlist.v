@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
 // Date        : Wed Mar  6 13:35:40 2024
 // Host        : HackerbookAce running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/ip/blk_mem_gen_img/blk_mem_gen_img_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top blk_mem_gen_img -prefix
+//               blk_mem_gen_img_ blk_mem_gen_img_sim_netlist.v
 // Design      : blk_mem_gen_img
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -198,7 +198,6 @@ module blk_mem_gen_img
         .web(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module blk_mem_gen_img_blk_mem_gen_generic_cstr
    (doutb,
     clka,
@@ -233,7 +232,6 @@ module blk_mem_gen_img_blk_mem_gen_generic_cstr
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module blk_mem_gen_img_blk_mem_gen_prim_width
    (doutb,
     clka,
@@ -268,7 +266,6 @@ module blk_mem_gen_img_blk_mem_gen_prim_width
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
 module blk_mem_gen_img_blk_mem_gen_prim_wrapper_init
    (doutb,
     clka,
@@ -438,7 +435,6 @@ module blk_mem_gen_img_blk_mem_gen_prim_wrapper_init
         .WEBWE({1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module blk_mem_gen_img_blk_mem_gen_top
    (doutb,
     clka,
@@ -497,7 +493,7 @@ endmodule
 (* C_USE_URAM = "0" *) (* C_WEA_WIDTH = "1" *) (* C_WEB_WIDTH = "1" *) 
 (* C_WRITE_DEPTH_A = "784" *) (* C_WRITE_DEPTH_B = "784" *) (* C_WRITE_MODE_A = "NO_CHANGE" *) 
 (* C_WRITE_MODE_B = "WRITE_FIRST" *) (* C_WRITE_WIDTH_A = "1" *) (* C_WRITE_WIDTH_B = "1" *) 
-(* C_XDEVICEFAMILY = "artix7" *) (* ORIG_REF_NAME = "blk_mem_gen_v8_4_1" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* C_XDEVICEFAMILY = "artix7" *) (* downgradeipidentifiedwarnings = "yes" *) 
 module blk_mem_gen_img_blk_mem_gen_v8_4_1
    (clka,
     rsta,
@@ -693,7 +689,6 @@ module blk_mem_gen_img_blk_mem_gen_v8_4_1
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_1_synth" *) 
 module blk_mem_gen_img_blk_mem_gen_v8_4_1_synth
    (doutb,
     clka,

@@ -18,51 +18,53 @@ proc create_report { reportName command } {
   }
 }
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.cache/wt [current_project]
-set_property parent.project_path C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.xpr [current_project]
+set_property webtalk.parent_dir {C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.xpr} [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.cache/ip [current_project]
+set_property ip_output_repo {c:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/imports/res/weights.coe
-add_files C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/imports/res/00.coe
+add_files {{C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/imports/res/weights.coe}}
+add_files {{C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/imports/res/00.coe}}
 read_verilog -library xil_defaultlib {
-  C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v
-  C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/imports/Desktop/Oled_Display.v
-  C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/adaptor_task_a.v
-  C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/adaptor_task_group.v
-  C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/animation_timer.v
-  C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/custom/clk_counter.v
-  C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/middle_square_timer.v
-  C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/module_pack.v
-  C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/neural_net.v
-  C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/paint.v
-  C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/helpers/seg/seg_multiplexer.v
-  C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/ss_display.v
-  C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v
+  {C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v}
+  {C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/imports/Desktop/Oled_Display.v}
+  {C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/adaptor_task_a.v}
+  {C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/adaptor_task_b.v}
+  {C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/adaptor_task_group.v}
+  {C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/animation_timer.v}
+  {C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/custom/clk_counter.v}
+  {C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/middle_square_timer.v}
+  {C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/module_pack.v}
+  {C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/neural_net.v}
+  {C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/paint.v}
+  {C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/helpers/seg/seg_multiplexer.v}
+  {C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/ss_display.v}
+  {C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v}
 }
 read_vhdl -library xil_defaultlib {
-  C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/imports/Desktop/Mouse_Control.vhd
-  C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/imports/Desktop/Ps2Interface.vhd
+  {C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/imports/Desktop/Mouse_Control.vhd}
+  {C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/imports/Desktop/Ps2Interface.vhd}
 }
-read_ip -quiet C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/ip/blk_mem_gen_inter/blk_mem_gen_inter.xci
-set_property used_in_implementation false [get_files -all c:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/ip/blk_mem_gen_inter/blk_mem_gen_inter_ooc.xdc]
+read_ip -quiet {{C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/ip/blk_mem_gen_inter/blk_mem_gen_inter.xci}}
+set_property used_in_implementation false [get_files -all {{c:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/ip/blk_mem_gen_inter/blk_mem_gen_inter_ooc.xdc}}]
 
-read_ip -quiet C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0_ooc.xdc]
+read_ip -quiet {{C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci}}
+set_property used_in_implementation false [get_files -all {{c:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0_ooc.xdc}}]
 
-read_ip -quiet C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/ip/blk_mem_gen_const/blk_mem_gen_const.xci
-set_property used_in_implementation false [get_files -all c:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/ip/blk_mem_gen_const/blk_mem_gen_const_ooc.xdc]
+read_ip -quiet {{C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/ip/blk_mem_gen_const/blk_mem_gen_const.xci}}
+set_property used_in_implementation false [get_files -all {{c:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/ip/blk_mem_gen_const/blk_mem_gen_const_ooc.xdc}}]
 
-read_ip -quiet C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/ip/blk_mem_gen_img/blk_mem_gen_img.xci
-set_property used_in_implementation false [get_files -all c:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/ip/blk_mem_gen_img/blk_mem_gen_img_ooc.xdc]
+read_ip -quiet {{C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/ip/blk_mem_gen_img/blk_mem_gen_img.xci}}
+set_property used_in_implementation false [get_files -all {{c:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/ip/blk_mem_gen_img/blk_mem_gen_img_ooc.xdc}}]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -72,8 +74,8 @@ set_property used_in_implementation false [get_files -all c:/Users/zunmun/Docume
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/constrs_1/new/basys3.xdc
-set_property used_in_implementation false [get_files C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/constrs_1/new/basys3.xdc]
+read_xdc {{C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/constrs_1/new/basys3.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/constrs_1/new/basys3.xdc}}]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

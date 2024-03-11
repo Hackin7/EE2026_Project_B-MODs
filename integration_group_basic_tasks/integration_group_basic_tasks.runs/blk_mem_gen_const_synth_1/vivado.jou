@@ -2,11 +2,11 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Mar  6 13:34:49 2024
-# Process ID: 57880
-# Current directory: C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/blk_mem_gen_const_synth_1
+# Start of session at: Sun Mar 10 23:19:55 2024
+# Process ID: 4080
+# Current directory: C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/blk_mem_gen_const_synth_1
 # Command line: vivado.exe -log blk_mem_gen_const.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_gen_const.tcl
-# Log file: C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/blk_mem_gen_const_synth_1/blk_mem_gen_const.vds
-# Journal file: C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/blk_mem_gen_const_synth_1\vivado.jou
+# Log file: C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/blk_mem_gen_const_synth_1/blk_mem_gen_const.vds
+# Journal file: C:/Users/TL/Desktop/New folder/EE2026/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/blk_mem_gen_const_synth_1\vivado.jou
 #-----------------------------------------------------------
 source blk_mem_gen_const.tcl -notrace

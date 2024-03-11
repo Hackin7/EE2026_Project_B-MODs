@@ -42,6 +42,7 @@ module adaptor_task_b(
     reg [2:0] green_box_pos = 3'd3;
     reg [31:0] counter, enable_task_counter;
     reg [31:0] move_counter;
+    reg shift_once;
    
    function is_green_border(input [7:0] size, 
            input [7:0] x, input [7:0] y,
@@ -75,7 +76,7 @@ module adaptor_task_b(
                 move_counter <= move_counter + 1;
                 if (move_counter >= 1_000_000) begin
                     green_box_pos <= green_box_pos - 1;
-                    counter <= 0;
+                    move_counter <= 0;
                 end
             end else if (btnR && green_box_pos < 5) begin 
                 move_counter <= move_counter + 1;
@@ -91,7 +92,7 @@ module adaptor_task_b(
         xpos = pixel_index % 96;
         ypos = pixel_index / 96;
         if (enable_task_counter) begin
-            if (is_box(xpos, ypos, 8'd46, 8'd29, SQUARE_LENGTH)) begin 
+            if (is_box(xpos, ypos, 8'd45, 8'd29, SQUARE_LENGTH)) begin 
                 oled_data <= WHITE; 
             end else if (is_box(xpos, ypos, 8'd30, 8'd29, SQUARE_LENGTH)) begin 
                 oled_data <= WHITE;
@@ -101,8 +102,11 @@ module adaptor_task_b(
                 oled_data <= WHITE;
             end else if (is_box(xpos, ypos, 8'd75, 8'd29, SQUARE_LENGTH)) begin 
                 oled_data <= WHITE;
-            end else if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd70, 8'd25, BORDER_THICKNESS, 2)) begin
+            end else oled_data <= BLACK;
+        end else begin
+            if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd40, 8'd25, BORDER_THICKNESS, 2)) begin
                 oled_data <= GREEN;
+                green_box_pos <= 3'd3;
             end else oled_data <= BLACK;
         end
         
@@ -110,29 +114,53 @@ module adaptor_task_b(
             1: begin 
                 if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd10, 8'd25, BORDER_THICKNESS, 2)) begin
                     oled_data <= GREEN;
-                end else oled_data <= BLACK;
+                    if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd25, 8'd25, BORDER_THICKNESS, 2)) begin
+                        oled_data <= BLACK;
+                    end
+                end 
             end
             2: begin 
                 if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd25, 8'd25, BORDER_THICKNESS, 2)) begin
                     oled_data <= GREEN;
-                end else oled_data <= BLACK;
+                    if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd10, 8'd25, BORDER_THICKNESS, 2)) begin
+                        oled_data <= BLACK;
+                    end
+                    if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd40, 8'd25, BORDER_THICKNESS, 2)) begin
+                        oled_data <= BLACK;
+                    end
+                end
             end
             3: begin 
                 if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd40, 8'd25, BORDER_THICKNESS, 2)) begin
                     oled_data <= GREEN;
-                end else oled_data <= BLACK;
+                    if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd25, 8'd25, BORDER_THICKNESS, 2)) begin
+                        oled_data <= BLACK;
+                    end
+                    if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd55, 8'd25, BORDER_THICKNESS, 2)) begin
+                        oled_data <= BLACK;
+                    end
+                end
             end
             4: begin 
                 if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd55, 8'd25, BORDER_THICKNESS, 2)) begin
                     oled_data <= GREEN;
-                end else oled_data <= BLACK;
+                    if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd40, 8'd25, BORDER_THICKNESS, 2)) begin
+                        oled_data <= BLACK;
+                    end
+                    if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd70, 8'd25, BORDER_THICKNESS, 2)) begin
+                        oled_data <= BLACK;
+                    end
+                end
             end
             5: begin 
                 if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd70, 8'd25, BORDER_THICKNESS, 2)) begin
                     oled_data <= GREEN;
-                end else oled_data <= BLACK;
+                    if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd55, 8'd25, BORDER_THICKNESS, 2)) begin
+                        oled_data <= BLACK;
+                    end
+                end
             end
         endcase
-   end
+    end
 
 endmodule
