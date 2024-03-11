@@ -54,7 +54,7 @@ module Top_Student (
     wire mouse_right_click;
     wire mouse_new_event;
     MouseCtl mouse(
-        .clk(clk), .rst(mouse_reset), .value(11'b0), .setx(0), .sety(0), .setmax_x(96), .setmax_y(64),
+        .clk(clk), .rst(mouse_reset), .value(11'b0), .setx(0), .sety(0), .setmax_x(80), .setmax_y(48),
         .xpos(mouse_xpos), .ypos(mouse_ypos), .zpos(mouse_zpos), 
         .left(mouse_left_click), .middle(mouse_middle_click), .right(mouse_right_click), .new_event(mouse_new_event),
         .ps2_clk(mouse_ps2_clk), .ps2_data(mouse_ps2_data)
@@ -97,6 +97,7 @@ module Top_Student (
         .mouse_right_click(mouse_right_click), .mouse_new_event(mouse_new_event)
     );
     
+    //// Task B //////////////////////////////////////////////////////////////////////////////////////////////////
     wire b_reset;
     wire [15:0] b_oled_pixel_data;
     
@@ -105,6 +106,24 @@ module Top_Student (
     .sw(sw), .oled_pixel_index(oled_pixel_index), .oled_pixel_data(b_oled_pixel_data)
     );
 
+    //// Task C //////////////////////////////////////////////////////////////////////////////////////////////////
+    wire c_reset;
+    wire [15:0] c_led; 
+    wire [6:0] c_seg; 
+    wire c_dp;
+    wire [3:0] c_an;
+    wire [15:0] c_oled_pixel_data;
+
+    adaptor_task_c task_c(
+        .reset(c_reset), .clk(clk),
+        .btnC(btnC), .btnU(btnU), .btnL(btnL), .btnR(btnR), .btnD(btnD), .sw(sw), .led(c_led), 
+        .seg(c_seg), .dp(c_dp), .an(c_an),
+        .oled_pixel_index(oled_pixel_index), .oled_pixel_data(c_oled_pixel_data)/*,
+        .mouse_xpos(mouse_xpos), .mouse_ypos(mouse_ypos), .mouse_zpos(mouse_zpos),
+        .mouse_left_click(mouse_left_click), .mouse_middle_click(mouse_middle_click),
+        .mouse_right_click(mouse_right_click), .mouse_new_event(mouse_new_event)*/
+    );
+    
     //// Overall Control Logic ////////////////////////////////////////////////////////////////////////////////////
     // 4.E1
     wire enable_task_group = sw[4];
@@ -120,7 +139,7 @@ module Top_Student (
     assign an = enable_task_group ? group_an : 4'b1111;
     assign oled_pixel_data = enable_task_group ? group_oled_pixel_data : (
         enable_task_d ? 16'hF0FF /*d_oled_pixel_data*/: (
-        enable_task_c ? 16'h0FFF /*c has no oled_pixel_data*/ : (
+        enable_task_c ? c_oled_pixel_data : (
         enable_task_b ? b_oled_pixel_data : (
         enable_task_a ? a_oled_pixel_data :
          16'hFFFF

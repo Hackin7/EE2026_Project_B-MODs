@@ -21,30 +21,9 @@
 
 
 module image(
-    // Control
-    input reset, input clk,
-    // LEDs, Switches, Buttons
-    input btnC, btnU, btnL, btnR, btnD, input [15:0] sw, output [15:0] led,
-    // 7 Segment Display
-    output [6:0] seg, output dp, output [3:0] an,
     // OLED
-    inout [7:0] JB
+    input [12:0] oled_pixel_index, output reg [15:0] oled_pixel_data
 );
-    //// 3.A OLED Setup ////////////////////////////////////////////////////////
-    wire [7:0] Jb;
-    assign JB[7:0] = Jb;
-
-    wire clk_6_25mhz;
-    clk_counter #(16, 5) clk6p25m (clk, clk_6_25mhz);
-
-    reg [15:0] oled_pixel_data = 16'h0000;
-    wire [12:0] oled_pixel_index;
-    wire [15:0] pixel_data = oled_pixel_data;
-    Oled_Display display(
-        .clk(clk_6_25mhz), .reset(0),
-        .frame_begin(), .sending_pixels(), .sample_pixel(), .pixel_index(oled_pixel_index), .pixel_data(pixel_data),
-        .cs(Jb[0]), .sdin(Jb[1]), .sclk(Jb[3]), .d_cn(Jb[4]), .resn(Jb[5]), .vccen(Jb[6]), .pmoden(Jb[7])); //to SPI
-
     // Ease of usage
     reg [7:0] xpos; // = pixel_index % 96;
     reg [7:0] ypos; // = pixel_index / 96;

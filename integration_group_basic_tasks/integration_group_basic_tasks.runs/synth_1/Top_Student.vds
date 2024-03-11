@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Mon Mar 11 13:06:38 2024
-# Process ID: 12368
+# Start of session at: Mon Mar 11 13:41:38 2024
+# Process ID: 19392
 # Current directory: C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1
 # Command line: vivado.exe -log Top_Student.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Student.tcl
 # Log file: C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/Top_Student.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 29636 
+INFO: Helper process launched with PID 34728 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 388.051 ; gain = 101.391
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 398.645 ; gain = 112.016
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:14]
 INFO: [Synth 8-6157] synthesizing module 'clk_counter' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/custom/clk_counter.v:23]
@@ -156,8 +156,8 @@ WARNING: [Synth 8-567] referenced signal 'pixel_data' should be on the sensitivi
 WARNING: [Synth 8-567] referenced signal 'row' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/paint.v:145]
 WARNING: [Synth 8-567] referenced signal 'col' should be on the sensitivity list [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/paint.v:145]
 INFO: [Synth 8-6157] synthesizing module 'module_pack' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/module_pack.v:23]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-12368-HackerbookAce/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (5#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-12368-HackerbookAce/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-19392-HackerbookAce/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (5#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-19392-HackerbookAce/realtime/blk_mem_gen_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'CanvasTransfer' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:23]
 	Parameter CANVAS_SIZE bound to: 3136 - type: integer 
 	Parameter IDLE bound to: 2'b10 
@@ -175,12 +175,12 @@ INFO: [Synth 8-226] default block is never used [C:/Users/zunmun/Documents/Stuff
 WARNING: [Synth 8-6014] Unused sequential element offsetX_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:91]
 WARNING: [Synth 8-6014] Unused sequential element offsetY_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:92]
 INFO: [Synth 8-6155] done synthesizing module 'CanvasTransfer' (6#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:23]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_img' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-12368-HackerbookAce/realtime/blk_mem_gen_img_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_img' (7#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-12368-HackerbookAce/realtime/blk_mem_gen_img_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_const' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-12368-HackerbookAce/realtime/blk_mem_gen_const_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_const' (8#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-12368-HackerbookAce/realtime/blk_mem_gen_const_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_inter' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-12368-HackerbookAce/realtime/blk_mem_gen_inter_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_inter' (9#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-12368-HackerbookAce/realtime/blk_mem_gen_inter_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_img' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-19392-HackerbookAce/realtime/blk_mem_gen_img_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_img' (7#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-19392-HackerbookAce/realtime/blk_mem_gen_img_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_const' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-19392-HackerbookAce/realtime/blk_mem_gen_const_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_const' (8#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-19392-HackerbookAce/realtime/blk_mem_gen_const_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_inter' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-19392-HackerbookAce/realtime/blk_mem_gen_inter_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_inter' (9#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/.Xil/Vivado-19392-HackerbookAce/realtime/blk_mem_gen_inter_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'neural_net' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/neural_net.v:3]
 	Parameter S_IDLE bound to: 2'b00 
 	Parameter S_FIRST bound to: 2'b01 
@@ -209,7 +209,9 @@ INFO: [Synth 8-6157] synthesizing module 'clk_counter__parameterized7' [C:/Users
 	Parameter BITWIDTH bound to: 30 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'clk_counter__parameterized7' (13#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/custom/clk_counter.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'seg_multiplexer' (14#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/helpers/seg/seg_multiplexer.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'adaptor_task_group' (15#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/adaptor_task_group.v:23]
+INFO: [Synth 8-6157] synthesizing module 'image' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/image.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'image' (15#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/image.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'adaptor_task_group' (16#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/adaptor_task_group.v:23]
 INFO: [Synth 8-6157] synthesizing module 'adaptor_task_a' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/adaptor_task_a.v:23]
 	Parameter WIDTH bound to: 96 - type: integer 
 	Parameter HEIGHT bound to: 64 - type: integer 
@@ -222,19 +224,19 @@ INFO: [Synth 8-6157] synthesizing module 'animation_timer' [C:/Users/zunmun/Docu
 	Parameter COUNT3 bound to: 100000000 - type: integer 
 	Parameter COUNT4 bound to: 100000000 - type: integer 
 	Parameter BITWIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'animation_timer' (16#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/animation_timer.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'animation_timer' (17#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/animation_timer.v:23]
 INFO: [Synth 8-6157] synthesizing module 'middle_square_timer' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/middle_square_timer.v:23]
 	Parameter COUNT_BUTTON bound to: 5000000 - type: integer 
 	Parameter COUNT_DEBOUNCE bound to: 20000000 - type: integer 
 	Parameter BITWIDTH bound to: 32 - type: integer 
 WARNING: [Synth 8-6014] Unused sequential element counter_overflow_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/middle_square_timer.v:54]
-INFO: [Synth 8-6155] done synthesizing module 'middle_square_timer' (17#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/middle_square_timer.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'middle_square_timer' (18#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/middle_square_timer.v:23]
 WARNING: [Synth 8-350] instance 'mid_timer' of module 'middle_square_timer' requires 5 connections, but only 4 given [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/adaptor_task_a.v:150]
 WARNING: [Synth 8-3848] Net led in module/entity adaptor_task_a does not have driver. [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/adaptor_task_a.v:27]
 WARNING: [Synth 8-3848] Net seg in module/entity adaptor_task_a does not have driver. [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/adaptor_task_a.v:29]
 WARNING: [Synth 8-3848] Net dp in module/entity adaptor_task_a does not have driver. [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/adaptor_task_a.v:29]
 WARNING: [Synth 8-3848] Net an in module/entity adaptor_task_a does not have driver. [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/adaptor_task_a.v:29]
-INFO: [Synth 8-6155] done synthesizing module 'adaptor_task_a' (18#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/adaptor_task_a.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'adaptor_task_a' (19#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/adaptor_task_a.v:23]
 INFO: [Synth 8-6157] synthesizing module 'adaptor_task_b' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/adaptor_task_b.v:23]
 	Parameter WHITE bound to: 16'b1111111111111111 
 	Parameter RED bound to: 16'b1111100000000000 
@@ -248,8 +250,63 @@ INFO: [Synth 8-6157] synthesizing module 'adaptor_task_b' [C:/Users/zunmun/Docum
 WARNING: [Synth 8-350] instance 'mid_timer' of module 'middle_square_timer' requires 5 connections, but only 4 given [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/adaptor_task_b.v:48]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/adaptor_task_b.v:116]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/adaptor_task_b.v:168]
-INFO: [Synth 8-6155] done synthesizing module 'adaptor_task_b' (19#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/adaptor_task_b.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (20#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'adaptor_task_b' (20#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/adaptor_task_b.v:23]
+INFO: [Synth 8-6157] synthesizing module 'adaptor_task_c' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/adaptor_task_c.v:23]
+WARNING: [Synth 8-3848] Net led in module/entity adaptor_task_c does not have driver. [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/adaptor_task_c.v:27]
+WARNING: [Synth 8-3848] Net seg in module/entity adaptor_task_c does not have driver. [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/adaptor_task_c.v:29]
+WARNING: [Synth 8-3848] Net dp in module/entity adaptor_task_c does not have driver. [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/adaptor_task_c.v:29]
+WARNING: [Synth 8-3848] Net an in module/entity adaptor_task_c does not have driver. [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/adaptor_task_c.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'adaptor_task_c' (21#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/adaptor_task_c.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (22#1) [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/Top_Student.v:14]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port led[15]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port led[14]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port led[13]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port led[12]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port led[11]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port led[10]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port led[9]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port led[8]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port led[7]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port led[6]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port led[5]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port led[4]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port led[3]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port led[2]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port led[1]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port led[0]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port seg[6]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port seg[5]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port seg[4]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port seg[3]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port seg[2]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port seg[1]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port seg[0]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port dp
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port an[3]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port an[2]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port an[1]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port an[0]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port reset
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port btnC
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port btnU
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port btnL
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port btnR
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port sw[15]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port sw[14]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port sw[13]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port sw[12]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port sw[11]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port sw[10]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port sw[9]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port sw[8]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port sw[7]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port sw[6]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port sw[5]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port sw[4]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port sw[3]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port sw[2]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port sw[1]
+WARNING: [Synth 8-3331] design adaptor_task_c has unconnected port sw[0]
 WARNING: [Synth 8-3331] design adaptor_task_b has unconnected port sw[15]
 WARNING: [Synth 8-3331] design adaptor_task_b has unconnected port sw[14]
 WARNING: [Synth 8-3331] design adaptor_task_b has unconnected port sw[13]
@@ -301,58 +358,9 @@ WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port sw[14]
 WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port sw[13]
 WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port sw[12]
 WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port sw[11]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port sw[10]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port sw[9]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port sw[8]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port sw[7]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port sw[6]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port sw[5]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port sw[4]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port sw[3]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port sw[2]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port sw[1]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port sw[0]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_xpos[11]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_xpos[10]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_xpos[9]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_xpos[8]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_xpos[7]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_xpos[6]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_xpos[5]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_xpos[4]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_xpos[3]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_xpos[2]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_xpos[1]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_xpos[0]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_ypos[11]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_ypos[10]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_ypos[9]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_ypos[8]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_ypos[7]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_ypos[6]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_ypos[5]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_ypos[4]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_ypos[3]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_ypos[2]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_ypos[1]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_ypos[0]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_zpos[3]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_zpos[2]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_zpos[1]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_zpos[0]
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_left_click
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_middle_click
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_right_click
-WARNING: [Synth 8-3331] design adaptor_task_a has unconnected port mouse_new_event
-WARNING: [Synth 8-3331] design module_pack has unconnected port clk_6p25MHz
-WARNING: [Synth 8-3331] design paint has unconnected port led[15]
-WARNING: [Synth 8-3331] design paint has unconnected port led[14]
-WARNING: [Synth 8-3331] design paint has unconnected port led[13]
-WARNING: [Synth 8-3331] design paint has unconnected port led[12]
-WARNING: [Synth 8-3331] design paint has unconnected port led[11]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 482.426 ; gain = 195.766
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2397.086 ; gain = 2110.457
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -365,10 +373,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 482.426 ; gain = 195.766
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 2397.086 ; gain = 2110.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 482.426 ; gain = 195.766
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 2397.086 ; gain = 2110.457
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -394,18 +402,19 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 828.836 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2397.086 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'task_group/paint_module/nn_inst/blk_mem_gen_0_inst' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'task_group/paint_module/nn_inst/blk_mem_gen_img_inst' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 830.340 ; gain = 543.680
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 2397.086 ; gain = 2110.457
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 830.340 ; gain = 543.680
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 2397.086 ; gain = 2110.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -415,7 +424,7 @@ Applied set_property DONT_TOUCH = true for task_group/paint_module/nn_inst/blk_m
 Applied set_property DONT_TOUCH = true for task_group/paint_module/nn_inst/blk_mem_gen_const_inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for task_group/paint_module/nn_inst/blk_mem_gen_img_inst. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 830.340 ; gain = 543.680
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 2397.086 ; gain = 2110.457
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "clk_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "clk_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -614,6 +623,8 @@ INFO: [Synth 8-5544] ROM "mouse_press0" won't be mapped to Block RAM because add
 INFO: [Synth 8-5544] ROM "cursor_color" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "colour_chooser" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "seg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "oled_pixel_data" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "oled_pixel_data" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -728,14 +739,18 @@ WARNING: [Synth 8-327] inferring latch for variable 'colour_chooser_reg' [C:/Use
 WARNING: [Synth 8-327] inferring latch for variable 'state_reg' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/paint.v:87]
 WARNING: [Synth 8-327] inferring latch for variable 'COLOR_reg' [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/adaptor_task_b.v:100]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 830.340 ; gain = 543.680
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:17 ; elapsed = 00:01:39 . Memory (MB): peak = 2397.086 ; gain = 2110.457
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+------------------------+------------+----------+
+|      |RTL Partition           |Replication |Instances |
++------+------------------------+------------+----------+
+|1     |muxpart__504            |           1|    240754|
+|2     |image__GB1              |           1|      6715|
+|3     |adaptor_task_group__GC0 |           1|     20780|
+|4     |Top_Student__GC0        |           1|     23792|
++------+------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -743,18 +758,18 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     64 Bit       Adders := 5     
 	   4 Input     64 Bit       Adders := 1     
-	   2 Input     32 Bit       Adders := 12    
+	   2 Input     32 Bit       Adders := 13    
 	   2 Input     30 Bit       Adders := 5     
 	   2 Input     26 Bit       Adders := 1     
 	   2 Input     24 Bit       Adders := 1     
 	   2 Input     17 Bit       Adders := 1     
 	   3 Input     13 Bit       Adders := 4     
 	   2 Input     12 Bit       Adders := 6     
-	   2 Input     11 Bit       Adders := 1     
 	   3 Input     11 Bit       Adders := 2     
-	   3 Input     10 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 1     
+	   3 Input     10 Bit       Adders := 4     
 	   2 Input     10 Bit       Adders := 7     
-	   2 Input      8 Bit       Adders := 3     
+	   2 Input      8 Bit       Adders := 5     
 	   2 Input      7 Bit       Adders := 4     
 	   2 Input      6 Bit       Adders := 2     
 	   2 Input      5 Bit       Adders := 1     
@@ -772,16 +787,19 @@ Detailed RTL Component Info :
 	               12 Bit    Registers := 8     
 	               11 Bit    Registers := 3     
 	               10 Bit    Registers := 18    
-	                8 Bit    Registers := 4     
+	                8 Bit    Registers := 7     
 	                7 Bit    Registers := 4     
 	                6 Bit    Registers := 2     
 	                5 Bit    Registers := 1     
 	                4 Bit    Registers := 8     
 	                3 Bit    Registers := 365   
 	                2 Bit    Registers := 3     
-	                1 Bit    Registers := 68    
+	                1 Bit    Registers := 73    
 +---Multipliers : 
 	                32x32  Multipliers := 2     
+	                 4x32  Multipliers := 1     
+	                 6x32  Multipliers := 1     
+	                 4x29  Multipliers := 1     
 +---Muxes : 
 	   2 Input     64 Bit        Muxes := 5     
 	   4 Input     64 Bit        Muxes := 1     
@@ -803,8 +821,9 @@ Detailed RTL Component Info :
 	   4 Input     16 Bit        Muxes := 4     
 	  12 Input     16 Bit        Muxes := 1     
 	   9 Input     16 Bit        Muxes := 1     
-	   2 Input     12 Bit        Muxes := 12    
+	   7 Input     16 Bit        Muxes := 1     
 	   3 Input     12 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 12    
 	   2 Input     11 Bit        Muxes := 7     
 	   3 Input     11 Bit        Muxes := 2     
 	   3 Input     10 Bit        Muxes := 9     
@@ -812,33 +831,34 @@ Detailed RTL Component Info :
 	   4 Input     10 Bit        Muxes := 2     
 	   2 Input      9 Bit        Muxes := 2     
 	  37 Input      8 Bit        Muxes := 3     
+	   6 Input      8 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 7     
 	   3 Input      7 Bit        Muxes := 2     
 	   4 Input      7 Bit        Muxes := 4     
-	  32 Input      6 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 3     
 	   4 Input      6 Bit        Muxes := 1     
+	  32 Input      6 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	  32 Input      5 Bit        Muxes := 1     
 	   4 Input      5 Bit        Muxes := 1     
-	  37 Input      4 Bit        Muxes := 1     
+	  32 Input      5 Bit        Muxes := 1     
 	   3 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 5     
 	   4 Input      4 Bit        Muxes := 2     
 	  11 Input      4 Bit        Muxes := 1     
+	  37 Input      4 Bit        Muxes := 1     
 	   5 Input      3 Bit        Muxes := 2     
 	   2 Input      3 Bit        Muxes := 7     
 	   2 Input      2 Bit        Muxes := 5     
 	   4 Input      2 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 419   
-	  17 Input      1 Bit        Muxes := 4     
-	  37 Input      1 Bit        Muxes := 20    
+	   2 Input      1 Bit        Muxes := 438   
 	   6 Input      1 Bit        Muxes := 3     
 	   3 Input      1 Bit        Muxes := 12    
-	   5 Input      1 Bit        Muxes := 2     
-	   4 Input      1 Bit        Muxes := 12    
+	   5 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 13    
 	   8 Input      1 Bit        Muxes := 1     
 	  12 Input      1 Bit        Muxes := 1     
+	  17 Input      1 Bit        Muxes := 4     
+	  37 Input      1 Bit        Muxes := 20    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -853,113 +873,6 @@ Detailed RTL Component Info :
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
-Module clk_counter 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-+---Registers : 
-	               32 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   3 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
-Module clk_counter__parameterized0 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-+---Registers : 
-	               32 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   3 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
-Module clk_counter__parameterized1 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-+---Registers : 
-	               32 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   3 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
-Module clk_counter__parameterized2 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-+---Registers : 
-	               32 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   3 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
-Module Oled_Display 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     17 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 1     
-+---Registers : 
-	               40 Bit    Registers := 1     
-	               17 Bit    Registers := 1     
-	                6 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     40 Bit        Muxes := 3     
-	  32 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 2     
-	  32 Input     20 Bit        Muxes := 1     
-	   2 Input     17 Bit        Muxes := 1     
-	  32 Input      6 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 2     
-	  32 Input      5 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
-Module Ps2Interface 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     11 Bit       Adders := 1     
-	   2 Input      7 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 3     
-+---Registers : 
-	               11 Bit    Registers := 2     
-	                8 Bit    Registers := 1     
-	                7 Bit    Registers := 1     
-	                4 Bit    Registers := 3     
-	                1 Bit    Registers := 17    
-+---Muxes : 
-	  17 Input     17 Bit        Muxes := 1     
-	   2 Input     17 Bit        Muxes := 18    
-	   2 Input     11 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3     
-	  17 Input      1 Bit        Muxes := 4     
-Module MouseCtl 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     26 Bit       Adders := 1     
-	   2 Input     24 Bit       Adders := 1     
-	   2 Input     12 Bit       Adders := 4     
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	               26 Bit    Registers := 1     
-	               24 Bit    Registers := 1     
-	               12 Bit    Registers := 6     
-	                8 Bit    Registers := 3     
-	                4 Bit    Registers := 1     
-	                1 Bit    Registers := 17    
-+---Muxes : 
-	  37 Input     37 Bit        Muxes := 1     
-	   2 Input     37 Bit        Muxes := 69    
-	   2 Input     26 Bit        Muxes := 1     
-	   2 Input     24 Bit        Muxes := 1     
-	   2 Input     12 Bit        Muxes := 10    
-	   2 Input      9 Bit        Muxes := 2     
-	  37 Input      8 Bit        Muxes := 3     
-	  37 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 5     
-	  37 Input      1 Bit        Muxes := 20    
 Module clk_counter__parameterized3 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1145,6 +1058,113 @@ Detailed RTL Component Info :
 	   3 Input      7 Bit        Muxes := 1     
 	   4 Input      7 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
+Module clk_counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module clk_counter__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module clk_counter__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module clk_counter__parameterized2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module Oled_Display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               40 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     40 Bit        Muxes := 3     
+	  32 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	  32 Input     20 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	  32 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	  32 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module Ps2Interface 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 3     
++---Registers : 
+	               11 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 17    
++---Muxes : 
+	  17 Input     17 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 18    
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  17 Input      1 Bit        Muxes := 4     
+Module MouseCtl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     26 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 4     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               26 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               12 Bit    Registers := 6     
+	                8 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 17    
++---Muxes : 
+	  37 Input     37 Bit        Muxes := 1     
+	   2 Input     37 Bit        Muxes := 69    
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 10    
+	   2 Input      9 Bit        Muxes := 2     
+	  37 Input      8 Bit        Muxes := 3     
+	  37 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	  37 Input      1 Bit        Muxes := 20    
 Module animation_timer 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1181,6 +1201,19 @@ Detailed RTL Component Info :
 	                32x32  Multipliers := 2     
 +---Muxes : 
 	   9 Input     16 Bit        Muxes := 1     
+Module middle_square_timer__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
 Module adaptor_task_b 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1199,6 +1232,25 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit        Muxes := 5     
 	   3 Input      1 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 1     
+Module adaptor_task_c 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     10 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 3     
+	                1 Bit    Registers := 5     
++---Multipliers : 
+	                 4x32  Multipliers := 1     
+	                 6x32  Multipliers := 1     
+	                 4x29  Multipliers := 1     
++---Muxes : 
+	   7 Input     16 Bit        Muxes := 1     
+	   6 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 19    
+	   5 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
@@ -1222,9 +1274,6 @@ WARNING: [Synth 8-6014] Unused sequential element clk12p5m/counter_reg was remov
 WARNING: [Synth 8-6014] Unused sequential element clk12p5m/clk_out_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/custom/clk_counter.v:32]
 WARNING: [Synth 8-6014] Unused sequential element clkslow/counter_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/custom/clk_counter.v:30]
 WARNING: [Synth 8-6014] Unused sequential element clkslow/clk_out_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/custom/clk_counter.v:32]
-INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "timeout" won't be mapped to RAM because it is too sparse
 DSP Report: Generating DSP nextTurtleX3, operation Mode is: A*B.
 DSP Report: operator nextTurtleX3 is absorbed into DSP nextTurtleX3.
 DSP Report: Generating DSP nextTurtleX1, operation Mode is: C+A*B.
@@ -1258,8 +1307,8 @@ WARNING: [Synth 8-6014] Unused sequential element j_reg was removed.  [C:/Users/
 WARNING: [Synth 8-6014] Unused sequential element i_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/neural_net.v:69]
 WARNING: [Synth 8-6014] Unused sequential element i_reg was removed.  [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/neural_net.v:69]
 INFO: [Synth 8-5546] ROM "next_addr_inter" won't be mapped to RAM because it is too sparse
-DSP Debug: swapped A/B pins for adder 00000260BC12CDA0
-DSP Debug: swapped A/B pins for adder 00000260BC1387A0
+DSP Debug: swapped A/B pins for adder 000002640064D590
+DSP Debug: swapped A/B pins for adder 00000263F3BBB330
 DSP Report: Generating DSP next_val_out0, operation Mode is: A*B.
 DSP Report: operator next_val_out0 is absorbed into DSP next_val_out0.
 DSP Report: operator next_val_out0 is absorbed into DSP next_val_out0.
@@ -1312,6 +1361,9 @@ INFO: [Synth 8-5546] ROM "numsd" won't be mapped to RAM because it is too sparse
 DSP Report: Generating DSP p_0_in, operation Mode is: C+A*(B:0x13).
 DSP Report: operator p_0_in is absorbed into DSP p_0_in.
 DSP Report: operator p_0_out is absorbed into DSP p_0_in.
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timeout" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/adaptor_task_a.v:54]
 INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/task_a/adaptor_task_a.v:54]
 DSP Report: Generating DSP is_in_circle_return1, operation Mode is: A*B.
@@ -1338,94 +1390,47 @@ DSP Report: operator is_in_circle_return1 is absorbed into DSP is_in_circle_retu
 DSP Report: Generating DSP is_in_circle_return1, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator is_in_circle_return1 is absorbed into DSP is_in_circle_return1.
 DSP Report: operator is_in_circle_return1 is absorbed into DSP is_in_circle_return1.
-INFO: [Synth 8-3886] merging instance 'task_b/COLOR_reg[0]' (LD) to 'task_b/COLOR_reg[1]'
-INFO: [Synth 8-3886] merging instance 'task_b/COLOR_reg[1]' (LD) to 'task_b/COLOR_reg[2]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/colour_chooser_reg[1]' (LD) to 'task_group/paint_module/colour_chooser_reg[2]'
-INFO: [Synth 8-3886] merging instance 'task_b/COLOR_reg[2]' (LD) to 'task_b/COLOR_reg[3]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/colour_chooser_reg[2]' (LD) to 'task_group/paint_module/colour_chooser_reg[3]'
-INFO: [Synth 8-3886] merging instance 'task_b/COLOR_reg[3]' (LD) to 'task_b/COLOR_reg[4]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/colour_chooser_reg[3]' (LD) to 'task_group/paint_module/colour_chooser_reg[4]'
-INFO: [Synth 8-3886] merging instance 'task_b/COLOR_reg[5]' (LD) to 'task_b/COLOR_reg[10]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/colour_chooser_reg[5]' (LD) to 'task_group/paint_module/colour_chooser_reg[7]'
-INFO: [Synth 8-3886] merging instance 'task_b/COLOR_reg[6]' (LD) to 'task_b/COLOR_reg[10]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/colour_chooser_reg[6]' (LD) to 'task_group/paint_module/colour_chooser_reg[9]'
-INFO: [Synth 8-3886] merging instance 'task_b/COLOR_reg[7]' (LD) to 'task_b/COLOR_reg[10]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/colour_chooser_reg[7]' (LD) to 'task_group/paint_module/colour_chooser_reg[8]'
-INFO: [Synth 8-3886] merging instance 'task_b/COLOR_reg[8]' (LD) to 'task_b/COLOR_reg[10]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/colour_chooser_reg[8]' (LD) to 'task_group/paint_module/colour_chooser_reg[10]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/MOUSE_Y_POS_reg[0]' (FDR) to 'task_group/paint_module/nn_inst/MOUSE_X_POS_reg[0]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/MOUSE_Y_POS_reg[1]' (FDR) to 'task_group/paint_module/nn_inst/MOUSE_X_POS_reg[0]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/MOUSE_Y_POS_reg[2]' (FDR) to 'task_group/paint_module/nn_inst/MOUSE_X_POS_reg[0]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/MOUSE_X_POS_reg[0]' (FDR) to 'task_group/paint_module/nn_inst/MOUSE_X_POS_reg[1]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/MOUSE_X_POS_reg[1]' (FDR) to 'task_group/paint_module/nn_inst/MOUSE_X_POS_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (task_group/paint_module/nn_inst/\MOUSE_X_POS_reg[2] )
-INFO: [Synth 8-3886] merging instance 'task_b/COLOR_reg[9]' (LD) to 'task_b/COLOR_reg[10]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/p_reg[8]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/p_reg[9]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/p_reg[7]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/p_reg[6]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/p_reg[5]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/p_reg[4]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/p_reg[3]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/p_reg[2]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/p_reg[1]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (task_group/paint_module/nn_inst/\ct_inst/p_reg[0] )
-INFO: [Synth 8-3886] merging instance 'task_b/COLOR_reg[11]' (LD) to 'task_b/COLOR_reg[12]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/colour_chooser_reg[11]' (LD) to 'task_group/paint_module/colour_chooser_reg[12]'
-INFO: [Synth 8-3886] merging instance 'task_b/COLOR_reg[12]' (LD) to 'task_b/COLOR_reg[13]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/colour_chooser_reg[12]' (LD) to 'task_group/paint_module/colour_chooser_reg[13]'
-INFO: [Synth 8-3886] merging instance 'mouse/y_max_reg[0]' (FDRE) to 'mouse/y_max_reg[1]'
-INFO: [Synth 8-3886] merging instance 'mouse/y_max_reg[1]' (FDRE) to 'mouse/y_max_reg[2]'
-INFO: [Synth 8-3886] merging instance 'mouse/y_max_reg[2]' (FDRE) to 'mouse/y_max_reg[3]'
-INFO: [Synth 8-3886] merging instance 'mouse/y_max_reg[3]' (FDRE) to 'mouse/y_max_reg[4]'
-INFO: [Synth 8-3886] merging instance 'mouse/y_max_reg[4]' (FDRE) to 'mouse/y_max_reg[5]'
-INFO: [Synth 8-3886] merging instance 'mouse/y_max_reg[5]' (FDRE) to 'mouse/y_max_reg[6]'
-INFO: [Synth 8-3886] merging instance 'mouse/y_max_reg[6]' (FDRE) to 'mouse/y_max_reg[8]'
-INFO: [Synth 8-3886] merging instance 'mouse/y_max_reg[7]' (FDSE) to 'mouse/y_max_reg[9]'
-INFO: [Synth 8-3886] merging instance 'mouse/y_max_reg[8]' (FDRE) to 'mouse/y_max_reg[10]'
-INFO: [Synth 8-3886] merging instance 'mouse/y_max_reg[9]' (FDSE) to 'mouse/x_max_reg[9]'
-INFO: [Synth 8-3886] merging instance 'mouse/y_max_reg[10]' (FDRE) to 'mouse/y_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'mouse/y_max_reg[11]' (FDRE) to 'mouse/x_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'mouse/x_max_reg[0]' (FDRE) to 'mouse/x_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'mouse/x_max_reg[1]' (FDRE) to 'mouse/x_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'mouse/x_max_reg[2]' (FDRE) to 'mouse/x_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'mouse/x_max_reg[3]' (FDRE) to 'mouse/x_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'mouse/x_max_reg[4]' (FDRE) to 'mouse/x_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'mouse/x_max_reg[5]' (FDRE) to 'mouse/x_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'mouse/x_max_reg[6]' (FDSE) to 'mouse/x_max_reg[9]'
-INFO: [Synth 8-3886] merging instance 'mouse/x_max_reg[7]' (FDSE) to 'mouse/x_max_reg[9]'
-INFO: [Synth 8-3886] merging instance 'mouse/x_max_reg[8]' (FDSE) to 'mouse/x_max_reg[9]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (mouse/\x_max_reg[9] )
-INFO: [Synth 8-3886] merging instance 'mouse/x_max_reg[10]' (FDRE) to 'mouse/x_max_reg[11]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (mouse/\x_max_reg[11] )
-INFO: [Synth 8-3886] merging instance 'task_b/COLOR_reg[13]' (LD) to 'task_b/COLOR_reg[14]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/colour_chooser_reg[13]' (LD) to 'task_group/paint_module/colour_chooser_reg[14]'
-INFO: [Synth 8-3886] merging instance 'task_b/COLOR_reg[14]' (LD) to 'task_b/COLOR_reg[15]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/colour_chooser_reg[14]' (LD) to 'task_group/paint_module/colour_chooser_reg[15]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (task_b/\enable_task_counter_reg[1] )
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/startY_reg[0]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/goalX_reg[0]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/goalX_reg[1]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/goalX_reg[2]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/goalY_reg[0]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/goalY_reg[1]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/goalY_reg[2]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/startY_reg[1]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/startY_reg[2]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/startY_reg[2]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/startX_reg[0]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/startX_reg[0]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/startX_reg[1]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/startX_reg[1]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/startX_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (task_group/paint_module/nn_inst/\ct_inst/startX_reg[2] )
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/dY_reg[1]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/dY_reg[2]'
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/dX_reg[1]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/dX_reg[2]'
-WARNING: [Synth 8-3332] Sequential element (zpos_reg[3]) is unused and will be removed from module MouseCtl.
-WARNING: [Synth 8-3332] Sequential element (zpos_reg[2]) is unused and will be removed from module MouseCtl.
-WARNING: [Synth 8-3332] Sequential element (zpos_reg[1]) is unused and will be removed from module MouseCtl.
-WARNING: [Synth 8-3332] Sequential element (zpos_reg[0]) is unused and will be removed from module MouseCtl.
-WARNING: [Synth 8-3332] Sequential element (middle_down_reg) is unused and will be removed from module MouseCtl.
-WARNING: [Synth 8-3332] Sequential element (middle_reg) is unused and will be removed from module MouseCtl.
-WARNING: [Synth 8-3332] Sequential element (new_event_reg) is unused and will be removed from module MouseCtl.
-WARNING: [Synth 8-3332] Sequential element (x_max_reg[9]) is unused and will be removed from module MouseCtl.
-WARNING: [Synth 8-3332] Sequential element (x_max_reg[11]) is unused and will be removed from module MouseCtl.
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/MOUSE_Y_POS_reg[0]' (FDR) to 'task_groupi_3/paint_module/nn_inst/MOUSE_X_POS_reg[0]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/MOUSE_Y_POS_reg[1]' (FDR) to 'task_groupi_3/paint_module/nn_inst/MOUSE_X_POS_reg[0]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/MOUSE_Y_POS_reg[2]' (FDR) to 'task_groupi_3/paint_module/nn_inst/MOUSE_X_POS_reg[0]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/MOUSE_X_POS_reg[0]' (FDR) to 'task_groupi_3/paint_module/nn_inst/MOUSE_X_POS_reg[1]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/MOUSE_X_POS_reg[1]' (FDR) to 'task_groupi_3/paint_module/nn_inst/MOUSE_X_POS_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (task_groupi_3/paint_module/nn_inst/\MOUSE_X_POS_reg[2] )
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/ct_inst/p_reg[8]' (FDCE) to 'task_groupi_3/paint_module/nn_inst/ct_inst/p_reg[0]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/ct_inst/p_reg[9]' (FDCE) to 'task_groupi_3/paint_module/nn_inst/ct_inst/p_reg[0]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/ct_inst/p_reg[7]' (FDCE) to 'task_groupi_3/paint_module/nn_inst/ct_inst/p_reg[0]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/ct_inst/p_reg[6]' (FDCE) to 'task_groupi_3/paint_module/nn_inst/ct_inst/p_reg[0]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/ct_inst/p_reg[5]' (FDCE) to 'task_groupi_3/paint_module/nn_inst/ct_inst/p_reg[0]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/ct_inst/p_reg[4]' (FDCE) to 'task_groupi_3/paint_module/nn_inst/ct_inst/p_reg[0]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/ct_inst/p_reg[3]' (FDCE) to 'task_groupi_3/paint_module/nn_inst/ct_inst/p_reg[0]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/ct_inst/p_reg[2]' (FDCE) to 'task_groupi_3/paint_module/nn_inst/ct_inst/p_reg[0]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/ct_inst/p_reg[1]' (FDCE) to 'task_groupi_3/paint_module/nn_inst/ct_inst/p_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (task_groupi_3/paint_module/nn_inst/\ct_inst/p_reg[0] )
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/colour_chooser_reg[1]' (LD) to 'task_groupi_3/paint_module/colour_chooser_reg[2]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/colour_chooser_reg[2]' (LD) to 'task_groupi_3/paint_module/colour_chooser_reg[3]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/colour_chooser_reg[3]' (LD) to 'task_groupi_3/paint_module/colour_chooser_reg[4]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/colour_chooser_reg[5]' (LD) to 'task_groupi_3/paint_module/colour_chooser_reg[7]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/colour_chooser_reg[6]' (LD) to 'task_groupi_3/paint_module/colour_chooser_reg[9]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/colour_chooser_reg[7]' (LD) to 'task_groupi_3/paint_module/colour_chooser_reg[8]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/colour_chooser_reg[8]' (LD) to 'task_groupi_3/paint_module/colour_chooser_reg[10]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/colour_chooser_reg[11]' (LD) to 'task_groupi_3/paint_module/colour_chooser_reg[12]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/colour_chooser_reg[12]' (LD) to 'task_groupi_3/paint_module/colour_chooser_reg[13]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/colour_chooser_reg[13]' (LD) to 'task_groupi_3/paint_module/colour_chooser_reg[14]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/colour_chooser_reg[14]' (LD) to 'task_groupi_3/paint_module/colour_chooser_reg[15]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/ct_inst/startY_reg[0]' (FDCE) to 'task_groupi_3/paint_module/nn_inst/ct_inst/startY_reg[1]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/ct_inst/goalX_reg[0]' (FDCE) to 'task_groupi_3/paint_module/nn_inst/ct_inst/startY_reg[1]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/ct_inst/goalX_reg[1]' (FDCE) to 'task_groupi_3/paint_module/nn_inst/ct_inst/startY_reg[1]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/ct_inst/goalX_reg[2]' (FDCE) to 'task_groupi_3/paint_module/nn_inst/ct_inst/startY_reg[1]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/ct_inst/goalY_reg[0]' (FDCE) to 'task_groupi_3/paint_module/nn_inst/ct_inst/startY_reg[1]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/ct_inst/goalY_reg[1]' (FDCE) to 'task_groupi_3/paint_module/nn_inst/ct_inst/startY_reg[1]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/ct_inst/goalY_reg[2]' (FDCE) to 'task_groupi_3/paint_module/nn_inst/ct_inst/startY_reg[1]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/ct_inst/startY_reg[1]' (FDCE) to 'task_groupi_3/paint_module/nn_inst/ct_inst/startY_reg[2]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/ct_inst/startY_reg[2]' (FDCE) to 'task_groupi_3/paint_module/nn_inst/ct_inst/startX_reg[0]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/ct_inst/startX_reg[0]' (FDCE) to 'task_groupi_3/paint_module/nn_inst/ct_inst/startX_reg[1]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/ct_inst/startX_reg[1]' (FDCE) to 'task_groupi_3/paint_module/nn_inst/ct_inst/startX_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (task_groupi_3/paint_module/nn_inst/\ct_inst/startX_reg[2] )
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/ct_inst/dY_reg[1]' (FDCE) to 'task_groupi_3/paint_module/nn_inst/ct_inst/dY_reg[2]'
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/ct_inst/dX_reg[1]' (FDCE) to 'task_groupi_3/paint_module/nn_inst/ct_inst/dX_reg[2]'
 WARNING: [Synth 8-3332] Sequential element (ct_inst/p_reg[0]) is unused and will be removed from module module_pack.
 WARNING: [Synth 8-3332] Sequential element (ct_inst/startX_reg[2]) is unused and will be removed from module module_pack.
 WARNING: [Synth 8-3332] Sequential element (nums_reg[15]) is unused and will be removed from module module_pack.
@@ -1446,15 +1451,69 @@ WARNING: [Synth 8-3332] Sequential element (nums_reg[1]) is unused and will be r
 WARNING: [Synth 8-3332] Sequential element (nums_reg[0]) is unused and will be removed from module module_pack.
 WARNING: [Synth 8-3332] Sequential element (MOUSE_X_POS_reg[2]) is unused and will be removed from module module_pack.
 WARNING: [Synth 8-3332] Sequential element (clk_6p25MHz_reg) is unused and will be removed from module paint.
+INFO: [Synth 8-3886] merging instance 'i_0/task_b/COLOR_reg[0]' (LD) to 'i_0/task_b/COLOR_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/task_b/COLOR_reg[1]' (LD) to 'i_0/task_b/COLOR_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_0/task_b/COLOR_reg[2]' (LD) to 'i_0/task_b/COLOR_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/task_b/COLOR_reg[3]' (LD) to 'i_0/task_b/COLOR_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/task_b/COLOR_reg[5]' (LD) to 'i_0/task_b/COLOR_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_0/task_b/COLOR_reg[6]' (LD) to 'i_0/task_b/COLOR_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_0/task_b/COLOR_reg[7]' (LD) to 'i_0/task_b/COLOR_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_0/task_b/COLOR_reg[8]' (LD) to 'i_0/task_b/COLOR_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_0/task_b/COLOR_reg[9]' (LD) to 'i_0/task_b/COLOR_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_0/task_b/COLOR_reg[11]' (LD) to 'i_0/task_b/COLOR_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_0/task_b/COLOR_reg[12]' (LD) to 'i_0/task_b/COLOR_reg[13]'
+INFO: [Synth 8-3886] merging instance 'i_0/task_b/COLOR_reg[13]' (LD) to 'i_0/task_b/COLOR_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse/y_max_reg[0]' (FDRE) to 'i_0/mouse/y_max_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse/y_max_reg[1]' (FDRE) to 'i_0/mouse/y_max_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse/y_max_reg[2]' (FDRE) to 'i_0/mouse/y_max_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse/y_max_reg[3]' (FDRE) to 'i_0/mouse/y_max_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse/y_max_reg[4]' (FDRE) to 'i_0/mouse/y_max_reg[5]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse/y_max_reg[5]' (FDRE) to 'i_0/mouse/y_max_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse/y_max_reg[6]' (FDRE) to 'i_0/mouse/y_max_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse/y_max_reg[7]' (FDSE) to 'i_0/mouse/y_max_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse/y_max_reg[8]' (FDRE) to 'i_0/mouse/y_max_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse/y_max_reg[9]' (FDSE) to 'i_0/mouse/x_max_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse/y_max_reg[10]' (FDRE) to 'i_0/mouse/y_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse/y_max_reg[11]' (FDRE) to 'i_0/mouse/x_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse/x_max_reg[0]' (FDRE) to 'i_0/mouse/x_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse/x_max_reg[1]' (FDRE) to 'i_0/mouse/x_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse/x_max_reg[2]' (FDRE) to 'i_0/mouse/x_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse/x_max_reg[3]' (FDRE) to 'i_0/mouse/x_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse/x_max_reg[4]' (FDRE) to 'i_0/mouse/x_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse/x_max_reg[5]' (FDRE) to 'i_0/mouse/x_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse/x_max_reg[6]' (FDSE) to 'i_0/mouse/x_max_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse/x_max_reg[7]' (FDSE) to 'i_0/mouse/x_max_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/mouse/x_max_reg[8]' (FDSE) to 'i_0/mouse/x_max_reg[9]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_0/mouse/\x_max_reg[9] )
+INFO: [Synth 8-3886] merging instance 'i_0/mouse/x_max_reg[10]' (FDRE) to 'i_0/mouse/x_max_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/mouse/\x_max_reg[11] )
+INFO: [Synth 8-3886] merging instance 'i_0/task_b/COLOR_reg[14]' (LD) to 'i_0/task_b/COLOR_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/task_b/\enable_task_counter_reg[1] )
+INFO: [Synth 8-3886] merging instance 'i_0/task_c/expand_width_reg[6]' (FDRE) to 'i_0/task_c/expand_width_reg[5]'
+INFO: [Synth 8-3886] merging instance 'i_0/task_c/expand_width_reg[5]' (FDRE) to 'i_0/task_c/expand_width_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/task_c/\expand_width_reg[7] )
+INFO: [Synth 8-3886] merging instance 'i_0/task_c/square_ypos_reg[6]' (FDRE) to 'i_0/task_c/square_ypos_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/task_c/\square_ypos_reg[7] )
+WARNING: [Synth 8-3332] Sequential element (x_max_reg[9]) is unused and will be removed from module MouseCtl.
+WARNING: [Synth 8-3332] Sequential element (x_max_reg[11]) is unused and will be removed from module MouseCtl.
 WARNING: [Synth 8-3332] Sequential element (enable_task_counter_reg[1]) is unused and will be removed from module adaptor_task_b.
-INFO: [Synth 8-3886] merging instance 'task_group/paint_module/nn_inst/ct_inst/dY_reg[0]' (FDCE) to 'task_group/paint_module/nn_inst/ct_inst/dX_reg[0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (task_group/paint_module/nn_inst/\ct_inst/dX_reg[0] )
-WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[0]) is unused and will be removed from module module_pack.
+WARNING: [Synth 8-3332] Sequential element (square_ypos_reg[7]) is unused and will be removed from module adaptor_task_c.
+WARNING: [Synth 8-3332] Sequential element (expand_width_reg[7]) is unused and will be removed from module adaptor_task_c.
+INFO: [Synth 8-3886] merging instance 'task_groupi_3/paint_module/nn_inst/ct_inst/dY_reg[0]' (FDCE) to 'task_groupi_3/paint_module/nn_inst/ct_inst/dX_reg[0]'
+WARNING: [Synth 8-3332] Sequential element (zpos_reg[3]) is unused and will be removed from module MouseCtl.
+WARNING: [Synth 8-3332] Sequential element (zpos_reg[2]) is unused and will be removed from module MouseCtl.
+WARNING: [Synth 8-3332] Sequential element (zpos_reg[1]) is unused and will be removed from module MouseCtl.
+WARNING: [Synth 8-3332] Sequential element (zpos_reg[0]) is unused and will be removed from module MouseCtl.
+WARNING: [Synth 8-3332] Sequential element (middle_down_reg) is unused and will be removed from module MouseCtl.
+WARNING: [Synth 8-3332] Sequential element (middle_reg) is unused and will be removed from module MouseCtl.
+WARNING: [Synth 8-3332] Sequential element (new_event_reg) is unused and will be removed from module MouseCtl.
 WARNING: [Synth 8-3332] Sequential element (mid_timer/trigger_state_reg[2]) is unused and will be removed from module adaptor_task_a.
 WARNING: [Synth 8-3332] Sequential element (COLOR_reg[15]) is unused and will be removed from module adaptor_task_b.
 WARNING: [Synth 8-3332] Sequential element (COLOR_reg[10]) is unused and will be removed from module adaptor_task_b.
 WARNING: [Synth 8-3332] Sequential element (COLOR_reg[4]) is unused and will be removed from module adaptor_task_b.
 WARNING: [Synth 8-3332] Sequential element (mid_timer/trigger_state_reg[2]) is unused and will be removed from module adaptor_task_b.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (task_groupi_3/paint_module/nn_inst/\ct_inst/dX_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[0]) is unused and will be removed from module module_pack.
 WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[9]) is unused and will be removed from module module_pack.
 WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[8]) is unused and will be removed from module module_pack.
 WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[7]) is unused and will be removed from module module_pack.
@@ -1497,7 +1556,7 @@ WARNING: [Synth 8-3332] Sequential element (LED_reg[2]_P) is unused and will be 
 WARNING: [Synth 8-3332] Sequential element (LED_reg[1]_P) is unused and will be removed from module module_pack.
 WARNING: [Synth 8-3332] Sequential element (LED_reg[0]_P) is unused and will be removed from module module_pack.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 830.340 ; gain = 543.680
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:15 ; elapsed = 00:02:52 . Memory (MB): peak = 2397.086 ; gain = 2110.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1551,48 +1610,49 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:80]
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+------------------------+------------+----------+
+|      |RTL Partition           |Replication |Instances |
++------+------------------------+------------+----------+
+|1     |muxpart__504            |           1|     35367|
+|2     |image__GB1              |           1|      6598|
+|3     |adaptor_task_group__GC0 |           1|     10097|
+|4     |Top_Student__GC0        |           1|      6669|
++------+------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 882.242 ; gain = 595.582
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:20 ; elapsed = 00:02:59 . Memory (MB): peak = 2397.086 ; gain = 2110.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 909.887 ; gain = 623.227
+Finished Timing Optimization : Time (s): cpu = 00:02:25 ; elapsed = 00:03:05 . Memory (MB): peak = 2397.086 ; gain = 2110.457
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+------------------------+------------+----------+
+|      |RTL Partition           |Replication |Instances |
++------+------------------------+------------+----------+
+|1     |muxpart__504            |           1|     35367|
+|2     |image__GB1              |           1|      6598|
+|3     |adaptor_task_group__GC0 |           1|     10097|
+|4     |Top_Student__GC0        |           1|      6740|
++------+------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/nn_inst/ct_inst/goalX_reg[9]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/nn_inst/MOUSE_X_POS_reg[9]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/v_cnt_reg[9]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/v_cnt_reg[8]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/v_cnt_reg[7]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/v_cnt_reg[6]) is unused and will be removed from module Top_Student.
+INFO: [Synth 8-3886] merging instance 'task_a/prev_btn_reg' (FD) to 'task_group/prev_button_state_reg'
 INFO: [Synth 8-3886] merging instance 'task_group/prev_button_state_reg' (FD) to 'task_b/mid_timer/prev_button_state_reg'
-INFO: [Synth 8-3886] merging instance 'task_b/mid_timer/prev_button_state_reg' (FD) to 'task_a/prev_btn_reg'
-WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/nn_inst/ct_inst/turtleX_reg[0]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/nn_inst/ct_inst/turtleY_reg[0]) is unused and will be removed from module Top_Student.
 INFO: [Synth 8-3886] merging instance 'task_group/starting_digit_number/an_reg[2]' (FDE) to 'task_group/starting_digit_number/dp_reg'
 WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/nn_inst/ct_inst/invY_reg) is unused and will be removed from module Top_Student.
 WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/nn_inst/ct_inst/turtleY_reg[2]) is unused and will be removed from module Top_Student.
 WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/nn_inst/ct_inst/turtleY_reg[1]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (task_group/paint_module/nn_inst/ct_inst/turtleY_reg[0]) is unused and will be removed from module Top_Student.
 INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.srcs/sources_1/new/group_task/given_paint/CanvasTransfer.v:80]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 1003.859 ; gain = 717.199
+Finished Technology Mapping : Time (s): cpu = 00:02:34 ; elapsed = 00:03:16 . Memory (MB): peak = 2397.086 ; gain = 2110.457
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1614,13 +1674,13 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5365] Flop mouse/Inst_Ps2Interface/ps2_clk_h_reg is being inverted and renamed to mouse/Inst_Ps2Interface/ps2_clk_h_reg_inv.
 INFO: [Synth 8-5365] Flop mouse/Inst_Ps2Interface/ps2_data_h_reg is being inverted and renamed to mouse/Inst_Ps2Interface/ps2_data_h_reg_inv.
-INFO: [Synth 8-6064] Net n_0_4566 is driving 70 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
-INFO: [Synth 8-6064] Net n_0_5315 is driving 70 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_22635 is driving 70 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_24432 is driving 70 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:41 . Memory (MB): peak = 1003.859 ; gain = 717.199
+Finished IO Insertion : Time (s): cpu = 00:02:36 ; elapsed = 00:03:17 . Memory (MB): peak = 2397.086 ; gain = 2110.457
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1633,7 +1693,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:41 . Memory (MB): peak = 1003.859 ; gain = 717.199
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:36 ; elapsed = 00:03:17 . Memory (MB): peak = 2397.086 ; gain = 2110.457
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1645,25 +1705,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 1003.859 ; gain = 717.199
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:37 ; elapsed = 00:03:18 . Memory (MB): peak = 2397.086 ; gain = 2110.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 1003.859 ; gain = 717.199
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:37 ; elapsed = 00:03:18 . Memory (MB): peak = 2397.086 ; gain = 2110.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:42 . Memory (MB): peak = 1003.859 ; gain = 717.199
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:37 ; elapsed = 00:03:19 . Memory (MB): peak = 2397.086 ; gain = 2110.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:42 . Memory (MB): peak = 1003.859 ; gain = 717.199
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:37 ; elapsed = 00:03:19 . Memory (MB): peak = 2397.086 ; gain = 2110.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1688,26 +1748,26 @@ Report Cell Usage:
 |3     |blk_mem_gen_img   |     1|
 |4     |blk_mem_gen_inter |     1|
 |5     |BUFG              |     4|
-|6     |CARRY4            |   410|
+|6     |CARRY4            |   610|
 |7     |DSP48E1           |    19|
 |8     |DSP48E1_1         |     1|
 |9     |DSP48E1_2         |     1|
 |10    |DSP48E1_3         |     1|
 |11    |DSP48E1_4         |     2|
 |12    |DSP48E1_5         |     1|
-|13    |LUT1              |   115|
-|14    |LUT2              |   918|
-|15    |LUT3              |  1194|
-|16    |LUT4              |   514|
-|17    |LUT5              |   609|
-|18    |LUT6              |  1703|
-|19    |MUXF7             |   268|
-|20    |MUXF8             |    92|
-|21    |FDCE              |  1230|
+|13    |LUT1              |   141|
+|14    |LUT2              |  7392|
+|15    |LUT3              |  2782|
+|16    |LUT4              |  1941|
+|17    |LUT5              |  2928|
+|18    |LUT6              |  9210|
+|19    |MUXF7             |   231|
+|20    |MUXF8             |    88|
+|21    |FDCE              |  1231|
 |22    |FDE_1             |    32|
 |23    |FDPE              |     6|
-|24    |FDRE              |   899|
-|25    |FDSE              |     4|
+|24    |FDRE              |  1010|
+|25    |FDSE              |    13|
 |26    |LD                |     8|
 |27    |IBUF              |    13|
 |28    |IOBUF             |     2|
@@ -1718,37 +1778,38 @@ Report Instance Areas:
 +------+--------------------------+----------------------------+------+
 |      |Instance                  |Module                      |Cells |
 +------+--------------------------+----------------------------+------+
-|1     |top                       |                            |  8163|
-|2     |  clk6p25m                |clk_counter__parameterized1 |    53|
-|3     |  display                 |Oled_Display                |   884|
-|4     |  mouse                   |MouseCtl                    |   961|
+|1     |top                       |                            | 27784|
+|2     |  clk6p25m                |clk_counter__parameterized1 |    52|
+|3     |  display                 |Oled_Display                | 19300|
+|4     |  mouse                   |MouseCtl                    |   962|
 |5     |    Inst_Ps2Interface     |Ps2Interface                |   284|
-|6     |  task_a                  |adaptor_task_a              |   315|
-|7     |    anim_timer            |animation_timer             |   110|
+|6     |  task_a                  |adaptor_task_a              |   312|
+|7     |    anim_timer            |animation_timer             |   109|
 |8     |    mid_timer             |middle_square_timer_0       |   115|
-|9     |  task_b                  |adaptor_task_b              |   225|
-|10    |    mid_timer             |middle_square_timer         |   111|
-|11    |  task_group              |adaptor_task_group          |  5622|
-|12    |    clk12p5m              |clk_counter__parameterized4 |    49|
-|13    |    clk25m                |clk_counter__parameterized3 |    49|
-|14    |    clk6p25m              |clk_counter__parameterized5 |    49|
-|15    |    clkslow               |clk_counter__parameterized6 |    49|
-|16    |    paint_module          |paint                       |  5325|
-|17    |      nn_inst             |module_pack                 |  1473|
-|18    |        ct_inst           |CanvasTransfer              |   154|
-|19    |        nn1               |neural_net                  |  1038|
-|20    |      ssd1                |ss_display                  |    14|
-|21    |    starting_digit_number |seg_multiplexer             |   100|
-|22    |      clk_100hz_module    |clk_counter__parameterized7 |    49|
+|9     |  task_b                  |adaptor_task_b              |   226|
+|10    |    mid_timer             |middle_square_timer         |   114|
+|11    |  task_c                  |adaptor_task_c              |   542|
+|12    |  task_group              |adaptor_task_group          |  5619|
+|13    |    clk12p5m              |clk_counter__parameterized4 |    49|
+|14    |    clk25m                |clk_counter__parameterized3 |    49|
+|15    |    clk6p25m              |clk_counter__parameterized5 |    49|
+|16    |    clkslow               |clk_counter__parameterized6 |    49|
+|17    |    paint_module          |paint                       |  5322|
+|18    |      nn_inst             |module_pack                 |  1476|
+|19    |        ct_inst           |CanvasTransfer              |   156|
+|20    |        nn1               |neural_net                  |  1039|
+|21    |      ssd1                |ss_display                  |    14|
+|22    |    starting_digit_number |seg_multiplexer             |   100|
+|23    |      clk_100hz_module    |clk_counter__parameterized7 |    49|
 +------+--------------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:42 . Memory (MB): peak = 1003.859 ; gain = 717.199
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:37 ; elapsed = 00:03:19 . Memory (MB): peak = 2397.086 ; gain = 2110.457
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 230 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 1003.859 ; gain = 369.285
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:42 . Memory (MB): peak = 1003.859 ; gain = 717.199
+Synthesis finished with 0 errors, 0 critical warnings and 97 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:17 ; elapsed = 00:03:09 . Memory (MB): peak = 2397.086 ; gain = 2110.457
+Synthesis Optimization Complete : Time (s): cpu = 00:02:38 ; elapsed = 00:03:19 . Memory (MB): peak = 2397.086 ; gain = 2110.457
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 850 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1009 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 3 load pin(s).
@@ -1760,11 +1821,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LD => LDCE (inverted pins: G): 3 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-380 Infos, 233 Warnings, 0 Critical Warnings and 0 Errors encountered.
+392 Infos, 232 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:44 . Memory (MB): peak = 1003.859 ; gain = 728.676
+synth_design: Time (s): cpu = 00:02:40 ; elapsed = 00:03:24 . Memory (MB): peak = 2397.086 ; gain = 2121.957
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/zunmun/Documents/Stuff/Github/WORK/EE2026_Project_B-MODs/integration_group_basic_tasks/integration_group_basic_tasks.runs/synth_1/Top_Student.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1003.859 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 11 13:07:26 2024...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.095 . Memory (MB): peak = 2397.086 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 11 13:45:07 2024...
