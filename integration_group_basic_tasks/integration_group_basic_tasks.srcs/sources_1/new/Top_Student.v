@@ -118,7 +118,7 @@ module Top_Student (
     // 4.E3
     assign group_reset = ~enable_task_group;
     assign mouse_reset = group_reset;
-    assign a_reset = ~enable_task_a;
+    assign a_reset = ~enable_task_a | (enable_task_b | enable_task_c | enable_task_d | enable_task_group);
     /*assign b_reset = ~enable_task_b;
     assign c_reset = ~enable_task_c;
     assign d_reset = ~enable_task_d;*/

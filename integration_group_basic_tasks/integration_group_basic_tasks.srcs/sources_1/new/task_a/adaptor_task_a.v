@@ -128,14 +128,26 @@ module adaptor_task_a(
             oled_data = 16'h0;
         end
     end
-        
+    
+    //// Orange Latch ///////////////////////////////////////////////////////////////////////////
+    reg prev_btn = 0;
+    reg orange_enable = 0;
+    always @ (posedge clk) begin
+        if (reset) begin
+            orange_enable <= 0;
+        end else if (prev_btn == 1 && btnC == 0) begin
+            orange_enable <= 1;
+        end
+        prev_btn <= btnC;
+    end
+    
     //// Elements State //////////////////////////////////////////////////////////////////////////
     assign element_state[0] = 1;
-    assign element_state[1] = btnC;
+    assign element_state[1] = orange_enable;
     
-    animation_timer anim_timer(clk, btnC, element_state[4:2]);
+    animation_timer anim_timer(clk, orange_enable, element_state[4:2]);
     wire [2:0] middle_trigger_state;
-    middle_square_timer #(5_000_000, 20_000_000) mid_timer(clk, reset, btnC & btnD, middle_trigger_state);
+    middle_square_timer #(5_000_000, 20_000_000) mid_timer(clk, reset, orange_enable & btnD, middle_trigger_state);
     assign element_state[5] = middle_trigger_state == 1;
     assign element_state[6] = middle_trigger_state == 2;
     assign element_state[7] = middle_trigger_state == 3;

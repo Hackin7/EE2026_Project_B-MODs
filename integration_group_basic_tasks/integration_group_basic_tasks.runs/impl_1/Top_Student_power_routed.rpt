@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Mon Mar 11 08:52:54 2024
+| Date             : Mon Mar 11 11:07:43 2024
 | Host             : HackerbookAce running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.119        |
+| Total On-Chip Power (W)  | 0.112        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.046        |
+| Dynamic (W)              | 0.039        |
 | Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.4         |
@@ -52,20 +52,20 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.006 |        3 |       --- |             --- |
-| Slice Logic    |     0.012 |     7898 |       --- |             --- |
-|   LUT as Logic |     0.010 |     4004 |     20800 |           19.25 |
+| Clocks         |     0.005 |        3 |       --- |             --- |
+| Slice Logic    |     0.009 |     7918 |       --- |             --- |
+|   LUT as Logic |     0.007 |     4021 |     20800 |           19.33 |
 |   CARRY4       |     0.001 |      362 |      8150 |            4.44 |
 |   F7/F8 Muxes  |    <0.001 |      388 |     32600 |            1.19 |
-|   Register     |    <0.001 |     2106 |     41600 |            5.06 |
+|   Register     |    <0.001 |     2110 |     41600 |            5.07 |
 |   BUFG         |    <0.001 |        3 |        32 |            9.38 |
 |   Others       |     0.000 |      143 |       --- |             --- |
-| Signals        |     0.013 |     6206 |       --- |             --- |
+| Signals        |     0.009 |     6224 |       --- |             --- |
 | Block RAM      |     0.002 |     26.5 |        50 |           53.00 |
 | DSPs           |     0.011 |       25 |        90 |           27.78 |
 | I/O            |     0.002 |       48 |       106 |           45.28 |
 | Static Power   |     0.073 |          |           |                 |
-| Total          |     0.119 |          |           |                 |
+| Total          |     0.112 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.054 |       0.044 |      0.010 |
+| Vccint    |       1.000 |     0.047 |       0.036 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -144,23 +144,23 @@ Table of Contents
 +----------------------------------------------------+-----------+
 | Name                                               | Power (W) |
 +----------------------------------------------------+-----------+
-| Top_Student                                        |     0.046 |
+| Top_Student                                        |     0.039 |
 |   clk6p25m                                         |    <0.001 |
 |   display                                          |    <0.001 |
-|   mouse                                            |     0.004 |
+|   mouse                                            |     0.003 |
 |     Inst_Ps2Interface                              |     0.001 |
 |   mouse_ps2_clk_IOBUF_inst                         |     0.000 |
 |   mouse_ps2_data_IOBUF_inst                        |     0.000 |
-|   task_a                                           |     0.001 |
+|   task_a                                           |    <0.001 |
 |     anim_timer                                     |    <0.001 |
 |     mid_timer                                      |    <0.001 |
-|   task_group                                       |     0.037 |
+|   task_group                                       |     0.031 |
 |     clk12p5m                                       |    <0.001 |
 |     clk25m                                         |    <0.001 |
 |     clk6p25m                                       |    <0.001 |
 |     clkslow                                        |    <0.001 |
-|     paint_module                                   |     0.035 |
-|       nn_inst                                      |     0.025 |
+|     paint_module                                   |     0.029 |
+|       nn_inst                                      |     0.024 |
 |         blk_mem_gen_0_inst                         |     0.002 |
 |           U0                                       |     0.002 |
 |             inst_blk_mem_gen                       |     0.002 |
