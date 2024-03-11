@@ -97,6 +97,8 @@ module adaptor_task_a(
     reg [15:0] oled_data = 16'h07E0;
     wire [12:0] pixel_index = oled_pixel_index;
     assign oled_pixel_data = oled_data;
+    
+    wire [7:0] element_state;
     // Ease of usage
     reg [7:0] xpos; // = pixel_index % 96;
     reg [7:0] ypos; // = pixel_index / 96;
@@ -128,7 +130,6 @@ module adaptor_task_a(
     end
         
     //// Elements State //////////////////////////////////////////////////////////////////////////
-    wire [7:0] element_state;
     assign element_state[0] = 1;
     assign element_state[1] = btnC;
     

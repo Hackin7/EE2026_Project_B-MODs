@@ -26,10 +26,10 @@ module Top_Student (
     //// Setup ///////////////////////////////////////////////////////////////////////////////////////////////////////
     //// Clocks /////////////////////////////////////////////
     wire clk_25mhz, clk_12_5mhz, clk_6_25mhz, slow_clk;
-    clk_counter #(2, 32) clk25m (clk, clk_25mhz);
-    clk_counter #(4, 32) clk12p5m (clk, clk_12_5mhz);
-    clk_counter #(8, 32) clk6p25m (clk, clk_6_25mhz);
-    clk_counter #(50_000_000, 32) clkslow (clk, slow_clk); // 1hz
+    clk_counter #(2, 2, 32) clk25m (clk, clk_25mhz);
+    clk_counter #(4, 4, 32) clk12p5m (clk, clk_12_5mhz);
+    clk_counter #(8, 8, 32) clk6p25m (clk, clk_6_25mhz);
+    clk_counter #(50_000_000, 50_000_000, 32) clkslow (clk, slow_clk); // 1hz
 
     //// 3.A OLED Setup //////////////////////////////////////
     // Inputs
