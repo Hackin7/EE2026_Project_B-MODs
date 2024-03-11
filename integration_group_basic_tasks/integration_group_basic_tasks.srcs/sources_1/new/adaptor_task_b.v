@@ -46,26 +46,28 @@ module adaptor_task_b(
     reg [15:0] COLOR = WHITE;
     wire [2:0] middle_trigger_state;
     middle_square_timer #(5_000_000, 20_000_000) mid_timer(clk, reset, btnC, middle_trigger_state);
+    reg [3:0] box_color;
+    
+    function is_green_border(input [7:0] size, 
+            input [7:0] x, input [7:0] y,
+            input [7:0] x_start, input [7:0] y_start,
+            input [4:0] width, input [4:0] gap);
+            reg long_range, short_range; 
+        begin
+            long_range = (x >= x_start && x < x_start + size + 2 * width + 2 * gap) && ((y >= y_start && y < y_start + width) || (y >= y_start + width + 2 * gap + size && y < y_start + 2 * width + 2 * gap + size));
+            short_range = (((x >= x_start && x < x_start + width)|| (x >= x_start + 2* gap + width + size && x < x_start + 2* gap + 2 * width + size )) && (y >= y_start + width && y < y_start + size + 2 * width + 2 * gap));
+            is_green_border = long_range || short_range;
+        end
+    endfunction
    
-   function is_green_border(input [7:0] size, 
-           input [7:0] x, input [7:0] y,
-           input [7:0] x_start, input [7:0] y_start,
-           input [4:0] width, input [4:0] gap);
-           reg long_range, short_range; 
-       begin
-           long_range = (x >= x_start && x < x_start + size + 2 * width + 2 * gap) && ((y >= y_start && y < y_start + width) || (y >= y_start + width + 2 * gap + size && y < y_start + 2 * width + 2 * gap + size));
-           short_range = (((x >= x_start && x < x_start + width)|| (x >= x_start + 2* gap + width + size && x < x_start + 2* gap + 2 * width + size )) && (y >= y_start + width && y < y_start + size + 2 * width + 2 * gap));
-           is_green_border = long_range || short_range;
-       end
-   endfunction
-   
-   function is_box( input [7:0] x, input [7:0] y,
-           input [7:0] x_start, input [7:0] y_start,
-           input [7:0] size
-       ); begin
-       is_box = (x >= x_start && x <= x_start + size) && (y >= y_start && y <= y_start + size);
-   end
-   endfunction
+    function is_box( input [7:0] x, input [7:0] y,
+            input [7:0] x_start, input [7:0] y_start,
+            input [7:0] size
+    ); begin
+        is_box = (x >= x_start && x <= x_start + size) && (y >= y_start && y <= y_start + size);
+        end
+    endfunction
+    
     always @ (posedge clk) begin
         if (sw[0]) begin
             counter <= counter <= 400_000_000 ? counter + 1 : counter;
@@ -78,13 +80,13 @@ module adaptor_task_b(
         if (enable_task_counter) begin
             if (btnL && green_box_pos > 1) begin 
                 move_counter <= move_counter + 1;
-                if (move_counter >= 10_000_000) begin
+                if (move_counter >= 5_000_000) begin
                     green_box_pos <= green_box_pos - 1;
                     move_counter <= 0;
                 end
             end else if (btnR && green_box_pos < 5) begin 
                 move_counter <= move_counter + 1;
-                if (move_counter >= 10_000_000) begin
+                if (move_counter >= 5_000_000) begin
                     green_box_pos <= green_box_pos + 1;
                     move_counter <= 0;
                 end
@@ -95,6 +97,7 @@ module adaptor_task_b(
     always @ (*) begin
         xpos = pixel_index % 96;
         ypos = pixel_index / 96;
+        box_color <= sw[0] ? middle_trigger_state : 0;
         if (enable_task_counter) begin
             if (is_box(xpos, ypos, 8'd45, 8'd29, SQUARE_LENGTH)) begin 
                 oled_data <= COLOR; 
@@ -165,7 +168,7 @@ module adaptor_task_b(
             end
         endcase
         
-        case (middle_trigger_state)
+        case (box_color)
             0: COLOR <= WHITE;
             1: COLOR <= RED;
             2: COLOR <= GREEN;

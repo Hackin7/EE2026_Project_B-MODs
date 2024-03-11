@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Mon Mar 11 11:27:43 2024
+| Date         : Mon Mar 11 12:06:26 2024
 | Host         : DESKTOP-LRNITL8 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
 | Design       : Top_Student
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             | 4103 |     0 |     20800 | 19.73 |
-|   LUT as Logic          | 4103 |     0 |     20800 | 19.73 |
+| Slice LUTs*             | 4123 |     0 |     20800 | 19.82 |
+|   LUT as Logic          | 4123 |     0 |     20800 | 19.82 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
 | Slice Registers         | 2186 |     0 |     41600 |  5.25 |
 |   Register as Flip Flop | 2178 |     0 |     41600 |  5.24 |
@@ -150,16 +150,16 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     | 1697 |                 LUT |
+| LUT6     | 1718 |                 LUT |
 | FDCE     | 1230 |        Flop & Latch |
-| LUT3     | 1194 |                 LUT |
+| LUT3     | 1213 |                 LUT |
 | FDRE     |  938 |        Flop & Latch |
-| LUT2     |  912 |                 LUT |
-| LUT5     |  609 |                 LUT |
-| LUT4     |  518 |                 LUT |
+| LUT2     |  899 |                 LUT |
+| LUT5     |  622 |                 LUT |
+| LUT4     |  510 |                 LUT |
 | CARRY4   |  410 |          CarryLogic |
 | MUXF7    |  268 |               MuxFx |
-| LUT1     |  112 |                 LUT |
+| LUT1     |  111 |                 LUT |
 | MUXF8    |   92 |               MuxFx |
 | OBUF     |   35 |                  IO |
 | DSP48E1  |   25 |    Block Arithmetic |
