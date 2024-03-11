@@ -96,6 +96,14 @@ module Top_Student (
         .mouse_left_click(mouse_left_click), .mouse_middle_click(mouse_middle_click),
         .mouse_right_click(mouse_right_click), .mouse_new_event(mouse_new_event)
     );
+    
+    wire b_reset;
+    wire [15:0] b_oled_pixel_data;
+    
+    adaptor_task_b task_b(
+    .clk(clk), .btnC(btnC), .btnL(btnL), .btnR(btnR),
+    .sw(sw), .oled_pixel_index(oled_pixel_index), .oled_pixel_data(b_oled_pixel_data)
+    );
 
     //// Overall Control Logic ////////////////////////////////////////////////////////////////////////////////////
     // 4.E1
@@ -110,8 +118,14 @@ module Top_Student (
     assign seg = enable_task_group ? group_seg : 7'b1111111;
     assign dp = enable_task_group ? group_dp : 1;
     assign an = enable_task_group ? group_an : 4'b1111;
-    assign oled_pixel_data = enable_task_group ? group_oled_pixel_data : (enable_task_a ? a_oled_pixel_data : 16'hFFFF);
-
+    assign oled_pixel_data = enable_task_group ? group_oled_pixel_data : (
+        enable_task_d ? 16'hF0FF /*d_oled_pixel_data*/: (
+        enable_task_c ? 16'h0FFF /*c has no oled_pixel_data*/ :  (
+        enable_task_b ? b_oled_pixel_data : (
+        enable_task_a ? a_oled_pixel_data :
+         16'hFFFF
+        )))
+    );
     // 4.E2
     assign indiv_led = {12'b0, enable_task_d, enable_task_c, enable_task_b, enable_task_a}; 
 
@@ -119,8 +133,8 @@ module Top_Student (
     assign group_reset = ~enable_task_group;
     assign mouse_reset = group_reset;
     assign a_reset = ~enable_task_a;
-    /*assign b_reset = ~enable_task_b;
+    assign b_reset = ~enable_task_b;
     assign c_reset = ~enable_task_c;
-    assign d_reset = ~enable_task_d;*/
+    assign d_reset = ~enable_task_d;
 
 endmodule
