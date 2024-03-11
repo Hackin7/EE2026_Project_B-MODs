@@ -134,7 +134,7 @@ module adaptor_task_a(
     
     animation_timer anim_timer(clk, btnC, element_state[4:2]);
     wire [2:0] middle_trigger_state;
-    middle_square_timer #(5_000_000, 20_000_000) mid_timer(clk, reset, btnD, middle_trigger_state);
+    middle_square_timer #(5_000_000, 20_000_000) mid_timer(clk, reset, btnC & btnD, middle_trigger_state);
     assign element_state[5] = middle_trigger_state == 1;
     assign element_state[6] = middle_trigger_state == 2;
     assign element_state[7] = middle_trigger_state == 3;
