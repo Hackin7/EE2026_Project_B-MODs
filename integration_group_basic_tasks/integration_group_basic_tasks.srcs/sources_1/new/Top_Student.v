@@ -100,10 +100,10 @@ module Top_Student (
     wire b_reset;
     wire [15:0] b_oled_pixel_data;
     
-    /*adaptor_task_b task_b(
+    adaptor_task_b task_b(
     .clk(clk), .reset(b_reset), .btnC(btnC), .btnL(btnL), .btnR(btnR),
     .sw(sw), .oled_pixel_index(oled_pixel_index), .oled_pixel_data(b_oled_pixel_data)
-    );*/
+    );
 
     //// Overall Control Logic ////////////////////////////////////////////////////////////////////////////////////
     // 4.E1
