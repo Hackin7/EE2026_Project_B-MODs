@@ -1,4 +1,0 @@
-
-*** Running vivado
-    with args -log blk_mem_gen_img.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_gen_img.tcl
-
