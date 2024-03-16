@@ -123,7 +123,23 @@ module Top_Student (
         .mouse_left_click(mouse_left_click), .mouse_middle_click(mouse_middle_click),
         .mouse_right_click(mouse_right_click), .mouse_new_event(mouse_new_event)*/
     );
+    //// Task D //////////////////////////////////////////////////////////////////////////////////////////////////
+        wire d_reset;
+        wire [15:0] d_led; 
+        wire [6:0] d_seg; 
+        wire d_dp;
+        wire [3:0] d_an;
+        wire [15:0] d_oled_pixel_data;
     
+        adaptor_task_d task_d(
+            .reset(d_reset), .clk(clk),
+            .btnC(btnC), .btnU(btnU), .btnL(btnL), .btnR(btnR), .btnD(btnD), .sw(sw), .led(c_led), 
+            .seg(d_seg), .dp(d_dp), .an(d_an),
+            .oled_pixel_index(oled_pixel_index), .oled_pixel_data(d_oled_pixel_data)/*,
+            .mouse_xpos(mouse_xpos), .mouse_ypos(mouse_ypos), .mouse_zpos(mouse_zpos),
+            .mouse_left_click(mouse_left_click), .mouse_middle_click(mouse_middle_click),
+            .mouse_right_click(mouse_right_click), .mouse_new_event(mouse_new_event)*/
+        );
     //// Overall Control Logic ////////////////////////////////////////////////////////////////////////////////////
     // 4.E1
     wire enable_task_group = sw[4];
@@ -138,7 +154,7 @@ module Top_Student (
     assign dp = enable_task_group ? group_dp : 1;
     assign an = enable_task_group ? group_an : 4'b1111;
     assign oled_pixel_data = enable_task_group ? group_oled_pixel_data : (
-        enable_task_d ? 16'hF0FF /*d_oled_pixel_data*/: (
+        enable_task_d ? d_oled_pixel_data : (
         enable_task_c ? c_oled_pixel_data : (
         enable_task_b ? b_oled_pixel_data : (
         enable_task_a ? a_oled_pixel_data :
