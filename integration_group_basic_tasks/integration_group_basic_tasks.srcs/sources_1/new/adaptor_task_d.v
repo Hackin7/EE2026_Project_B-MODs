@@ -18,40 +18,49 @@ module adaptor_task_d(
     reg [2:0] active_btn = 3'b000; 
 
     always @(posedge clk) begin
-
-            if(btnU && !btnU_prev) active_btn <= 3'b001;
-            else if(btnL && !btnL_prev) active_btn <= 3'b011;
-            else if(btnR && !btnR_prev) active_btn <= 3'b100;
-            else if(btnC && !btnC_prev) begin
-                square_xpos <= 48; 
-                square_ypos <= 59;
-                square_color <= 16'hFFFF;
-                active_btn <= 3'b000; 
-            end
-
-            if (sw[0] && active_btn <= 3'b001) speed_threshold <= SPEED_15;
-            else if (sw[0] && active_btn <= 3'b011) speed_threshold <= SPEED_30;
-            else if (sw[0] && active_btn <= 3'b100) speed_threshold <= SPEED_30;
-            else if (!sw[0]) speed_threshold <= SPEED_45;
-                 
-
-            move_counter <= move_counter + 1;
-            if(move_counter >= speed_threshold) begin
-                case (active_btn)
-                    3'b001: if(square_ypos > 0) square_ypos <= square_ypos - 1; // Up
-                    3'b011: if(square_xpos > 0) square_xpos <= square_xpos - 1; // Left
-                    3'b100: if(square_xpos < 91) square_xpos <= square_xpos + 1; // Right
-                    default: ; // No movement
-                endcase
-                move_counter <= 0;
-            end
-
-            btnC_prev <= btnC;
-            btnU_prev <= btnU;
-            btnL_prev <= btnL;
-            btnR_prev <= btnR;
-            btnD_prev <= btnD;
+        if(btnU && !btnU_prev) active_btn <= 3'b001;
+        else if(btnL && !btnL_prev) active_btn <= 3'b011;
+        else if(btnR && !btnR_prev) active_btn <= 3'b100;
+        else if(btnC && !btnC_prev) begin
+            square_xpos <= 48; 
+            square_ypos <= 59;
+            square_color <= 16'hFFFF;
+            active_btn <= 3'b000; 
         end
+
+        if (sw[0] && active_btn <= 3'b001) speed_threshold <= SPEED_15;
+        else if (sw[0] && active_btn <= 3'b011) speed_threshold <= SPEED_30;
+        else if (sw[0] && active_btn <= 3'b100) speed_threshold <= SPEED_30;
+        else if (!sw[0]) speed_threshold <= SPEED_45;
+             
+
+        move_counter <= move_counter + 1;
+        if(move_counter >= speed_threshold) begin
+            case (active_btn)
+                3'b001: if(square_ypos > 0) square_ypos <= square_ypos - 1; // Up
+                3'b011: if(square_xpos > 0) square_xpos <= square_xpos - 1; // Left
+                3'b100: if(square_xpos < 91) square_xpos <= square_xpos + 1; // Right
+                default: ; // No movement
+            endcase
+            move_counter <= 0;
+        end
+
+        /* Button ----------------------------*/
+        btnC_prev <= btnC;
+        btnU_prev <= btnU;
+        btnL_prev <= btnL;
+        btnR_prev <= btnR;
+        btnD_prev <= btnD;
+        
+        /* Reset -----------------------------*/
+        if (reset) begin
+            square_xpos <= 0; 
+            square_ypos <= 0;
+            square_color <= 16'h001F;
+            move_counter <= 0;
+            active_btn <= 3'b000;
+        end
+    end
  
 
     always @(posedge clk) begin
