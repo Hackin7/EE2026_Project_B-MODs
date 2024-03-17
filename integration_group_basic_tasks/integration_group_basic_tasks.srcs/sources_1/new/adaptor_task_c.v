@@ -58,30 +58,7 @@ module adaptor_task_c(
     reg [31:0] delay_after_animation = 0;
     reg final_state = 0;
     
-    task reset_control;
-        begin
-            if (reset) begin
-                red_trail_start = 0;
-                red_trail_count = 0;
-                red_trail_done = 0;
-                red_expansion_start = 0;
-                red_expansion_delay = 0;
-                red_expansion_count = 0;
-                red_square_start = 0;
-                red_square_delay = 0;
-                green_trail_start = 0;
-                green_trail_done = 0;
-                green_expansion_start = 0;
-                green_trail_count = 0;
-                green_expansion_count = 0;
-                green_expansion_delay = 0;
-                final_state = 0;
-            end
-        end
-    endtask
-    
     always @ (posedge clk) begin
-        reset_control;
         xpos <= oled_pixel_index % 96;
         ypos <= oled_pixel_index / 96;
         
