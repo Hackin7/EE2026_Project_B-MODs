@@ -46,21 +46,28 @@ module task_c(
     reg [7:0] xpos; // = pixel_index % 96;
     reg [7:0] ypos; // = pixel_index / 96;
     
+    // Color variables
+    parameter COLOR_RED = 16'b11111_000000_00000;
+    parameter COLOR_GREEN = 16'b00000_101010_00000;
+    parameter COLOR_BLACK = 16'd0;
+    
     // Subtask C variables
-    reg red_trail_start = 0;
-    reg [31:0] red_trail_count = 0;
-    reg red_trail_done = 0;
-    reg red_expansion_start = 0;
-    reg [31:0] red_expansion_delay = 0;
-    reg [31:0] red_expansion_count = 0;
-    reg red_square_start = 0;
-    reg [31:0] red_square_delay = 0;
-    reg green_trail_start = 0;
-    reg green_trail_done = 0;
-    reg green_expansion_start = 0;
-    reg [31:0] green_trail_count = 0;
-    reg [31:0] green_expansion_count = 0;
-    reg [31:0] green_expansion_delay = 0;
+    reg fill_status = 0;
+    reg [31:0] fill_count = 0;
+    reg fill_complete = 0;
+    reg move_right_status = 0;
+    reg [31:0] delay_after_fill = 0;
+    reg [31:0] move_right_count = 0;
+    reg move_right_complete = 0;
+    reg [31:0] delay_before_color_change = 0;
+    reg change_color_status = 0;
+    reg move_left_status = 0;
+    reg move_up_status = 0; 
+    reg animation_complete_status = 0;
+    reg reset_status = 0;
+    reg [31:0] move_left_count = 0;
+    reg [31:0] move_up_count = 0;
+    reg [31:0] delay_after_animation = 0;
     reg final_state = 0;
     
     always @ (posedge clk) begin
@@ -68,132 +75,136 @@ module task_c(
         ypos <= oled_pixel_index / 96;
         
         if (sw[0] == 1) begin
-            if (ypos >= 2 && (ypos < 7 + red_trail_count/1_250_000) && xpos >= 45 && xpos < 50) begin
-                oled_pixel_data <= 16'b11111_000000_00000;
+            oled_pixel_data <= COLOR_BLACK;
+            
+            if (ypos >= 2 && (ypos < 7 + fill_count/1_250_000) && xpos >= 45 && xpos < 50) begin
+                oled_pixel_data <= COLOR_RED;
             end 
                     
-            else if ( final_state == 1 && ((ypos >= 7 && ypos < 32 && xpos >= 45 && xpos < 50) || (ypos >= 32 && ypos < 37 && xpos >= 45 && xpos < 65)) ) begin
-                oled_pixel_data <= 16'b00000_101010_00000;
-            end
-                
-            else begin
-                oled_pixel_data <= 16'd0;
+            else if (final_state == 1 && ((ypos >= 7 && ypos < 32 && xpos >= 45 && xpos < 50) || (ypos >= 32 && ypos < 37 && xpos >= 45 && xpos < 65))) begin
+                oled_pixel_data <= COLOR_GREEN;
             end
                     
             if (btnD == 1) begin
-                red_trail_start <= 1;      
+                fill_status <= 1;      
             end    
                 
-            if (red_trail_start == 1) begin 
-                red_trail_count <= (red_trail_count == 37_500_000) ? 37_500_000 : red_trail_count + 1;      
+            if (fill_status == 1) begin 
+                fill_count <= (fill_count == 37_500_000) ? 37_500_000 : fill_count + 1;      
             end          
                    
-            if (red_trail_count == 0 && red_trail_start == 1) begin
-                red_trail_done <= 1;
+            if (fill_count == 0 && fill_status == 1) begin
+                fill_complete <= 1;
             end
            
-            if (red_trail_done == 1) begin
-                red_expansion_delay <= (red_expansion_delay == 37_500_000) ? 37_500_000 : red_expansion_delay + 1;            
-                if (red_expansion_delay == 37_500_000) begin
-                    red_expansion_start <= 1;              
+            if (fill_complete == 1) begin
+                delay_after_fill <= (delay_after_fill == 37_500_000) ? 37_500_000 : delay_after_fill + 1;            
+                if (delay_after_fill == 37_500_000) begin
+                    move_right_status <= 1;              
                 end
             end
            
-            if (red_expansion_start == 1) begin
-                red_expansion_count <= (red_expansion_count == 18_750_000) ? 18_750_000 : red_expansion_count + 1;
-                if (ypos >= 2 + red_trail_count/1_250_000 && (ypos < 7 + red_trail_count/1_250_000) && 
-                    xpos >= 45 && xpos < 50 + red_expansion_count/1_250_000) begin  //btw 45 and 65
-                    oled_pixel_data <= 16'b11111_000000_00000;
+            if (move_right_status == 1) begin
+                move_right_count <= (move_right_count == 18_750_000) ? 18_750_000 : move_right_count + 1;
+                if (ypos >= 2 + fill_count/1_250_000 && (ypos < 7 + fill_count/1_250_000) && 
+                    xpos >= 45 && xpos < 50 + move_right_count/1_250_000) begin
+                    oled_pixel_data <= COLOR_RED;
                 end
             end
            
-            if (red_expansion_count == 18_750_000) begin
-                red_square_start <= 1;
+            if (move_right_count == 18_750_000) begin
+                move_right_complete <= 1;
             end
            
-            if (red_square_start == 1) begin
-                red_square_delay <= red_square_delay + 1;
-                if (red_square_delay == 12_500_000) begin
-                    green_trail_start <= 1;
-                    red_square_delay <= 0;              
+            if (move_right_complete == 1) begin
+                delay_before_color_change <= delay_before_color_change + 1;
+                if (delay_before_color_change == 12_500_000) begin
+                    change_color_status <= 1;
+                    delay_before_color_change <= 0;              
                 end
             end
            
-            if (green_trail_start == 1) begin
-                if (ypos >= 2 + red_trail_count/1_250_000 && (ypos < 7 + red_trail_count/1_250_000) && 
-                    xpos >= 45 + red_expansion_count/1_250_000 && xpos < 50 + red_expansion_count/1_250_000) 
+            if (change_color_status == 1) begin
+                if (ypos >= 2 + fill_count/1_250_000 && (ypos < 7 + fill_count/1_250_000) && 
+                    xpos >= 45 + move_right_count/1_250_000 && xpos < 50 + move_right_count/1_250_000) 
                 begin
-                    oled_pixel_data <= 16'b00000_101010_00000;
+                    oled_pixel_data <= COLOR_GREEN;
                 end
-                if (red_square_delay == 12_500_000) begin
-                    green_trail_done <= 1;               
+                if (delay_before_color_change == 12_500_000) begin
+                    move_left_status <= 1;               
                 end
             end
            
-            if (green_trail_done == 1) begin
-                green_trail_count <= (green_trail_count == 37_500_000) ? 37_500_000 : green_trail_count + 1;
-                if (ypos >= 2 + red_trail_count/1_250_000 && (ypos < 7 + red_trail_count/1_250_000) && 
-                    xpos >= 45 + 15 - green_trail_count/2_500_000 && xpos < 50 + 15)
+            if (move_left_status == 1) begin
+                move_left_count <= (move_left_count == 37_500_000) ? 37_500_000 : move_left_count + 1;
+                if (ypos >= 2 + fill_count/1_250_000 && (ypos < 7 + fill_count/1_250_000) && 
+                    xpos >= 45 + 15 - move_left_count/2_500_000 && xpos < 50 + 15)
                 begin
-                    oled_pixel_data <= 16'b00000_101010_00000;
+                    oled_pixel_data <= COLOR_GREEN;
                 end            
             end
            
-            if (green_trail_count == 37_500_000) begin
-                green_expansion_start <= 1;            
+            if (move_left_count == 37_500_000) begin
+                move_up_status <= 1;            
             end
            
-            if (green_expansion_start == 1) begin
-                green_expansion_count <= (green_expansion_count == 75_000_000) ? 75_000_000 : green_expansion_count + 1;
-                if (ypos >= 2 + 30 - green_expansion_count/2_500_000 && (ypos < 7 + 30) && xpos >= 45 && xpos < 50) begin
-                    oled_pixel_data <= 16'b00000_101010_00000;
+            if (move_up_status == 1) begin
+                move_up_count <= (move_up_count == 75_000_000) ? 75_000_000 : move_up_count + 1;
+                if (ypos >= 2 + 30 - move_up_count/2_500_000 && (ypos < 7 + 30) && xpos >= 45 && xpos < 50) begin
+                    oled_pixel_data <= COLOR_GREEN;
                 end
             end
            
-            if (green_expansion_count == 75_000_000) begin
-                green_expansion_delay <= 0;   
+            if (move_up_count == 75_000_000) begin
+                animation_complete_status <= 1;
+                delay_after_animation <= 0;   
             end
            
-            if (green_expansion_delay == 0) begin
-                green_expansion_delay <= (green_expansion_delay == 12_500_000)? 12_500_000 : green_expansion_delay + 1;
-                if (green_expansion_delay == 12_500_000) begin
-                    final_state <= 1;                           
+            if (animation_complete_status == 1) begin
+                delay_after_animation <= (delay_after_animation == 12_500_000)? 12_500_000 : delay_after_animation + 1;
+                if (delay_after_animation == 12_500_000) begin
+                    reset_status <= 1;                           
                 end
             end
            
-            if (final_state == 1) begin                    
-                red_trail_start <= 0;
-                red_trail_done <= 0;
-                red_expansion_start <= 0;
-                red_square_start <= 0; 
-                green_trail_start <= 0;
-                green_trail_done <= 0;
-                green_expansion_start <= 0;
-                red_trail_count <= 0;  
-                red_expansion_delay <= 0;
-                red_expansion_count <= 0;
-                green_trail_count <= 0;
-                green_expansion_count <= 0;
-                red_square_delay <= 0;
-                green_expansion_delay <= 0;                   
+            if (reset_status == 1) begin                    
+                fill_status <= 0;
+                fill_complete <= 0;
+                move_right_status <= 0;
+                move_right_complete <= 0; 
+                change_color_status <= 0;
+                move_left_status <= 0;
+                move_up_status <= 0;
+                animation_complete_status <= 0;
+                reset_status <= 0;            
+                final_state <= 1;    
+                fill_count <= 0;  
+                delay_after_fill <= 0;
+                move_right_count <= 0;
+                move_left_count <= 0;
+                move_up_count <= 0;
+                delay_before_color_change <= 0;
+                delay_after_animation <= 0;                   
             end
         end
         else begin
-            red_trail_start <= 0;
-            red_trail_done <= 0;
-            red_expansion_start <= 0;
-            red_square_start <= 0; 
-            green_trail_start <= 0;
-            green_trail_done <= 0;
-            green_expansion_start <= 0;
+            fill_status <= 0;
+            fill_complete <= 0;
+            move_right_status <= 0;
+            move_right_complete <= 0; 
+            change_color_status <= 0;
+            move_left_status <= 0;
+            move_up_status <= 0;
+            animation_complete_status <= 0;
+            reset_status <= 0;            
             final_state <= 0;    
-            red_trail_count <= 0;  
-            red_expansion_delay <= 0;
-            red_expansion_count <= 0;
-            green_trail_count <= 0;
-            green_expansion_count <= 0;
-            red_square_delay <= 0;
-            green_expansion_delay <= 0;   
+            fill_count <= 0;  
+            delay_after_fill <= 0;
+            move_right_count <= 0;
+            move_left_count <= 0;
+            move_up_count <= 0;
+            delay_before_color_change <= 0;
+            delay_after_animation <= 0;   
         end        
              
     end
