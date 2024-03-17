@@ -97,7 +97,7 @@ module adaptor_task_b(
             input [7:0] x_start, input [7:0] y_start,
             input [7:0] size
     ); begin
-        is_box = (x >= x_start && x <= x_start + size) && (y >= y_start && y <= y_start + size);
+        is_box = (x >= x_start && x < x_start + size) && (y >= y_start && y < y_start + size);
         end
     endfunction
     

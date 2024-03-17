@@ -141,23 +141,23 @@ module adaptor_task_c(
     task reset_control;
         begin
             if (reset) begin
-                square_xpos = 45;
-                square_ypos = 0;
-                btnD_prev = 0;
-                animation_active = 0;
-                animation_counter = 0;
-                square_color_changed = 0;
-                expand_xpos = 60; // Starting position for expansion
-                expand_width = 0; // Width of the expansion
-                expand_counter = 0; // Counter for expansion animation
-                expand_active = 0; // Flag to indicate if expansion animation is active
-                square_color_reset = 0; // Flag to indicate if Square color has been reset at the end
-                red_trail_counter = 0;
-                red_trail_active = 0;
-                vertical_expand_ypos = 30; // Starting position for vertical expansion
-                vertical_expand_height = 0; // Height of the vertical expansion
-                vertical_expand_counter = 0; // Counter for vertical expansion animation
-                vertical_expand_active = 0; // Flag to indicate if vertical expansion animation is active
+                square_xpos <= 45;
+                square_ypos <= 0;
+                btnD_prev <= 0;
+                animation_active <= 0;
+                animation_counter <= 0;
+                square_color_changed <= 0;
+                expand_xpos <= 60; // Starting position for expansion
+                expand_width <= 0; // Width of the expansion
+                expand_counter <= 0; // Counter for expansion animation
+                expand_active <= 0; // Flag to indicate if expansion animation is active
+                square_color_reset <= 0; // Flag to indicate if Square color has been reset at the end
+                red_trail_counter <= 0;
+                red_trail_active <= 0;
+                vertical_expand_ypos <= 30; // Starting position for vertical expansion
+                vertical_expand_height <= 0; // Height of the vertical expansion
+                vertical_expand_counter <= 0; // Counter for vertical expansion animation
+                vertical_expand_active <= 0; // Flag to indicate if vertical expansion animation is active
             end
         end
     endtask
