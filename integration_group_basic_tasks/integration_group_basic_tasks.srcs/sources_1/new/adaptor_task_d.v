@@ -1,11 +1,25 @@
 module adaptor_task_d(
     input reset, input clk,
     input btnC, btnU, btnL, btnR, btnD, input [15:0] sw, output [15:0] led,
+    input [12:0] oled_pixel_index, output [15:0] oled_pixel_data,
     output [6:0] seg, output dp, output [3:0] an,
     // OLED
     input [12:0] oled_pixel_index, output reg [15:0] oled_pixel_data
 );
 
+<<<<<<< Updated upstream
+=======
+    wire [7:0] Jb;
+    assign JB[7:0] = Jb;
+
+    wire clk_6_25mhz;
+    clk_counter #(16, 5) clk6p25m (clk, clk_6_25mhz);
+
+    wire [12:0] pixel_index = oled_pixel_index;
+    reg [15:0] pixel_data;
+    assign oled_pixel_data = pixel_data;
+
+>>>>>>> Stashed changes
     reg [7:0] square_xpos = 0, square_ypos = 0;
     reg [15:0] square_color = 16'h001F;
     reg [31:0] move_counter = 0;
@@ -66,9 +80,9 @@ module adaptor_task_d(
     always @(posedge clk) begin
         if ((oled_pixel_index % 96 >= square_xpos) && (oled_pixel_index % 96 < square_xpos + 5) &&
             (oled_pixel_index / 96 >= square_ypos) && (oled_pixel_index / 96 < square_ypos + 5)) begin
-            oled_pixel_data <= square_color;
+            pixel_data <= square_color;
         end else begin
-            oled_pixel_data <= 16'h0000;
+            pixel_data <= 16'h0000;
         end
     end
 

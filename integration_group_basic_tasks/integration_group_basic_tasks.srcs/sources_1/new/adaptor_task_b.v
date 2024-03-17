@@ -39,7 +39,7 @@ module adaptor_task_b(
     wire [12:0] pixel_index = oled_pixel_index;
     assign oled_pixel_data = oled_data;
 
-    reg [2:0] green_box_pos = 3'd3;
+    reg [2:0] green_box_pos = 3'd5;
     reg [31:0] counter, enable_task_counter;
     reg [31:0] move_counter;
     reg shift_once;
@@ -47,7 +47,6 @@ module adaptor_task_b(
     wire [2:0] middle_trigger_state;
     middle_square_timer #(5_000_000, 20_000_000) mid_timer(clk, reset, btnC, middle_trigger_state);
     reg [3:0] box_color;
-    
     function is_green_border(input [7:0] size, 
             input [7:0] x, input [7:0] y,
             input [7:0] x_start, input [7:0] y_start,
@@ -71,13 +70,20 @@ module adaptor_task_b(
     always @ (posedge clk) begin
         if (sw[0]) begin
             counter <= counter <= 400_000_000 ? counter + 1 : counter;
-            enable_task_counter <= counter >= 399_999_999 ? 1 : 0;
-        end else if (~sw[0]) begin
+            if (counter >= 399_999_999) begin
+                enable_task_counter <= 1;
+            end
+        end 
+        if (reset || ~sw[0]) begin
+            shift_once <= 0;
             counter <= 0;
             enable_task_counter <= 0;
             green_box_pos <= 3;
-        end
-        if (enable_task_counter) begin
+        end else if (enable_task_counter) begin
+            if (~shift_once) begin
+                shift_once <= 1;
+                green_box_pos <= 5;
+            end
             if (btnL && green_box_pos > 1) begin 
                 move_counter <= move_counter + 1;
                 if (move_counter >= 5_000_000) begin
@@ -91,13 +97,13 @@ module adaptor_task_b(
                     move_counter <= 0;
                 end
             end else move_counter <= 0;
-        end
+        end else green_box_pos <= 3;
     end
     
     always @ (*) begin
         xpos = pixel_index % 96;
         ypos = pixel_index / 96;
-        box_color <= sw[0] ? middle_trigger_state : 0;
+        box_color <= middle_trigger_state;
         if (enable_task_counter) begin
             if (is_box(xpos, ypos, 8'd45, 8'd29, SQUARE_LENGTH)) begin 
                 oled_data <= COLOR; 
@@ -123,6 +129,15 @@ module adaptor_task_b(
                     if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd25, 8'd25, BORDER_THICKNESS, 2)) begin
                         oled_data <= BLACK;
                     end
+                    if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd40, 8'd25, BORDER_THICKNESS, 2)) begin
+                        oled_data <= BLACK;
+                    end
+                    if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd55, 8'd25, BORDER_THICKNESS, 2)) begin
+                        oled_data <= BLACK;
+                    end
+                    if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd70, 8'd25, BORDER_THICKNESS, 2)) begin
+                        oled_data <= BLACK;
+                    end
                 end 
             end
             2: begin 
@@ -134,15 +149,27 @@ module adaptor_task_b(
                     if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd40, 8'd25, BORDER_THICKNESS, 2)) begin
                         oled_data <= BLACK;
                     end
+                    if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd55, 8'd25, BORDER_THICKNESS, 2)) begin
+                        oled_data <= BLACK;
+                    end
+                    if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd70, 8'd25, BORDER_THICKNESS, 2)) begin
+                        oled_data <= BLACK;
+                    end
                 end
             end
             3: begin 
                 if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd40, 8'd25, BORDER_THICKNESS, 2)) begin
                     oled_data <= GREEN;
+                    if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd10, 8'd25, BORDER_THICKNESS, 2)) begin
+                        oled_data <= BLACK;
+                    end
                     if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd25, 8'd25, BORDER_THICKNESS, 2)) begin
                         oled_data <= BLACK;
                     end
                     if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd55, 8'd25, BORDER_THICKNESS, 2)) begin
+                        oled_data <= BLACK;
+                    end
+                    if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd70, 8'd25, BORDER_THICKNESS, 2)) begin
                         oled_data <= BLACK;
                     end
                 end
@@ -150,6 +177,12 @@ module adaptor_task_b(
             4: begin 
                 if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd55, 8'd25, BORDER_THICKNESS, 2)) begin
                     oled_data <= GREEN;
+                    if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd10, 8'd25, BORDER_THICKNESS, 2)) begin
+                        oled_data <= BLACK;
+                    end
+                    if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd25, 8'd25, BORDER_THICKNESS, 2)) begin
+                        oled_data <= BLACK;
+                    end
                     if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd40, 8'd25, BORDER_THICKNESS, 2)) begin
                         oled_data <= BLACK;
                     end
@@ -161,6 +194,15 @@ module adaptor_task_b(
             5: begin 
                 if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd70, 8'd25, BORDER_THICKNESS, 2)) begin
                     oled_data <= GREEN;
+                    if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd10, 8'd25, BORDER_THICKNESS, 2)) begin
+                        oled_data <= BLACK;
+                    end
+                    if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd25, 8'd25, BORDER_THICKNESS, 2)) begin
+                        oled_data <= BLACK;
+                    end
+                    if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd40, 8'd25, BORDER_THICKNESS, 2)) begin
+                                            oled_data <= BLACK;
+                    end
                     if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd55, 8'd25, BORDER_THICKNESS, 2)) begin
                         oled_data <= BLACK;
                     end
@@ -177,3 +219,4 @@ module adaptor_task_b(
     end
     
 endmodule
+
