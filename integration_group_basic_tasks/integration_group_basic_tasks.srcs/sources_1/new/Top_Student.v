@@ -69,7 +69,7 @@ module Top_Student (
     wire [3:0] group_an;
     wire [15:0] group_oled_pixel_data;
 
-    adaptor_task_group task_group(
+    /*adaptor_task_group task_group(
         .reset(group_reset), .clk(clk),
         .btnC(btnC), .btnU(btnU), .btnL(btnL), .btnR(btnR), .btnD(btnD), .sw(sw), .led(group_led), 
         .seg(group_seg), .dp(group_dp), .an(group_an),
@@ -77,7 +77,7 @@ module Top_Student (
         .mouse_xpos(mouse_xpos), .mouse_ypos(mouse_ypos), .mouse_zpos(mouse_zpos),
         .mouse_left_click(mouse_left_click), .mouse_middle_click(mouse_middle_click),
         .mouse_right_click(mouse_right_click), .mouse_new_event(mouse_new_event)
-    );
+    );*/
 
     //// Task A //////////////////////////////////////////////////////////////////////////////////////////////////
     wire a_reset;
@@ -87,7 +87,7 @@ module Top_Student (
     wire [3:0] a_an;
     wire [15:0] a_oled_pixel_data;
 
-    adaptor_task_a task_a(
+    /*adaptor_task_a task_a(
         .reset(a_reset), .clk(clk),
         .btnC(btnC), .btnU(btnU), .btnL(btnL), .btnR(btnR), .btnD(btnD), .sw(sw), .led(a_led), 
         .seg(a_seg), .dp(a_dp), .an(a_an),
@@ -95,7 +95,7 @@ module Top_Student (
         .mouse_xpos(mouse_xpos), .mouse_ypos(mouse_ypos), .mouse_zpos(mouse_zpos),
         .mouse_left_click(mouse_left_click), .mouse_middle_click(mouse_middle_click),
         .mouse_right_click(mouse_right_click), .mouse_new_event(mouse_new_event)
-    );
+    );*/
     
     //// Task B //////////////////////////////////////////////////////////////////////////////////////////////////
     wire b_reset;
@@ -131,15 +131,12 @@ module Top_Student (
         wire [3:0] d_an;
         wire [15:0] d_oled_pixel_data;
     
-        adaptor_task_d task_d(
+        /*adaptor_task_d task_d(
             .reset(d_reset), .clk(clk),
             .btnC(btnC), .btnU(btnU), .btnL(btnL), .btnR(btnR), .btnD(btnD), .sw(sw), .led(c_led), 
             .seg(d_seg), .dp(d_dp), .an(d_an),
-            .oled_pixel_index(oled_pixel_index), .oled_pixel_data(d_oled_pixel_data)/*,
-            .mouse_xpos(mouse_xpos), .mouse_ypos(mouse_ypos), .mouse_zpos(mouse_zpos),
-            .mouse_left_click(mouse_left_click), .mouse_middle_click(mouse_middle_click),
-            .mouse_right_click(mouse_right_click), .mouse_new_event(mouse_new_event)*/
-        );
+            .oled_pixel_index(oled_pixel_index), .oled_pixel_data(d_oled_pixel_data)
+        );*/
     //// Overall Control Logic ////////////////////////////////////////////////////////////////////////////////////
     // 4.E1
     wire enable_task_group = sw[4];
