@@ -45,7 +45,7 @@ module adaptor_task_b(
     reg shift_once;
     reg [15:0] COLOR = WHITE;
     wire [2:0] middle_trigger_state;
-    middle_square_timer #(.LOOP_STATE(0)) mid_timer(clk, reset, btnC, middle_trigger_state);
+    middle_square_timer #(.LOOP_STATE(0)) mid_timer(clk, reset, enable_task_counter & btnC, middle_trigger_state);
     /* Trigger_state
     0: white, 1: red, 2: green, 3: blue , goes back to 0
     */
@@ -53,11 +53,42 @@ module adaptor_task_b(
     function is_green_border(input [7:0] size, 
             input [7:0] x, input [7:0] y,
             input [7:0] x_start, input [7:0] y_start,
-            input [4:0] width, input [4:0] gap);
-            reg long_range, short_range; 
+            input [4:0] width, //  
+            input [4:0] gap    // gap of item
+       );
+        reg long_range, short_range;
+        
+        /* 
+           _c
+        a |_| b
+           d
+        */
+         
         begin
-            long_range = (x >= x_start && x < x_start + size + 2 * width + 2 * gap) && ((y >= y_start && y < y_start + width) || (y >= y_start + width + 2 * gap + size && y < y_start + 2 * width + 2 * gap + size));
-            short_range = (((x >= x_start && x < x_start + width)|| (x >= x_start + 2* gap + width + size && x < x_start + 2* gap + 2 * width + size )) && (y >= y_start + width && y < y_start + size + 2 * width + 2 * gap));
+            long_range = (
+                ((x_start+1 <= x) && (x <= x_start + size + 2 * width + 2 * gap - 1)) // x: Within outer box 
+                && 
+                (
+                    ((y_start <= y) && (y < y_start + width))        // top side (c)
+                    ||     
+                    (                                                // bottom side (d)
+                        ((y_start + width + 2 * gap + size) <= y) && 
+                        (y < y_start + 2 * width + 2 * gap + size)
+                    )
+                )
+            );
+            short_range = (
+                (
+                    ((x_start + 1 <= x) && (x <= x_start + width))    // left side (a)
+                    || 
+                    (
+                        (x_start + 2* gap + width + size <= x) 
+                        && 
+                        (x <= x_start + 2* gap + 2 * width + size - 1) 
+                    )
+                ) && 
+                (y_start + width <= y && y < y_start + size + 2 * width + 2 * gap) // y: within box
+            );
             is_green_border = long_range || short_range;
         end
     endfunction
@@ -127,7 +158,7 @@ module adaptor_task_b(
         
         case (green_box_pos)
             1: begin 
-                if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd10, 8'd25, BORDER_THICKNESS, 2)) begin
+                if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd11, 8'd25, BORDER_THICKNESS, 2)) begin
                     oled_data <= GREEN;
                     if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd25, 8'd25, BORDER_THICKNESS, 2)) begin
                         oled_data <= BLACK;
@@ -195,7 +226,7 @@ module adaptor_task_b(
                 end
             end
             5: begin 
-                if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd70, 8'd25, BORDER_THICKNESS, 2)) begin
+                if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd70-1, 8'd25, BORDER_THICKNESS, 2)) begin
                     oled_data <= GREEN;
                     if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd10, 8'd25, BORDER_THICKNESS, 2)) begin
                         oled_data <= BLACK;
