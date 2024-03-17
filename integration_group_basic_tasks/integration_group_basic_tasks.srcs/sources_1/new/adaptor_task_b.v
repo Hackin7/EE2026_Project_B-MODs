@@ -158,7 +158,7 @@ module adaptor_task_b(
         
         case (green_box_pos)
             1: begin 
-                if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd11, 8'd25, BORDER_THICKNESS, 2)) begin
+                if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd10, 8'd25, BORDER_THICKNESS, 2)) begin
                     oled_data <= GREEN;
                     if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd25, 8'd25, BORDER_THICKNESS, 2)) begin
                         oled_data <= BLACK;
@@ -226,7 +226,7 @@ module adaptor_task_b(
                 end
             end
             5: begin 
-                if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd70-1, 8'd25, BORDER_THICKNESS, 2)) begin
+                if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd70, 8'd25, BORDER_THICKNESS, 2)) begin
                     oled_data <= GREEN;
                     if (is_green_border(SQUARE_LENGTH, xpos, ypos, 8'd10, 8'd25, BORDER_THICKNESS, 2)) begin
                         oled_data <= BLACK;
