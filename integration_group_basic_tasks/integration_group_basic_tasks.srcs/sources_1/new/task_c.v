@@ -39,7 +39,7 @@ module task_c(
     wire [12:0] oled_pixel_index;
     wire [15:0] pixel_data = oled_pixel_data;
     Oled_Display display(
-       .clk(clk_6_25mhz), .reset(reset), 
+       .clk(clk_6_25mhz), .reset(0), 
        .frame_begin(), .sending_pixels(), .sample_pixel(), .pixel_index(oled_pixel_index), .pixel_data(pixel_data), 
        .cs(Jb[0]), .sdin(Jb[1]), .sclk(Jb[3]), .d_cn(Jb[4]), .resn(Jb[5]), .vccen(Jb[6]), .pmoden(Jb[7])); //to SPI    
     // Ease of usage
@@ -59,7 +59,7 @@ module task_c(
     reg square_color_reset = 0; // Flag to indicate if Square color has been reset at the end
     reg [31:0] red_trail_counter = 0;
     reg red_trail_active = 0;
-    reg [7:0] vertical_expand_ypos = 30; // Starting position for vertical expansion
+    reg [7:0] vertical_expand_ypos = 35; // Starting position for vertical expansion
     reg [7:0] vertical_expand_height = 0; // Height of the vertical expansion
     reg [31:0] vertical_expand_counter = 0; // Counter for vertical expansion animation
     reg vertical_expand_active = 0; // Flag to indicate if vertical expansion animation is active
@@ -74,8 +74,8 @@ module task_c(
                 square_color_changed <= 0;
                 expand_active <= 0; // Disable expansion animation initially
                 vertical_expand_active <= 0; // Disable vertical expansion animation initially
-            end
-        end
+            end        
+         end
     endtask
     
     // Task for animation control
@@ -102,7 +102,7 @@ module task_c(
                 end else begin
                     animation_active <= 0;
                     square_xpos <= 60;
-                    square_ypos <= 35;
+                    square_ypos <= 35;                
                 end
             end
         end
@@ -117,7 +117,7 @@ module task_c(
                     red_trail_active <= 1;
                 end
             end
-        end
+        end    
     endtask
     
     // Task for expansion animation
@@ -129,7 +129,7 @@ module task_c(
                     expand_width <= (expand_counter * 15) / 31250000; // Increase width from 0 to 15 pixels
                 end else begin
                     expand_active <= 0;
-                    expand_width <= 15; // Change final expand_width to 15
+                    expand_width <= 15; // Change final expand_width to 15                
                 end
             end
         end
@@ -141,13 +141,13 @@ module task_c(
             if (vertical_expand_active) begin
                 vertical_expand_counter <= vertical_expand_counter + 1;
                 if (vertical_expand_counter < 62500000) begin // 1 second at 62.5 MHz
-                    vertical_expand_height <= (vertical_expand_counter * 30) / 62500000; // Increase height from 0 to 30 pixels
+                    vertical_expand_height <= (vertical_expand_counter * 35) / 62500000; // Increase height from 0 to 35 pixels
                 end else begin
                     vertical_expand_active <= 0;
-                    vertical_expand_height <= 30; // Final vertical expand height is 30
+                    vertical_expand_height <= 35; // Final vertical expand height is 35
                 end
             end
-        end
+        end    
     endtask
     
     always @ (posedge clk) begin
@@ -162,12 +162,10 @@ module task_c(
         xpos = oled_pixel_index % 96;
         ypos = oled_pixel_index / 96;
     
-        if (square_color_changed && (xpos >= expand_xpos - expand_width && xpos < expand_xpos && ypos >= 35 && ypos < 40) && expand_xpos - expand_width >= 45) begin // Add condition to stop expansion at x45
-            oled_pixel_data = {5'd0, 6'd63, 5'd0}; // Green expansion trail
-        end else if (vertical_expand_active && (xpos >= 45 && xpos < 50 && ypos >= vertical_expand_ypos - vertical_expand_height && ypos < vertical_expand_ypos)) begin
-            oled_pixel_data = {5'd0, 6'd63, 5'd0}; // Green vertical expansion trail
-        end else if (xpos >= 45 && xpos < 50 && ypos >= 0 && ypos < square_ypos) begin
-            oled_pixel_data = {5'd31, 6'd0, 5'd0}; // Red trail (vertical)
+        if (vertical_expand_active && (xpos >= 45 && xpos < 50 && ypos >= vertical_expand_ypos - vertical_expand_height && ypos < vertical_expand_ypos)) begin
+            oled_pixel_data = {5'd0, 6'd63, 5'd0}; // Green vertical expansion 
+        end else if (square_color_changed && (xpos >= expand_xpos - expand_width && xpos < expand_xpos && ypos >= 35 && ypos < 40) && expand_xpos - expand_width >= 45) begin
+            oled_pixel_data = {5'd0, 6'd63, 5'd0}; // Green expansion 
         end else if (xpos >= square_xpos && xpos < square_xpos + 5 && ypos >= square_ypos && ypos < square_ypos + 5) begin
             if (square_color_changed)
                 oled_pixel_data = {5'd0, 6'd63, 5'd0}; // Green square
@@ -175,6 +173,8 @@ module task_c(
                 oled_pixel_data = {5'd31, 6'd0, 5'd0}; // Red square
         end else if (xpos >= 45 && xpos < square_xpos && ypos >= square_ypos && ypos < square_ypos + 5) begin
             oled_pixel_data = {5'd31, 6'd0, 5'd0}; // Red trail (horizontal)
+        end else if (xpos >= 45 && xpos < 50 && ypos >= 0 && ypos < square_ypos && !(vertical_expand_active && ypos >= vertical_expand_ypos - vertical_expand_height)) begin
+            oled_pixel_data = {5'd31, 6'd0, 5'd0}; // Red trail (vertical)
         end else begin
             oled_pixel_data = 16'h0000; // Black
         end
