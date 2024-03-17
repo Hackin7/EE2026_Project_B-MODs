@@ -77,7 +77,7 @@ module task_c(
         if (sw[0] == 1) begin
             oled_pixel_data <= COLOR_BLACK;
             
-            if (ypos >= 2 && (ypos < 7 + fill_count/1_250_000) && xpos >= 45 && xpos < 50) begin
+            if (ypos >= 2 && (ypos < 7 + fill_count/2_500_000) && xpos >= 45 && xpos < 50) begin
                 oled_pixel_data <= COLOR_RED;
             end 
                     
@@ -90,7 +90,7 @@ module task_c(
             end    
                 
             if (fill_status == 1) begin 
-                fill_count <= (fill_count == 37_500_000) ? 37_500_000 : fill_count + 1;      
+                fill_task();      
             end          
                    
             if (fill_count == 0 && fill_status == 1) begin
@@ -98,115 +98,153 @@ module task_c(
             end
            
             if (fill_complete == 1) begin
-                delay_after_fill <= (delay_after_fill == 37_500_000) ? 37_500_000 : delay_after_fill + 1;            
-                if (delay_after_fill == 37_500_000) begin
+                delay_after_fill_task();            
+                if (delay_after_fill == 75_000_000) begin
                     move_right_status <= 1;              
                 end
             end
            
             if (move_right_status == 1) begin
-                move_right_count <= (move_right_count == 18_750_000) ? 18_750_000 : move_right_count + 1;
-                if (ypos >= 2 + fill_count/1_250_000 && (ypos < 7 + fill_count/1_250_000) && 
-                    xpos >= 45 && xpos < 50 + move_right_count/1_250_000) begin
-                    oled_pixel_data <= COLOR_RED;
-                end
+                move_right_task();
             end
            
-            if (move_right_count == 18_750_000) begin
+            if (move_right_count == 37_500_000) begin
                 move_right_complete <= 1;
             end
            
             if (move_right_complete == 1) begin
-                delay_before_color_change <= delay_before_color_change + 1;
-                if (delay_before_color_change == 12_500_000) begin
+                delay_before_color_change_task();
+                if (delay_before_color_change == 25_000_000) begin
                     change_color_status <= 1;
                     delay_before_color_change <= 0;              
                 end
             end
            
             if (change_color_status == 1) begin
-                if (ypos >= 2 + fill_count/1_250_000 && (ypos < 7 + fill_count/1_250_000) && 
-                    xpos >= 45 + move_right_count/1_250_000 && xpos < 50 + move_right_count/1_250_000) 
-                begin
-                    oled_pixel_data <= COLOR_GREEN;
-                end
-                if (delay_before_color_change == 12_500_000) begin
+                change_color_task();
+                if (delay_before_color_change == 25_000_000) begin
                     move_left_status <= 1;               
                 end
             end
            
             if (move_left_status == 1) begin
-                move_left_count <= (move_left_count == 37_500_000) ? 37_500_000 : move_left_count + 1;
-                if (ypos >= 2 + fill_count/1_250_000 && (ypos < 7 + fill_count/1_250_000) && 
-                    xpos >= 45 + 15 - move_left_count/2_500_000 && xpos < 50 + 15)
-                begin
-                    oled_pixel_data <= COLOR_GREEN;
-                end            
+                move_left_task();            
             end
            
-            if (move_left_count == 37_500_000) begin
+            if (move_left_count == 75_000_000) begin
                 move_up_status <= 1;            
             end
            
             if (move_up_status == 1) begin
-                move_up_count <= (move_up_count == 75_000_000) ? 75_000_000 : move_up_count + 1;
-                if (ypos >= 2 + 30 - move_up_count/2_500_000 && (ypos < 7 + 30) && xpos >= 45 && xpos < 50) begin
-                    oled_pixel_data <= COLOR_GREEN;
-                end
+                move_up_task();
             end
            
-            if (move_up_count == 75_000_000) begin
+            if (move_up_count == 150_000_000) begin
                 animation_complete_status <= 1;
                 delay_after_animation <= 0;   
             end
            
             if (animation_complete_status == 1) begin
-                delay_after_animation <= (delay_after_animation == 12_500_000)? 12_500_000 : delay_after_animation + 1;
-                if (delay_after_animation == 12_500_000) begin
+                delay_after_animation_task();
+                if (delay_after_animation == 25_000_000) begin
                     reset_status <= 1;                           
                 end
             end
            
             if (reset_status == 1) begin                    
-                fill_status <= 0;
-                fill_complete <= 0;
-                move_right_status <= 0;
-                move_right_complete <= 0; 
-                change_color_status <= 0;
-                move_left_status <= 0;
-                move_up_status <= 0;
-                animation_complete_status <= 0;
-                reset_status <= 0;            
-                final_state <= 1;    
-                fill_count <= 0;  
-                delay_after_fill <= 0;
-                move_right_count <= 0;
-                move_left_count <= 0;
-                move_up_count <= 0;
-                delay_before_color_change <= 0;
-                delay_after_animation <= 0;                   
+                reset_task();                   
             end
         end
         else begin
-            fill_status <= 0;
-            fill_complete <= 0;
-            move_right_status <= 0;
-            move_right_complete <= 0; 
-            change_color_status <= 0;
-            move_left_status <= 0;
-            move_up_status <= 0;
-            animation_complete_status <= 0;
-            reset_status <= 0;            
-            final_state <= 0;    
-            fill_count <= 0;  
-            delay_after_fill <= 0;
-            move_right_count <= 0;
-            move_left_count <= 0;
-            move_up_count <= 0;
-            delay_before_color_change <= 0;
-            delay_after_animation <= 0;   
+            reset_task();   
         end        
              
     end
+    
+    task fill_task;
+    begin
+        fill_count <= (fill_count == 75_000_000) ? 75_000_000 : fill_count + 1;
+    end
+    endtask
+    
+    task delay_after_fill_task;
+    begin
+        delay_after_fill <= (delay_after_fill == 75_000_000) ? 75_000_000 : delay_after_fill + 1;
+    end
+    endtask
+    
+    task move_right_task;
+    begin
+        move_right_count <= (move_right_count == 37_500_000) ? 37_500_000 : move_right_count + 1;
+        if (ypos >= 2 + fill_count/2_500_000 && (ypos < 7 + fill_count/2_500_000) && 
+            xpos >= 45 && xpos < 50 + move_right_count/2_500_000) begin  //btw 45 and 65
+            oled_pixel_data <= COLOR_RED;
+        end
+    end
+    endtask
+    
+    task delay_before_color_change_task;
+    begin
+        delay_before_color_change <= delay_before_color_change + 1;
+    end
+    endtask
+    
+    task change_color_task;
+    begin
+        if (ypos >= 2 + fill_count/2_500_000 && (ypos < 7 + fill_count/2_500_000) && 
+            xpos >= 45 + move_right_count/2_500_000 && xpos < 50 + move_right_count/2_500_000) 
+        begin
+            oled_pixel_data <= COLOR_GREEN;
+        end
+    end
+    endtask
+    
+    task move_left_task;
+    begin
+        move_left_count <= (move_left_count == 75_000_000) ? 75_000_000 : move_left_count + 1;
+        if (ypos >= 2 + fill_count/2_500_000 && (ypos < 7 + fill_count/2_500_000) && 
+            xpos >= 45 + 15 - move_left_count/5_000_000 && xpos < 50 + 15)
+        begin
+            oled_pixel_data <= COLOR_GREEN;
+        end
+    end
+    endtask
+    
+    task move_up_task;
+    begin
+        move_up_count <= (move_up_count == 150_000_000) ? 150_000_000 : move_up_count + 1;
+        if (ypos >= 2 + 30 - move_up_count/5_000_000 && (ypos < 7 + 30) && xpos >= 45 && xpos < 50) begin
+            oled_pixel_data <= COLOR_GREEN;
+        end
+    end
+    endtask
+    
+    task delay_after_animation_task;
+    begin
+        delay_after_animation <= (delay_after_animation == 25_000_000)? 25_000_000 : delay_after_animation + 1;
+    end
+    endtask
+    
+    task reset_task;
+    begin
+        fill_status <= 0;
+        fill_complete <= 0;
+        move_right_status <= 0;
+        move_right_complete <= 0; 
+        change_color_status <= 0;
+        move_left_status <= 0;
+        move_up_status <= 0;
+        animation_complete_status <= 0;
+        reset_status <= 0;            
+        final_state <= 1;    
+        fill_count <= 0;  
+        delay_after_fill <= 0;
+        move_right_count <= 0;
+        move_left_count <= 0;
+        move_up_count <= 0;
+        delay_before_color_change <= 0;
+        delay_after_animation <= 0;
+    end
+    endtask
     
 endmodule
