@@ -24,12 +24,24 @@ module middle_square_timer
     #(parameter  // 1 second is 100_000_000;
         COUNT_BUTTON = 5_000_000, // 50 milliseconds 
         COUNT_DEBOUNCE = 20_000_000, // 200 milliseconds
-        BITWIDTH=32)
+        BITWIDTH=32,
+        MAX_STATE=3,
+        LOOP_STATE=1
+        )
     (
         input clk, input reset, input btn, 
-        output reg [2:0] trigger_state = 0, 
+        output reg [2:0] trigger_state = 0, // The main state output
         output [BITWIDTH-1:0] debug_counter
     );
+    /* 
+    Trigger state goes to
+    0 -> 1 -> ..... -> MAX_STATE
+         |                   |
+     LOOP_STATE (0 to MAX)   |
+         ^                   |
+         |--------------------
+    */ 
+    
     assign debug_counter = counter;
     
     reg [BITWIDTH-1:0] counter = 0;
@@ -59,8 +71,8 @@ module middle_square_timer
             // Released ////////////////////////////////////////
             end else if (prev_button_state == 1 && btn == 0 && button_release_valid) begin 
                 // switch modes
-                if (trigger_state == 3) begin
-                    trigger_state <= 1;
+                if (trigger_state == MAX_STATE) begin
+                    trigger_state <= LOOP_STATE;
                 end else begin
                     trigger_state <= trigger_state + 1;
                 end

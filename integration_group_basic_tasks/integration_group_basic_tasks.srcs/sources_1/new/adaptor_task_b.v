@@ -45,7 +45,10 @@ module adaptor_task_b(
     reg shift_once;
     reg [15:0] COLOR = WHITE;
     wire [2:0] middle_trigger_state;
-    middle_square_timer #(5_000_000, 20_000_000) mid_timer(clk, reset, btnC, middle_trigger_state);
+    middle_square_timer #(.LOOP_STATE(0)) mid_timer(clk, reset, btnC, middle_trigger_state);
+    /* Trigger_state
+    0: white, 1: red, 2: green, 3: blue , goes back to 0
+    */
     reg [3:0] box_color;
     function is_green_border(input [7:0] size, 
             input [7:0] x, input [7:0] y,
