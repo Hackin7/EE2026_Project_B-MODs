@@ -93,6 +93,6 @@ module adaptor_task_group(
     end
 
     wire [15:0] success_screen;
-    //image image_module(oled_pixel_index, success_screen);
+    image image_module(oled_pixel_index, success_screen);
     assign oled_pixel_data = (success ? success_screen : paint_oled_pixel_data);
 endmodule

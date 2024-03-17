@@ -15,7 +15,7 @@ module adaptor_task_d(
     reg [31:0] speed_threshold = SPEED_45;
 
     reg btnC_prev, btnU_prev, btnL_prev, btnR_prev, btnD_prev;
-    reg [2:0] active_btn = 3'b000; 
+    reg [2:0] active_btn = 3'b000; // state reg
 
     always @(posedge clk) begin
         if(btnU && !btnU_prev) active_btn <= 3'b001;
@@ -28,9 +28,9 @@ module adaptor_task_d(
             active_btn <= 3'b000; 
         end
 
-        if (sw[0] && active_btn <= 3'b001) speed_threshold <= SPEED_15;
-        else if (sw[0] && active_btn <= 3'b011) speed_threshold <= SPEED_30;
-        else if (sw[0] && active_btn <= 3'b100) speed_threshold <= SPEED_30;
+        if (sw[0] && active_btn == 3'b001) speed_threshold <= SPEED_15;
+        else if (sw[0] && active_btn == 3'b011) speed_threshold <= SPEED_30;
+        else if (sw[0] && active_btn == 3'b100) speed_threshold <= SPEED_30;
         else if (!sw[0]) speed_threshold <= SPEED_45;
              
 
